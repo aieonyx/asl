@@ -90,3 +90,16 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | Coverage | composite identity · threshold · binding · BindingMode |
 | TriSec | Point A implemented — HW+kernel+OS+biometric → 32-byte hash |
 | Date | 2026-06-24 |
+
+### ASL-M5 — AXON-Bridge PD (Final Mandatory Sovereign PD)
+| Field | Value |
+|---|---|
+| Milestone | ASL-M5 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| Tests | 52 passing / 0 failures |
+| Cumulative | 313 passing / 0 failures |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Coverage | ABI contract · cap translation · @constant_time · AXON-STUB-001 |
+| First .ax | ipc_bridge.ax + sovereign_identity.ax in ASL repo |
+| Status | ALL SIX MANDATORY PDs COMPLETE |
+| Date | 2026-06-24 |
