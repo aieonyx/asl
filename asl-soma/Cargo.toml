@@ -1,0 +1,10 @@
+[package]
+name = "asl-soma"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "SOMA-Identity PD — composite hardware identity and three-key threshold binding"
+
+[dependencies]
+asl-common = { path = "../asl-common" }

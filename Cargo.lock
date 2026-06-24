@@ -70,6 +70,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "asl-soma"
+version = "0.1.0"
+dependencies = [
+ "asl-common",
+]
+
+[[package]]
 name = "asl-touch-sensor"
 version = "0.1.0"
 dependencies = [

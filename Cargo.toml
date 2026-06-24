@@ -13,6 +13,7 @@ members = [
     "asl-network-routing",
     "asl-firewall-cap",
     "asl-touch-sensor",
+    "asl-soma",
 ]
 
 [workspace.package]
