@@ -1,8 +1,7 @@
 // Copyright (c) 2026 Edison Lepiten / AIEONYX
 // SPDX-License-Identifier: Apache-2.0
 //
-// asl-common — shared types, constants, and sovereignty primitives
-// for all ASL-seL4 mKernel Protection Domains.
+// asl-common — shared sovereignty primitives for all ASL PDs.
 
 #![no_std]
 #![deny(unsafe_op_in_unsafe_fn)]

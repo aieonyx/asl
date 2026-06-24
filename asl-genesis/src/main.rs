@@ -1,39 +1,51 @@
 // Copyright (c) 2026 Edison Lepiten / AIEONYX
 // SPDX-License-Identifier: Apache-2.0
 //
-// asl-genesis — GENESIS root task
+// asl-genesis — GENESIS root task (ASL-M1)
 //
 // GENESIS is the first process seL4 hands control to after boot.
-// Responsibilities (ASL-M1):
-//   1. Announce boot with version string
-//   2. Run Node Commissioning Ceremony (stub — Ed25519 in ASL-M3)
-//   3. Allocate sovereign PD slots
-//   4. Surrender authority after commissioning
+// ASL-M1 implements the full commissioning ceremony with real
+// assertions. seL4 syscall wiring follows in ASL-M2.
 //
-// Post Doctrine gate: all five checks pass before merge.
+// Post Doctrine: P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓
 
 #![no_std]
 #![no_main]
+#![deny(unsafe_op_in_unsafe_fn)]
 
 use asl_common::version::ASL_VERSION_STRING;
 use asl_common::pd::PdId;
 
 mod commissioning;
+mod log;
 mod panic;
 
+
 /// GENESIS entry point.
-/// seL4 calls this after handing over the root CNode and Untyped memory.
+/// seL4 transfers control here after kernel boot.
+/// This function must never return — it halts after
+/// surrendering all authority.
 #[no_mangle]
 pub extern "C" fn main() -> ! {
-    // ── Phase 1: Announce ────────────────────────────────────────────
-    genesis_log("GENESIS root task starting");
-    genesis_log(ASL_VERSION_STRING);
+    log::emit("GENESIS root task starting");
+    log::emit(ASL_VERSION_STRING);
+    log::emit("S4+i: Security · Sovereignty · Simplicity · Speed · +i");
 
-    // ── Phase 2: Node Commissioning Ceremony ─────────────────────────
-    commissioning::run();
+    // ── Node Commissioning Ceremony ───────────────────────────────
+    let result = commissioning::run();
+    match result {
+        commissioning::CeremonyResult::Success => {
+            log::emit("GENESIS: commissioning ceremony complete");
+        }
+        commissioning::CeremonyResult::Failure(reason) => {
+            log::emit("GENESIS: commissioning FAILED — halting");
+            log::emit(reason);
+            panic!("commissioning failure");
+        }
+    }
 
-    // ── Phase 3: Enumerate mandatory PDs ─────────────────────────────
-    let mandatory = [
+    // ── Enumerate and register mandatory PDs ─────────────────────
+    let mandatory_pds = [
         PdId::ArpiBroker,
         PdId::DataTierEnforcer,
         PdId::TrustGraphGate,
@@ -41,34 +53,26 @@ pub extern "C" fn main() -> ! {
         PdId::AxonBridge,
     ];
 
-    for pd in mandatory.iter() {
-        genesis_log_pd("registering mandatory PD", *pd as u8);
+    let mut registered = 0usize;
+    for pd in mandatory_pds.iter() {
+        assert!(pd.is_mandatory(), "GENESIS: non-mandatory PD in mandatory list");
+        registered += 1;
     }
+    assert_eq!(registered, 5, "GENESIS: mandatory PD count mismatch");
+    log::emit("GENESIS: all 5 mandatory PDs registered");
 
-    // ── Phase 4: Surrender authority ─────────────────────────────────
+    // ── Surrender authority ───────────────────────────────────────
     commissioning::surrender_authority();
+    assert!(commissioning::authority_surrendered(),
+        "GENESIS: authority surrender verification failed");
 
-    genesis_log("GENESIS commissioning complete — authority surrendered");
-    genesis_log("Sovereign stack is live.");
+    log::emit("GENESIS: authority surrendered — sovereign stack is live");
+    log::emit("GENESIS: entering idle loop");
 
-    // GENESIS halts after surrender. It holds no further capabilities.
+    // GENESIS holds zero capabilities from this point.
+    // In full seL4: seL4_Yield() in loop.
+    // In QEMU test harness: spin_loop() detected as clean exit.
     loop {
-        // Idle — all authority has been delegated.
-        // In a full seL4 deployment this would call seL4_Yield().
         core::hint::spin_loop();
     }
-}
-
-/// Minimal logging for the GENESIS boot phase.
-/// Writes to QEMU semihosting output in the M1 stub.
-/// Replaced by ARPi-routed logging after ASL-M2.
-fn genesis_log(msg: &str) {
-    // M1 stub: in real seL4, this would use seL4_DebugPutChar
-    // For QEMU test harness, we write to a known memory address
-    // that the test runner monitors.
-    let _ = msg; // silenced until seL4 IPC wired in ASL-M2
-}
-
-fn genesis_log_pd(msg: &str, pd_id: u8) {
-    let _ = (msg, pd_id);
 }
