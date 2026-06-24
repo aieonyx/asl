@@ -4,6 +4,7 @@ version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
+description = "Inverted-Admin PD — no ambient authority, dual-key admin enforcement"
 
 [dependencies]
 asl-common = { path = "../asl-common" }

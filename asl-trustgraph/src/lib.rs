@@ -1,14 +1,22 @@
 // Copyright (c) 2026 Edison Lepiten / AIEONYX
 // SPDX-License-Identifier: Apache-2.0
 //
-// asl-trustgraph — stub pending its milestone implementation.
-// ASL-M1: structure only. Logic implemented in assigned milestone.
+// asl-trustgraph — TrustGraph-Gate PD (ASL-M3)
+//
+// The trust graph is a directed capability graph:
+//   - Nodes: Protection Domains (PDs)
+//   - Edges: granted capabilities between PDs
+//   - Tokens: signed proof of a granted capability edge
+//
+// TrustGraph-Gate validates capability tokens before any
+// privileged operation proceeds. The ARPi-Broker tier gate
+// calls into TrustGraph-Gate for cross-tier grant validation.
+//
+// Post Doctrine: P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓
 
 #![no_std]
+#![deny(unsafe_op_in_unsafe_fn)]
 
-use asl_common::pd::PdId;
-
-pub fn pd_id() -> PdId {
-    // Each crate returns its own PdId — filled in per milestone.
-    PdId::Genesis // placeholder — overridden in each crate's milestone
-}
+pub mod graph;
+pub mod token;
+pub mod trust_score;
