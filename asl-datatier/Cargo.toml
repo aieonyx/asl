@@ -4,6 +4,7 @@ version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
+description = "DataTier-Enforcer PD — Critical/Personal/Noise boundary enforcement at kernel level"
 
 [dependencies]
 asl-common = { path = "../asl-common" }
