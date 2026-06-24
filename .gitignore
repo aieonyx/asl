@@ -1,0 +1,18 @@
+/target/
+**/*.rs.bk
+*.swp
+*.swo
+.DS_Store
+.env
+*.elf
+*.bin
+*.img
+*.iso
+/build/
+/dist/
+.vscode/launch.json
+# seL4 build artifacts
+CMakeCache.txt
+CMakeFiles/
+*.cmake
+kernel/

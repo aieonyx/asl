@@ -1,0 +1,37 @@
+[workspace]
+resolver = "2"
+members = [
+    "asl-common",
+    "asl-genesis",
+    "asl-arpi",
+    "asl-datatier",
+    "asl-trustgraph",
+    "asl-inverted-admin",
+    "asl-axon-bridge",
+    "asl-gpu-cap",
+    "asl-power-mgmt",
+    "asl-network-routing",
+    "asl-firewall-cap",
+    "asl-touch-sensor",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Edison Lepiten <aieonyx@proton.me>"]
+license = "Apache-2.0"
+repository = "https://github.com/aieonyx/asl"
+
+[workspace.dependencies]
+sel4 = { version = "0.1.0", default-features = false }
+sel4-root-task = { version = "0.1.0", default-features = false }
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = false
+
+[profile.dev]
+panic = "abort"

@@ -1,0 +1,22 @@
+[package]
+name = "asl-genesis"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "GENESIS root task — first seL4 process, bootstraps all sovereign PDs"
+
+[[bin]]
+name = "asl-genesis"
+path = "src/main.rs"
+
+[dependencies]
+asl-common = { path = "../asl-common" }
+
+[features]
+default = ["desktop"]
+desktop = ["asl-common/desktop"]
+mobile  = ["asl-common/mobile"]
+iot     = ["asl-common/iot"]
+server  = ["asl-common/server"]
+router  = ["asl-common/router"]
