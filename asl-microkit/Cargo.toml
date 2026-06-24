@@ -1,0 +1,16 @@
+[package]
+name = "asl-microkit"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "ASL-seL4 mKernel — Microkit boot layer (Track B, ASL v1.5)"
+
+[lib]
+name = "asl_microkit"
+crate-type = ["staticlib"]
+path = "src/lib.rs"
+
+[dependencies]
+asl-common      = { path = "../asl-common" }
+asl-axon-bridge = { path = "../asl-axon-bridge" }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    ASL-M6 Microkit System Description
+    Copyright (c) 2026 Edison Lepiten / AIEONYX
+    SPDX-License-Identifier: Apache-2.0
+-->
+<system>
+    <protection_domain name="genesis" priority="254" budget="1000" period="1000">
+        <program_image path="asl-genesis-pd.elf" />
+    </protection_domain>
+
+    <protection_domain name="arpi_broker" priority="200" budget="500" period="1000">
+        <program_image path="asl-arpi-pd.elf" />
+    </protection_domain>
+
+    <channel>
+        <end pd="genesis" id="1" />
+        <end pd="arpi_broker" id="1" />
+    </channel>
+</system>

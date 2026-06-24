@@ -56,6 +56,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "asl-microkit"
+version = "0.1.0"
+dependencies = [
+ "asl-axon-bridge",
+ "asl-common",
+]
+
+[[package]]
 name = "asl-network-routing"
 version = "0.1.0"
 dependencies = [
