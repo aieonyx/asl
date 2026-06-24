@@ -78,3 +78,15 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Coverage | flow · grant · audit · erasure · vault enforcement |
 | Date | 2026-06-24 |
+
+### ASL-M4.5 — SOMA-Identity PD (TriSec Point A)
+| Field | Value |
+|---|---|
+| Milestone | ASL-M4.5 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| Tests | 55 passing / 0 failures |
+| Cumulative | 261 passing / 0 failures |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Coverage | composite identity · threshold · binding · BindingMode |
+| TriSec | Point A implemented — HW+kernel+OS+biometric → 32-byte hash |
+| Date | 2026-06-24 |
