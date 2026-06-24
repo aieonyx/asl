@@ -4,6 +4,15 @@ version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
+description = "ARPi-Broker PD — sovereign IPC message broker for ASL-seL4 mKernel"
 
 [dependencies]
 asl-common = { path = "../asl-common" }
+
+[features]
+default = ["desktop"]
+desktop = ["asl-common/desktop"]
+mobile  = ["asl-common/mobile"]
+iot     = ["asl-common/iot"]
+server  = ["asl-common/server"]
+router  = ["asl-common/router"]

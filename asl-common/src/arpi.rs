@@ -4,12 +4,14 @@
 // ARPi provenance header — 78-byte sovereign IPC prefix.
 // Every message routed through ARPi-Broker carries this header.
 
-/// ARPi provenance header.
-/// Total size: 78 bytes.
+/// ARPi header size as a standalone constant (usable in const contexts).
+pub const ARPI_HEADER_SIZE: usize = 78;
+
+/// ARPi provenance header — exactly 78 bytes.
 #[derive(Debug, Clone, Copy)]
 #[repr(C, packed)]
 pub struct ArpiHeader {
-    /// Magic: 0xA2_91 (ARPi marker)
+    /// Magic: 0xA291 (ARPi marker)
     pub magic:      u16,
     /// ASL version that produced this message
     pub asl_ver:    u8,
@@ -26,7 +28,7 @@ pub struct ArpiHeader {
 }
 
 impl ArpiHeader {
-    pub const MAGIC: u16 = 0xA291;
+    pub const MAGIC: u16  = 0xA291;
     pub const SIZE:  usize = core::mem::size_of::<ArpiHeader>();
 
     pub fn new(src: u8, dst: u8, tier: u8, seq: u64, sig: [u8; 64]) -> Self {
@@ -42,7 +44,7 @@ impl ArpiHeader {
     }
 
     pub fn is_valid_magic(&self) -> bool {
-        self.magic == Self::MAGIC
+        let m = { self.magic }; m == Self::MAGIC
     }
 }
 
