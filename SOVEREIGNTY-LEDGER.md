@@ -67,3 +67,14 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Coverage | inverted-admin · dual-key · trust graph · cap tokens · trust score |
 | Date | 2026-06-24 |
+
+### ASL-M4 — DataTier-Enforcer PD
+| Field | Value |
+|---|---|
+| Milestone | ASL-M4 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| Tests | 50 passing / 0 failures |
+| Cumulative | 206 passing / 0 failures |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Coverage | flow · grant · audit · erasure · vault enforcement |
+| Date | 2026-06-24 |
