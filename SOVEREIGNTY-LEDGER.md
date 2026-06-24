@@ -34,3 +34,14 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Date | 2026-06-24 |
 
+
+### ASL-M1 — GENESIS Root Task
+| Field | Value |
+|---|---|
+| Milestone | ASL-M1 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| GPG Tag | pending v0.1.1 |
+| Tests | 46 passing / 0 failures |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Coverage | version · PdId · ARPi · DataTier · commissioning |
+| Date | 2026-06-24 |
