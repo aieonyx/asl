@@ -1,0 +1,76 @@
+// Copyright (c) 2026 Edison Lepiten / AIEONYX
+// SPDX-License-Identifier: Apache-2.0
+// asl-axon-bridge/axon_stubs/ipc_bridge.ax
+//
+// AXON-Bridge IPC stub — first .ax file in the ASL repository.
+// Target: aarch64-sel4 · Profile: seL4-strict
+//
+// This file is the AXON-side declaration of the bridge IPC boundary.
+// It mirrors ipc.ax from the AXONYX compiler's axon_sel4 crate.
+// The Rust shims in asl-axon-bridge resolve these at link time.
+//
+// Parser constraints (from axon_sel4 rewrite audit):
+//   - if-condition RHS must be literal when structs in scope
+//   - No return inside if blocks
+//   - All FFI boundary types are i64
+
+struct CPtr {
+    val: i64
+}
+
+struct MessageInfo {
+    label: i64,
+    length: i64
+}
+
+struct IpcResult {
+    val: i64,
+    err: i64
+}
+
+// FFI stubs — resolved by AXON-Bridge Rust shim (AXON-STUB-001)
+fn sel4_sys_send(dest: i64, label: i64, length: i64) -> i64 {
+    return 0;
+}
+
+fn sel4_sys_recv(src: i64) -> i64 {
+    return 0;
+}
+
+fn sel4_sys_call(dest: i64, label: i64, length: i64) -> i64 {
+    return 0;
+}
+
+fn sel4_mr_get(idx: i64) -> i64 {
+    return 0;
+}
+
+fn sel4_mr_set(idx: i64, val: i64) -> i64 {
+    return 0;
+}
+
+// Bridge IPC send — routes through AXON-Bridge PD
+fn bridge_send(dest: CPtr, label: i64, payload: i64) -> IpcResult {
+    let set_rc = sel4_mr_set(0, payload);
+    let rc = sel4_sys_send(dest.val, label, 1);
+    if rc == 0 {
+        return IpcResult { val: 0, err: 0 };
+    }
+    return IpcResult { val: 0, err: rc };
+}
+
+// Bridge IPC call — send + receive reply
+fn bridge_call(dest: CPtr, label: i64, payload: i64) -> IpcResult {
+    let set_rc = sel4_mr_set(0, payload);
+    let rc = sel4_sys_call(dest.val, label, 1);
+    if rc == 0 {
+        let reply = sel4_mr_get(0);
+        return IpcResult { val: reply, err: 0 };
+    }
+    return IpcResult { val: 0, err: rc };
+}
+
+// ABI version check stub — bridge validates this at load time
+fn axon_bridge_abi_version() -> i64 {
+    return 1;
+}

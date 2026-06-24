@@ -4,6 +4,7 @@ version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
+description = "AXON-Bridge PD — boundary between AXON userspace and ASL-seL4 mKernel"
 
 [dependencies]
 asl-common = { path = "../asl-common" }
