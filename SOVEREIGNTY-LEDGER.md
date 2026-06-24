@@ -45,3 +45,14 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Coverage | version · PdId · ARPi · DataTier · commissioning |
 | Date | 2026-06-24 |
+
+### ASL-M2 — ARPi-Broker PD
+| Field | Value |
+|---|---|
+| Milestone | ASL-M2 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| Tests | 47 passing / 0 failures |
+| Cumulative | 93 passing / 0 failures |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Coverage | broker · route · sequence · tier gate |
+| Date | 2026-06-24 |
