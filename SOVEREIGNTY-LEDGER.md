@@ -56,3 +56,14 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Coverage | broker · route · sequence · tier gate |
 | Date | 2026-06-24 |
+
+### ASL-M3 — Inverted-Admin + TrustGraph-Gate PD
+| Field | Value |
+|---|---|
+| Milestone | ASL-M3 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| Tests | 63 passing / 0 failures |
+| Cumulative | 156 passing / 0 failures |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Coverage | inverted-admin · dual-key · trust graph · cap tokens · trust score |
+| Date | 2026-06-24 |
