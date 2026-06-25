@@ -115,3 +115,16 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | Key output | GENESIS ceremony + ARPi-Broker IPC READY on real seL4 |
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Date | 2026-06-24 |
+
+### ASL-M7 — Input + Storage + USB Driver PDs
+| Field | Value |
+|---|---|
+| Milestone | ASL-M7 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| Board | qemu_virt_aarch64 debug |
+| PDs booted | 5 — GENESIS · ARPi · Input · Storage · USB |
+| Boot | VERIFIED — all 5 PDs active, interleaved serial output |
+| TriSec | Point A ID-1 (HW-UID) ACTIVE on real seL4 |
+| SOMA | Hardware identity sentinel verified — USB key fingerprint matched |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Date | 2026-06-25 |
