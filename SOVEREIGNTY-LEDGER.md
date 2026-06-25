@@ -165,3 +165,16 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | Track B | COMPLETE — M6 through M10 all verified on seL4 |
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Date | 2026-06-25 |
+
+### ASL-M11 — HANIEL Engine PD (First Sovereign Display)
+| Field | Value |
+|---|---|
+| Milestone | ASL-M11 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| PDs booted | 8 — full sovereign stack + HANIEL |
+| Framebuffer | 1280x720 ARGB8888 — 3,686,400 bytes |
+| HANIEL | VAULT · HERALD · PRISM · CANVAS — all verified |
+| First pixel | CANVAS sovereignty verified — no third-party renderer |
+| CS Terms | TERM-049 · TERM-050 · TERM-056 active |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Date | 2026-06-25 |
