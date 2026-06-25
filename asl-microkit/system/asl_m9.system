@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    ASL-M9 Microkit System Description
+    Copyright (c) 2026 Edison Lepiten / AIEONYX
+    SPDX-License-Identifier: Apache-2.0
+
+    Seven PDs: GENESIS · ARPi · Input · Storage · USB · Network · AXON-Bridge
+-->
+<system>
+    <protection_domain name="genesis" priority="254" budget="1000" period="1000">
+        <program_image path="asl-genesis-pd.elf" />
+    </protection_domain>
+
+    <protection_domain name="arpi_broker" priority="200" budget="500" period="1000">
+        <program_image path="asl-arpi-pd.elf" />
+    </protection_domain>
+
+    <protection_domain name="input_drv" priority="100" budget="200" period="1000">
+        <program_image path="asl-input-pd.elf" />
+    </protection_domain>
+
+    <protection_domain name="storage_drv" priority="150" budget="300" period="1000">
+        <program_image path="asl-storage-pd.elf" />
+    </protection_domain>
+
+    <protection_domain name="usb_drv" priority="120" budget="200" period="1000">
+        <program_image path="asl-usb-pd.elf" />
+    </protection_domain>
+
+    <protection_domain name="network_drv" priority="180" budget="400" period="1000">
+        <program_image path="asl-network-pd.elf" />
+    </protection_domain>
+
+    <protection_domain name="axon_bridge" priority="220" budget="600" period="1000">
+        <program_image path="asl-axon-bridge-pd.elf" />
+    </protection_domain>
+
+    <channel>
+        <end pd="genesis" id="1" />
+        <end pd="arpi_broker" id="1" />
+    </channel>
+
+    <channel>
+        <end pd="genesis" id="2" />
+        <end pd="usb_drv" id="1" />
+    </channel>
+
+    <channel>
+        <end pd="arpi_broker" id="2" />
+        <end pd="storage_drv" id="1" />
+    </channel>
+
+    <channel>
+        <end pd="arpi_broker" id="3" />
+        <end pd="network_drv" id="1" />
+    </channel>
+
+    <channel>
+        <end pd="usb_drv" id="2" />
+        <end pd="network_drv" id="2" />
+    </channel>
+
+    <channel>
+        <end pd="arpi_broker" id="4" />
+        <end pd="axon_bridge" id="1" />
+    </channel>
+</system>
