@@ -128,3 +128,15 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | SOMA | Hardware identity sentinel verified — USB key fingerprint matched |
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Date | 2026-06-25 |
+
+### ASL-M8 — Network Driver PD (Aegis Mesh + AWP)
+| Field | Value |
+|---|---|
+| Milestone | ASL-M8 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| PDs booted | 6 — GENESIS · ARPi · Input · Storage · USB · Network |
+| Boot | VERIFIED — 6 PDs, AWP 0xA1E0AE70 bound |
+| Aegis | Mesh interface + threat intel ingestion READY |
+| TriSec | Point B packet binding stub active |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Date | 2026-06-25 |
