@@ -3,6 +3,7 @@
 //
 // asl-microkit lib — all sovereign PD logic.
 // ASL v1.5 hybrid: Rust staticlib + C Microkit shims.
+// ASL-M10: MCS scheduler + WCET measurement added.
 
 #![no_std]
 
@@ -21,3 +22,7 @@ pub mod network;
 
 // Track B M9 — AXON-Bridge runtime
 pub mod axon_bridge_init;
+
+// Track B M10 — MCS + WCET
+pub mod mcs;
+pub mod wcet;
