@@ -1,7 +1,7 @@
 // Copyright (c) 2026 Edison Lepiten / AIEONYX
 // SPDX-License-Identifier: Apache-2.0
 //
-// asl-microkit lib — sovereignty logic for all Microkit PDs.
+// asl-microkit lib — all sovereign PD logic.
 // ASL v1.5 hybrid: Rust staticlib + C Microkit shims.
 
 #![no_std]
@@ -13,7 +13,8 @@ mod panic;
 pub mod genesis;
 pub mod arpi;
 
-// Track B — driver PDs (ASL-M7)
+// Track B — driver PDs
 pub mod input;
 pub mod storage;
 pub mod usb;
+pub mod network;
