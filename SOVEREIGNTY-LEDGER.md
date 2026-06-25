@@ -140,3 +140,15 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | TriSec | Point B packet binding stub active |
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Date | 2026-06-25 |
+
+### ASL-M9 — AXON Userspace Runtime on seL4
+| Field | Value |
+|---|---|
+| Milestone | ASL-M9 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| PDs booted | 7 — all driver PDs + AXON-Bridge |
+| AXON result | axon_main() → 16723 (0x4153) = AIEONYX Sovereign |
+| Proof | DataTier · ARPi 0xA291 · SOMA 0xA1E0 — all validated in AXON |
+| seL4 ABI | PASSED — aarch64-sel4, seL4-strict profile |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Date | 2026-06-25 |
