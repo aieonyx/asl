@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    ASL-M7 Microkit System Description
+    Copyright (c) 2026 Edison Lepiten / AIEONYX
+    SPDX-License-Identifier: Apache-2.0
+
+    Five PDs: GENESIS + ARPi-Broker + Input + Storage + USB
+    Channel topology:
+      GENESIS(1) ↔ ARPi-Broker(1)  — sovereignty signal
+      GENESIS(2) ↔ USB(1)          — SOMA identity ready signal
+      ARPi-Broker(2) ↔ Storage(1)  — storage sync notification
+-->
+<system>
+    <protection_domain name="genesis" priority="254" budget="1000" period="1000">
+        <program_image path="asl-genesis-pd.elf" />
+    </protection_domain>
+
+    <protection_domain name="arpi_broker" priority="200" budget="500" period="1000">
+        <program_image path="asl-arpi-pd.elf" />
+    </protection_domain>
+
+    <protection_domain name="input_drv" priority="100" budget="200" period="1000">
+        <program_image path="asl-input-pd.elf" />
+    </protection_domain>
+
+    <protection_domain name="storage_drv" priority="150" budget="300" period="1000">
+        <program_image path="asl-storage-pd.elf" />
+    </protection_domain>
+
+    <protection_domain name="usb_drv" priority="120" budget="200" period="1000">
+        <program_image path="asl-usb-pd.elf" />
+    </protection_domain>
+
+    <channel>
+        <end pd="genesis" id="1" />
+        <end pd="arpi_broker" id="1" />
+    </channel>
+
+    <channel>
+        <end pd="genesis" id="2" />
+        <end pd="usb_drv" id="1" />
+    </channel>
+
+    <channel>
+        <end pd="arpi_broker" id="2" />
+        <end pd="storage_drv" id="1" />
+    </channel>
+</system>

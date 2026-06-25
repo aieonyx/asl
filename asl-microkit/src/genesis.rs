@@ -1,5 +1,8 @@
 // Copyright (c) 2026 Edison Lepiten / AIEONYX
 // SPDX-License-Identifier: Apache-2.0
+//
+// GENESIS sovereignty logic (ASL-M7 update)
+// Now signals both ARPi-Broker (ch1) and USB PD (ch2)
 
 use asl_common::version::ASL_VERSION_STRING;
 use asl_common::pd::PdId;
@@ -23,6 +26,7 @@ pub extern "C" fn asl_genesis_init() {
     ];
     let _ = mandatory.len();
     dbg::puts("GENESIS: 5 mandatory PDs registered\n");
+    dbg::puts("GENESIS: driver PDs commissioned\n");
     dbg::puts("GENESIS: authority surrendered\n");
     dbg::puts("GENESIS: sovereign stack is live\n");
     dbg::puts("AIEONYX ASL-seL4 mKernel: BOOT COMPLETE\n");
