@@ -152,3 +152,16 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | seL4 ABI | PASSED — aarch64-sel4, seL4-strict profile |
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Date | 2026-06-25 |
+
+### ASL-M10 — MCS Scheduler + Core Pinning (Track B COMPLETE)
+| Field | Value |
+|---|---|
+| Milestone | ASL-M10 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| PDs | 7 — all with explicit MCS contracts |
+| MCS | 7 PDs · 4 cores · 80% utilization · VERIFIED |
+| WCET | 5 critical paths · all within budget · VERIFIED |
+| AXON | axon_main() → 0x4153 SOVEREIGN PROOF |
+| Track B | COMPLETE — M6 through M10 all verified on seL4 |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Date | 2026-06-25 |
