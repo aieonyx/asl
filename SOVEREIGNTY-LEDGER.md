@@ -206,3 +206,17 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | Tab isolation | seL4 capability boundary per tab |
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Date | 2026-06-25 |
+
+### ASL-M13 — Onyxia Browser PD (awp:// Sovereign)
+| Field | Value |
+|---|---|
+| Milestone | ASL-M13 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| PDs booted | 10 — complete sovereign stack |
+| KNOWN-BUG-002 | RESOLVED — no WebKitWebView in PD model |
+| KNOWN-BUG-003 | RESOLVED — no GTK in seL4 PD |
+| AWP | awp:// registered, sovereign mesh via HERALD |
+| ARPi bar | ✦ AIEONYX Sovereign Home verified |
+| Tab isolation | seL4 capability boundary per tab |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Date | 2026-06-25 |
