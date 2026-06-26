@@ -28,3 +28,4 @@ pub mod admin_proofs;
 pub mod trust_proofs;
 pub mod security_audit;
 pub mod phoenix_proofs;
+pub mod repl_proofs;
