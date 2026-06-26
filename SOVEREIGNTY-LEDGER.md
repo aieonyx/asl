@@ -220,3 +220,16 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | Tab isolation | seL4 capability boundary per tab |
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Date | 2026-06-25 |
+
+### ASL-M14 — Kani Formal Verification + Hardening
+| Field | Value |
+|---|---|
+| Milestone | ASL-M14 |
+| Version | ASL v0.1.0-asl-m14 |
+| Kani tests | 24 passing / 0 failures |
+| Security audit | 10 findings: 9 CLEAR + 1 MITIGATED + 0 DEFERRED |
+| audit_passed() | true |
+| arXiv | slot 7680982 · endorsement UZIQVF · cs.AR |
+| GPG tag | v0.1.0-asl-m14 signed B4C8548260DB40E1 |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Date | 2026-06-25 |
