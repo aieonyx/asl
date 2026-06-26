@@ -20,3 +20,4 @@ pub mod mcs;
 pub mod wcet;
 pub mod haniel;
 pub mod edisondb;
+pub mod onyxia;
