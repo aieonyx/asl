@@ -178,3 +178,17 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | CS Terms | TERM-049 · TERM-050 · TERM-056 active |
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Date | 2026-06-25 |
+
+### ASL-M12 — EdisonDB PD (Full Sovereign Data Tier)
+| Field | Value |
+|---|---|
+| Milestone | ASL-M12 |
+| Version | ASL v0.1.0 [seL4 15.0.0] |
+| PDs booted | 9 — full sovereign stack + EdisonDB |
+| AUDIT-001 | RESOLVED — Critical plaintext eliminated |
+| DataTier | Critical/Personal/Noise enforced at kernel level |
+| ARPi | 78-byte provenance header on every DB record |
+| TriSec Pt B | SOMA hash binding on outgoing data ACTIVE |
+| GDPR | Art.17 erasure path active, dual-key for Critical |
+| Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
+| Date | 2026-06-25 |
