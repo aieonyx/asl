@@ -1,3 +1,6 @@
+// Copyright (c) 2026 Edison Lepiten / AIEONYX
+// SPDX-License-Identifier: Apache-2.0
+//
 // ============================================================
 // ASL-M15 — Phoenix Console Protection Domain
 // AIEONYX Sovereign Linux · Apache 2.0
