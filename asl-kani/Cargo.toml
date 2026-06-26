@@ -1,0 +1,19 @@
+[package]
+name = "asl-kani"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "ASL-seL4 mKernel — Kani formal verification harnesses"
+
+[dependencies]
+asl-common      = { path = "../asl-common" }
+asl-arpi        = { path = "../asl-arpi" }
+asl-datatier    = { path = "../asl-datatier" }
+asl-inverted-admin = { path = "../asl-inverted-admin" }
+asl-trustgraph  = { path = "../asl-trustgraph" }
+asl-soma        = { path = "../asl-soma" }
+asl-axon-bridge = { path = "../asl-axon-bridge" }
+
+[dev-dependencies]
+# kani = "0.1" -- enabled when running: cargo kani

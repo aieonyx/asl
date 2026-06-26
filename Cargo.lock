@@ -56,6 +56,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "asl-kani"
+version = "0.1.0"
+dependencies = [
+ "asl-arpi",
+ "asl-axon-bridge",
+ "asl-common",
+ "asl-datatier",
+ "asl-inverted-admin",
+ "asl-soma",
+ "asl-trustgraph",
+]
+
+[[package]]
 name = "asl-microkit"
 version = "0.1.0"
 dependencies = [

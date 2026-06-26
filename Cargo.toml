@@ -15,6 +15,7 @@ members = [
     "asl-touch-sensor",
     "asl-soma",
     "asl-microkit",
+    "asl-kani",
 ]
 
 [workspace.package]

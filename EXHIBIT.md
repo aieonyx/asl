@@ -20,3 +20,32 @@ Updated at each milestone completion.
 - Post Doctrine gate active on all commits
 - SOVEREIGNTY-LEDGER.md live
 
+
+## §3 ASL-M14 Security Audit (2026-06-25)
+
+### Kani Formal Verification Coverage
+- ARPi header: size=78, magic=0xA291, valid-magic-validates, PD ID bounds
+- DataTier: grant-iff-upgrade, same-tier-no-grant, total-order, from_u8-total
+- SOMA: hash-size=32, incomplete-fails, distinct-layers-distinct-hashes, threshold-requires-all-three
+- ABI: v1-always-valid, zero-missing, wrong-prefix-invalid
+- Admin: devmode-always-not-active, all-actions-dual-key
+- TrustGraph: self-grant-invalid, zero-seq-invalid, zero-sig-invalid, valid-validates
+
+### Security Audit Summary
+- 10 findings total: 9 CLEAR + 1 MITIGATED
+- 0 DEFERRED findings
+- A1 Memory Safety: CLEAR
+- A2 Integer Overflow: CLEAR
+- A3 Information Leakage: CLEAR
+- A4 Replay Attacks: CLEAR
+- A5 Privilege Escalation: CLEAR
+- A6 Side Channels: MITIGATED (@constant_time at bridge boundary)
+- A7 Spectre/Meltdown: CLEAR (seL4 formal proof)
+- A8 AUDIT-001: CLEAR (resolved M12)
+- A9 KNOWN-BUG-002/003: CLEAR (resolved M13)
+
+### arXiv Abstract Status
+Slot: 7680982 | Endorsement code: UZIQVF
+Target: cs.AR — Computer Architecture
+Title: ASL-seL4: A Formally Isolated Sovereign Microkernel with
+       Capability-Flow Static Analysis and TriSec Identity Binding
