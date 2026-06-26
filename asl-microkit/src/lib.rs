@@ -9,22 +9,14 @@
 mod dbg;
 mod panic;
 
-// Track A — mandatory sovereign PDs
 pub mod genesis;
 pub mod arpi;
-
-// Track B — driver PDs
 pub mod input;
 pub mod storage;
 pub mod usb;
 pub mod network;
-
-// Track B M9 — AXON-Bridge runtime
 pub mod axon_bridge_init;
-
-// Track B M10 — MCS + WCET
 pub mod mcs;
 pub mod wcet;
-
-// Track C M11 — HANIEL Engine PD
 pub mod haniel;
+pub mod edisondb;
