@@ -7,7 +7,7 @@ use core::sync::atomic::{AtomicBool, Ordering};
 
 static PANICKED: AtomicBool = AtomicBool::new(false);
 
-#[panic_handler]
+#[cfg_attr(not(kani), panic_handler)]
 fn panic(_info: &core::panic::PanicInfo) -> ! {
     PANICKED.store(true, Ordering::SeqCst);
     loop {

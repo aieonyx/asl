@@ -5,7 +5,7 @@
 // Gated out during test runs (std provides panic handler).
 
 #[cfg(not(test))]
-#[panic_handler]
+#[cfg_attr(not(kani), panic_handler)]
 fn panic(_info: &core::panic::PanicInfo) -> ! {
     loop {
         core::hint::spin_loop();

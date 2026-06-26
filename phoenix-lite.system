@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ASL-M15 — Phoenix Lite System Description
+  AIEONYX Sovereign Linux · Apache 2.0
+  Microkit SDK 1.4.1 · seL4 15.0.0
+  10 Protection Domains: 7 sovereign core + 3 Phoenix boot PDs
+  GPG: B4C8548260DB40E1
+-->
+<system>
+
+  <!-- ══════════════════════════════════════════════════════
+       SOVEREIGN MEMORY REGIONS
+       Matches Track B QEMU aarch64 memory map
+       ════════════════════════════════════════════════════ -->
+
+  <memory_region name="serial"
+                 size="0x1000"
+                 phys_addr="0x09000000"/>  <!-- PL011 UART — ttyAMA0 -->
+
+  <memory_region name="sovereign_proof_frame"
+                 size="0x1000"
+                 phys_addr="0x48000000"/>  <!-- axon_main() → 0x4153 -->
+
+  <memory_region name="iso_block"
+                 size="0x100000"
+                 phys_addr="0x49000000"/>  <!-- ISO 9660 image mount -->
+
+  <memory_region name="phoenix_heap"
+                 size="0x200000"
+                 phys_addr="0x4A000000"/>  <!-- 2MB shared Phoenix heap -->
+
+  <memory_region name="watchdog_registers"
+                 size="0x1000"
+                 phys_addr="0x4C000000"/>  <!-- SP805 Watchdog MMIO -->
+
+  <!-- ══════════════════════════════════════════════════════
+       PD 1 — GENESIS (boot root, M1)
+       ════════════════════════════════════════════════════ -->
+  <protection_domain name="GENESIS"
+                     priority="254"
+                     budget="1000"
+                     period="1000">
+    <program_image path="pds/asl-genesis/target/aarch64-unknown-none/release/asl-genesis"/>
+    <map mr="serial"         vaddr="0x09000000" perms="rw" cached="false"/>
+    <map mr="sovereign_proof_frame" vaddr="0x48000000" perms="rw" cached="false"/>
+  </protection_domain>
+
+  <!-- ══════════════════════════════════════════════════════
+       PD 2 — ARPi-Broker (5-layer auth, M2)
+       ════════════════════════════════════════════════════ -->
+  <protection_domain name="ARPi-Broker"
+                     priority="253"
+                     budget="800"
+                     period="1000">
+    <program_image path="pds/asl-arpi-broker/target/aarch64-unknown-none/release/asl-arpi-broker"/>
+    <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
+  </protection_domain>
+
+  <!-- ══════════════════════════════════════════════════════
+       PD 3 — DataTier-Enforcer (Critical/Personal/Noise, M3)
+       ════════════════════════════════════════════════════ -->
+  <protection_domain name="DataTier-Enforcer"
+                     priority="252"
+                     budget="600"
+                     period="1000">
+    <program_image path="pds/asl-datatier-enforcer/target/aarch64-unknown-none/release/asl-datatier-enforcer"/>
+    <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
+  </protection_domain>
+
+  <!-- ══════════════════════════════════════════════════════
+       PD 4 — TrustGraph-Gate (provenance DAG, M4)
+       ════════════════════════════════════════════════════ -->
+  <protection_domain name="TrustGraph-Gate"
+                     priority="251"
+                     budget="600"
+                     period="1000">
+    <program_image path="pds/asl-trustgraph-gate/target/aarch64-unknown-none/release/asl-trustgraph-gate"/>
+    <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
+  </protection_domain>
+
+  <!-- ══════════════════════════════════════════════════════
+       PD 5 — Inverted-Admin (sovereignty model, M5)
+       ════════════════════════════════════════════════════ -->
+  <protection_domain name="Inverted-Admin"
+                     priority="250"
+                     budget="500"
+                     period="1000">
+    <program_image path="pds/asl-inverted-admin/target/aarch64-unknown-none/release/asl-inverted-admin"/>
+    <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
+  </protection_domain>
+
+  <!-- ══════════════════════════════════════════════════════
+       PD 6 — AXON-Bridge (compiler IPC gateway, M6)
+       ════════════════════════════════════════════════════ -->
+  <protection_domain name="AXON-Bridge"
+                     priority="249"
+                     budget="800"
+                     period="1000">
+    <program_image path="pds/asl-axon-bridge/target/aarch64-unknown-none/release/asl-axon-bridge"/>
+    <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
+  </protection_domain>
+
+  <!-- ══════════════════════════════════════════════════════
+       PD 7 — SOMA-Identity (TriSec Point A, M4.5)
+       ════════════════════════════════════════════════════ -->
+  <protection_domain name="SOMA-Identity"
+                     priority="248"
+                     budget="400"
+                     period="1000">
+    <program_image path="pds/asl-soma-identity/target/aarch64-unknown-none/release/asl-soma-identity"/>
+    <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
+  </protection_domain>
+
+  <!-- ══════════════════════════════════════════════════════
+       PD 8 — Phoenix-Init (NEW M15 — first-boot sequencer)
+       Highest priority of Phoenix trio
+       ════════════════════════════════════════════════════ -->
+  <protection_domain name="Phoenix-Init"
+                     priority="247"
+                     budget="1000"
+                     period="1000">
+    <program_image path="pds/asl-phoenix-init/target/aarch64-unknown-none/release/asl-phoenix-init"/>
+    <map mr="serial"       vaddr="0x09000000" perms="rw" cached="false"/>
+    <map mr="iso_block"    vaddr="0x49000000" perms="r"  cached="true"/>
+    <map mr="phoenix_heap" vaddr="0x4A000000" perms="rw" cached="true"/>
+  </protection_domain>
+
+  <!-- ══════════════════════════════════════════════════════
+       PD 9 — Phoenix-Console (NEW M15 — sovereign console)
+       ════════════════════════════════════════════════════ -->
+  <protection_domain name="Phoenix-Console"
+                     priority="246"
+                     budget="500"
+                     period="1000">
+    <program_image path="pds/asl-phoenix-console/target/aarch64-unknown-none/release/asl-phoenix-console"/>
+    <map mr="serial"       vaddr="0x09000000" perms="rw" cached="false"/>
+    <map mr="phoenix_heap" vaddr="0x4A000000" perms="r"  cached="true"/>
+  </protection_domain>
+
+  <!-- ══════════════════════════════════════════════════════
+       PD 10 — Phoenix-Watchdog (NEW M15 — heartbeat monitor)
+       ════════════════════════════════════════════════════ -->
+  <protection_domain name="Phoenix-Watchdog"
+                     priority="245"
+                     budget="200"
+                     period="1000">
+    <program_image path="pds/asl-phoenix-watchdog/target/aarch64-unknown-none/release/asl-phoenix-watchdog"/>
+    <map mr="serial"             vaddr="0x09000000" perms="rw" cached="false"/>
+    <map mr="watchdog_registers" vaddr="0x4C000000" perms="rw" cached="false"/>
+  </protection_domain>
+
+  <!-- ══════════════════════════════════════════════════════
+       IPC CHANNELS — M15 Phoenix boot sequence
+       ════════════════════════════════════════════════════ -->
+
+  <!-- GENESIS → Phoenix-Init: boot authorization -->
+  <channel>
+    <end pd="GENESIS" id="0"/>
+    <end pd="Phoenix-Init" id="0"/>
+  </channel>
+
+  <!-- Phoenix-Init → SOMA-Identity: TriSec handshake -->
+  <channel>
+    <end pd="Phoenix-Init" id="2"/>
+    <end pd="SOMA-Identity" id="1"/>
+  </channel>
+
+  <!-- Phoenix-Init → ARPi-Broker: core PD activation -->
+  <channel>
+    <end pd="Phoenix-Init" id="1"/>
+    <end pd="ARPi-Broker" id="0"/>
+  </channel>
+
+  <!-- Phoenix-Init → Phoenix-Console: CONSOLE_UP signal -->
+  <channel>
+    <end pd="Phoenix-Init" id="3"/>
+    <end pd="Phoenix-Console" id="0"/>
+  </channel>
+
+  <!-- Phoenix-Init → Phoenix-Watchdog: ARM signal -->
+  <channel>
+    <end pd="Phoenix-Init" id="4"/>
+    <end pd="Phoenix-Watchdog" id="0"/>
+  </channel>
+
+  <!-- Phoenix-Watchdog → GENESIS: heartbeat report -->
+  <channel>
+    <end pd="Phoenix-Watchdog" id="1"/>
+    <end pd="GENESIS" id="1"/>
+  </channel>
+
+  <!-- ARPi-Broker ↔ DataTier-Enforcer: data sovereignty -->
+  <channel>
+    <end pd="ARPi-Broker" id="1"/>
+    <end pd="DataTier-Enforcer" id="0"/>
+  </channel>
+
+  <!-- DataTier-Enforcer ↔ TrustGraph-Gate: provenance -->
+  <channel>
+    <end pd="DataTier-Enforcer" id="1"/>
+    <end pd="TrustGraph-Gate" id="0"/>
+  </channel>
+
+  <!-- TrustGraph-Gate ↔ Inverted-Admin: admin model -->
+  <channel>
+    <end pd="TrustGraph-Gate" id="1"/>
+    <end pd="Inverted-Admin" id="0"/>
+  </channel>
+
+  <!-- Inverted-Admin ↔ AXON-Bridge: compiler gateway -->
+  <channel>
+    <end pd="Inverted-Admin" id="1"/>
+    <end pd="AXON-Bridge" id="0"/>
+  </channel>
+
+</system>
