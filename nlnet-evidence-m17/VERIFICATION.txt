@@ -1,0 +1,13 @@
+AIEONYX Phoenix Lite — M17 Boot Demo Verification
+==================================================
+Date        : 2026-06-26T13:30:29Z
+Commit      : e73b04acd54f041d37026406cdb2056323e8c50f
+Tag         : v0.1.0-asl-m17
+GPG Key     : B4C8548260DB40E1
+Checks      : 12 PASS / 0 FAIL / 12 total
+Result      : VERIFIED
+
+Sovereign proof: axon_main() → 0x4153
+seL4 version   : 15.0.0
+PD count       : 10
+REPL builtins  : sovereign() pd_count() version() let arithmetic

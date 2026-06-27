@@ -1,0 +1,79 @@
+
+╔══════════════════════════════════════════════════════╗
+║         AIEONYX — Phoenix Lite v0.1.0                ║
+║         ASL v1.0 [seL4 15.0.0]  S4+i Doctrine       ║
+║         Sovereign Digital Civilization Stack          ║
+╚══════════════════════════════════════════════════════╝
+
+[GENESIS] Sovereign proof: axon_main() → 0x4153
+[GENESIS] seL4 15.0.0 microkernel — capability isolation active
+[GENESIS] 10 Protection Domains loaded and verified
+
+[PHOENIX-INIT] Phase 1: Awakening
+  seL4 caps verified — PD isolation confirmed
+  Sovereign proof: axon_main() → 0x4153
+
+[PHOENIX-INIT] Phase 2: Sovereign Identity (SOMA)
+  SOMA handshake → HW-UID + seL4 measurement + OS-UID
+  TriSec Point A: threshold 3/3 ✓
+
+[PHOENIX-INIT] Phase 3: Core Sovereign PDs
+  GENESIS → online ✓
+  ARPi-Broker → online ✓
+
+[PHOENIX-INIT] Phase 4: Hardware Discovery
+  ISO block device: /dev/sr0 (QEMU virtio-blk)
+  Volume ID: PHOENIX_LITE_010
+  MANIFEST.txt: integrity verified
+
+[PHOENIX-INIT] Phase 5: Phoenix Console
+  Console PD endpoint 8 → ready
+
+[PHOENIX-INIT] Phase 6: Watchdog Armed
+  Watchdog PD 9 → 30s sovereign heartbeat
+
+[WATCHDOG] Sovereign PD Health Report
+  Timeout threshold: 30000ms
+  GENESIS [REQUIRED] → ISO-boot: alive ✓
+  ARPi-Broker [REQUIRED] → ISO-boot: alive ✓
+  DataTier-Enforcer [REQUIRED] → ISO-boot: alive ✓
+  TrustGraph-Gate [REQUIRED] → ISO-boot: alive ✓
+  Inverted-Admin [REQUIRED] → ISO-boot: alive ✓
+  AXON-Bridge [REQUIRED] → ISO-boot: alive ✓
+  SOMA-Identity [REQUIRED] → ISO-boot: alive ✓
+  Phoenix-Init [REQUIRED] → ISO-boot: alive ✓
+  Phoenix-Console [OPTIONAL] → ISO-boot: alive ✓
+  All 9 protected domains: ALIVE
+[WATCHDOG] Sovereign heartbeat active ✓
+
+══════════════════════════════════════════════════════
+  Phoenix Lite v0.1.0 — FIRST BOOT COMPLETE
+  Sovereign OS alive under seL4 15.0.0
+  Track A ✓  Track B ✓  Track C ✓  M15 ✓  M16 ✓
+  axon_main() → 0x4153 — proof anchored
+══════════════════════════════════════════════════════
+
+[CONSOLE] CONSOLE_UP received from Phoenix-Init
+[CONSOLE] Sovereign proof: 0x4153
+[CONSOLE] AxonScript REPL active — type 'help' for commands
+
+phoenix@aieonyx:~$ sovereign()
+axon_main() -> 0x4153
+
+phoenix@aieonyx:~$ version()
+ASL v1.0 [seL4 15.0.0]
+
+phoenix@aieonyx:~$ pd_count()
+10
+
+phoenix@aieonyx:~$ let x = 21 + 21
+42
+
+phoenix@aieonyx:~$ 1 + 2 * 3
+7
+
+phoenix@aieonyx:~$ help
+sovereign() pd_count() version() let x=<expr> help exit
+
+phoenix@aieonyx:~$
+[CONSOLE] Interactive mode ready — M17 wires live serial input
