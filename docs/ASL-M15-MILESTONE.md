@@ -3,8 +3,6 @@
 **AIEONYX Sovereign Linux** · Apache 2.0  
 **Milestone:** `v0.1.0-asl-m15`  
 **GPG:** `B4C8548260DB40E1`  
-**NLNet Anchor:** August 1, 2026 deadline  
-**arXiv:** slot 7680982 · `UZIQVF` · cs.AR
 
 ---
 
@@ -12,7 +10,6 @@
 
 ASL-M15 is the capstone of the three-track sprint. It assembles the first bootable ISO image of **Phoenix Lite** — the minimal sovereign OS — and confirms a live first-boot sequence under QEMU, demonstrating the full sovereign stack end-to-end from seL4 microkernel through 10 Protection Domains to a human-readable console.
 
-This is the **NLNet evidence anchor**: a live, GPG-signed ISO that proves the AIEONYX sovereign digital civilization stack is real, running, and reproducible.
 
 ---
 
@@ -222,7 +219,6 @@ git tag -s v0.1.0-asl-m15 \
     - 10 PDs total confirmed booting
     - 15 new Kani proofs (352 total / 0 failures)
     - sovereign proof axon_main() → 0x4153 anchored in ISO
-    - NLNet Onyxia evidence anchor — August 1 2026
     
     GPG: B4C8548260DB40E1"
 
@@ -231,7 +227,6 @@ git push origin main --tags
 
 ---
 
-## NLNet Evidence Package
 
 For the **August 1, 2026** deadline, the M15 deliverables constitute:
 
@@ -243,7 +238,6 @@ For the **August 1, 2026** deadline, the M15 deliverables constitute:
 | Git tag (GPG-signed) | `v0.1.0-asl-m15` | Reproducible build at a specific commit |
 | MANIFEST.txt | `build/iso/asl/MANIFEST.txt` | Sovereign proof value `0x4153` anchored |
 
-**The QEMU boot log showing the sovereign banner + `axon_main() → 0x4153` is the primary NLNet deliverable.**
 
 ---
 
@@ -256,7 +250,6 @@ STATE   : Track A ✓  Track B ✓  Track C M11–M15 ✓  SPRINT COMPLETE
 TESTS   : 352 total / 0 failures
 ISO     : phoenix-lite-v0.1.0.iso (signed)
 BOOT    : axon_main() → 0x4153  confirmed in QEMU aarch64
-NLNET   : Evidence anchor produced — August 1 2026 ✓
 ```
 
 ---

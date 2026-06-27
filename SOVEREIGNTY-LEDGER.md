@@ -17,7 +17,6 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | GPG Tag | vX.X.X-asl-mx |
 | Tests | N passing / 0 failures |
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
-| NLNet Evidence | EXHIBIT.md §X |
 | Date | YYYY-MM-DD |
 
 ---
@@ -229,7 +228,6 @@ Each entry requires: GPG-signed tag, test count, Post Doctrine gate pass.
 | Kani tests | 24 passing / 0 failures |
 | Security audit | 10 findings: 9 CLEAR + 1 MITIGATED + 0 DEFERRED |
 | audit_passed() | true |
-| arXiv | slot 7680982 · endorsement UZIQVF · cs.AR |
 | GPG tag | v0.1.0-asl-m14 signed B4C8548260DB40E1 |
 | Post Doctrine | P1 ✓ P2 ✓ P3 ✓ P4 ✓ P5 ✓ |
 | Date | 2026-06-25 |

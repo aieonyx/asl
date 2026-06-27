@@ -41,6 +41,5 @@ in any publicly documented microkernel stack.
 **Keywords:** microkernel, formal verification, seL4, capability
 systems, sovereign computing, hardware identity, TriSec, AXON
 
-**Slot:** 7680982 | **Endorsement:** UZIQVF
 **Copyright:** (c) 2026 Edison Lepiten / AIEONYX
 **License:** Apache 2.0

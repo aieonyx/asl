@@ -4,7 +4,6 @@
 **Milestone:** `v0.1.0-asl-m16`
 **GPG:** `B4C8548260DB40E1`
 **Builds on:** M15 — Phoenix Lite ISO first boot (commit 5d72788)
-**NLNet:** August 1, 2026 — interactive sovereign shell evidence
 
 ---
 

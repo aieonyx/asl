@@ -4,7 +4,6 @@
 **Milestone:** `v0.1.0-asl-m17`
 **GPG:** `B4C8548260DB40E1`
 **Builds on:** M16 — AxonScript REPL (commit e73b04a)
-**NLNet:** August 1, 2026 — primary evidence artifact
 
 ---
 
@@ -17,7 +16,6 @@ that shows the full sovereign stack end-to-end:
 seL4 boot → 10 PDs alive → Phoenix-Init → REPL → phoenix@aieonyx:~$
 ```
 
-This is the artifact NLNet reviewers will watch/read to verify the
 AIEONYX sovereign OS is real and running.
 
 ---
@@ -31,7 +29,6 @@ AIEONYX sovereign OS is real and running.
 | D3 | Log verification script | `scripts/verify-boot-log.sh` |
 | D4 | CI workflow update (boot log gate) | `.github/workflows/asl-ci.yml` |
 | D5 | Kani harnesses — 4 new proofs | `asl-kani/src/demo_proofs.rs` |
-| D6 | NLNet evidence package script | `scripts/nlnet-evidence.sh` |
 | D7 | M17 milestone doc | `docs/ASL-M17-MILESTONE.md` |
 
 ---
@@ -76,7 +73,6 @@ phoenix@aieonyx:~$
 
 ---
 
-## NLNet Evidence Package Contents
 
 ```
 nlnet-evidence-m17/
@@ -113,8 +109,6 @@ nlnet-evidence-m17/
 
 ```bash
 git add -A
-git commit -S -m "feat(m17): QEMU aarch64 full ISO boot demo — NLNet evidence"
-git tag -s v0.1.0-asl-m17 -m "ASL-M17 QEMU boot demo NLNet evidence"
 git push origin main --tags
 ```
 

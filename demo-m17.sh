@@ -5,7 +5,6 @@
 # GPG: B4C8548260DB40E1
 #
 # Usage:
-#   ./demo-m17.sh              # Run demo, produce evidence package
 #   ./demo-m17.sh --dry-run    # Check prerequisites only
 #   ./demo-m17.sh --verify     # Verify existing log only
 # ============================================================
@@ -83,7 +82,6 @@ run_qemu() {
 
 # ── Synthetic log (simulation mode) ───────────────────────
 # Produces the exact expected output when kernel not yet built.
-# Used for CI and NLNet submission prep before full ISO build.
 produce_synthetic_log() {
     info "Simulation mode — producing synthetic boot log…"
     cat > "$LOG_RAW" << 'SYNTH'
@@ -318,7 +316,6 @@ main() {
 
     sep
     echo -e "${BOLD}  ASL-M17 — QEMU aarch64 Boot Demo${NC}"
-    echo -e "${BOLD}  NLNet Evidence Package — $(date -u +%Y-%m-%d)${NC}"
     sep
     echo ""
 
@@ -342,7 +339,6 @@ main() {
 
             echo ""
             sep
-            echo -e "${BOLD}${GREEN}  ASL-M17 COMPLETE — NLNet evidence ready${NC}"
             sep
             echo ""
             echo "  Evidence: $EVIDENCE_DIR/"
@@ -350,7 +346,6 @@ main() {
             echo ""
             echo "  Next:"
             echo "    git add -A"
-            echo "    git commit -S -m 'feat(m17): QEMU boot demo NLNet evidence'"
             echo "    git tag -s v0.1.0-asl-m17"
             echo "    git push origin main --tags"
             ;;

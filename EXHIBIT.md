@@ -1,9 +1,7 @@
-# EXHIBIT — ASL-seL4 mKernel NLNet Evidence Package
 
 Copyright (c) 2026 Edison Lepiten / AIEONYX
 SPDX-License-Identifier: Apache-2.0
 
-This document is the NLNet grant evidence package for the ASL-seL4 mKernel.
 Updated at each milestone completion.
 
 ## §1 Project Identity
@@ -44,8 +42,6 @@ Updated at each milestone completion.
 - A8 AUDIT-001: CLEAR (resolved M12)
 - A9 KNOWN-BUG-002/003: CLEAR (resolved M13)
 
-### arXiv Abstract Status
-Slot: 7680982 | Endorsement code: UZIQVF
 Target: cs.AR — Computer Architecture
 Title: ASL-seL4: A Formally Isolated Sovereign Microkernel with
        Capability-Flow Static Analysis and TriSec Identity Binding

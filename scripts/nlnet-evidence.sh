@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # ============================================================
-# ASL-M17 — NLNet Evidence Package Builder
 # AIEONYX Sovereign Linux · Apache 2.0
 # Produces: nlnet-evidence-m17.tar.gz (GPG-signed)
 # ============================================================
@@ -13,7 +12,6 @@ ARCHIVE="$ROOT/nlnet-evidence-m17.tar.gz"
 GPG_KEY="B4C8548260DB40E1"
 
 GREEN='\033[0;32m'; CYAN='\033[0;36m'; NC='\033[0m'
-info() { echo -e "${CYAN}[NLNet]${NC} $*"; }
 ok()   { echo -e "${GREEN}[OK]${NC}   $*"; }
 
 [[ -d "$EVIDENCE_DIR" ]] || {
@@ -21,7 +19,6 @@ ok()   { echo -e "${GREEN}[OK]${NC}   $*"; }
     exit 1
 }
 
-info "Building NLNet evidence package…"
 
 # Add git metadata
 git -C "$ROOT" log --oneline -10 > "$EVIDENCE_DIR/GIT-LOG.txt" 2>/dev/null || true
@@ -71,11 +68,8 @@ else
 fi
 
 echo ""
-ok "NLNet evidence package ready:"
 echo "  $ARCHIVE"
 [[ -f "${ARCHIVE}.asc" ]] && echo "  ${ARCHIVE}.asc"
 echo ""
-echo "Submit to NLNet alongside:"
 echo "  - GitHub repo: https://github.com/aieonyx/asl"
 echo "  - Tag: v0.1.0-asl-m17 (GPG-signed)"
-echo "  - arXiv: slot 7680982 · UZIQVF · cs.AR"

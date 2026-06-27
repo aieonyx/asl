@@ -4,7 +4,6 @@
 # AIEONYX Sovereign Linux — Apache 2.0
 # GPG: B4C8548260DB40E1
 # Milestone: v0.1.0-asl-m15
-# NLNet anchor: August 1 2026
 # ============================================================
 set -euo pipefail
 
@@ -146,7 +145,6 @@ fetch_kernel() {
         warn "No kernel binary found — generating stub for ISO structure test"
         # Stub allows ISO structure / GRUB config verification without full kernel
         echo "PHOENIX_LITE_KERNEL_STUB_v010" > "$kern"
-        warn "Replace with real vmlinuz before NLNet submission"
     fi
     cp "$kern" "$ISO_DIR/boot/vmlinuz"
 }
@@ -174,8 +172,6 @@ PDs         : 10 (GENESIS · ARPi-Broker · DataTier-Enforcer ·
               Phoenix-Watchdog)
 Tests       : 337 (313 Track A + 24 Kani) / 0 failures
 Sovereign   : axon_main() → 0x4153
-NLNet       : Onyxia grant — August 1 2026
-arXiv       : slot 7680982 · UZIQVF · cs.AR
 Built       : $(date -u +%Y-%m-%dT%H:%M:%SZ)
 Doctrine    : S4+i · 3P · Post Doctrine (5-check gate active)
 EOF
@@ -314,7 +310,6 @@ main() {
     echo "          git tag -s v0.1.0-asl-m15 -m 'ASL-M15 Phoenix Lite ISO first boot'"
     echo "          git push origin main --tags"
     echo ""
-    echo "  NLNet : ISO + QEMU log = evidence anchor for August 1 deadline"
     echo ""
 }
 
