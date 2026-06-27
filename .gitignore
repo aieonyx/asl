@@ -17,3 +17,6 @@ CMakeFiles/
 *.cmake
 kernel/
 nlnet-evidence-m17/
+nlnet-evidence-*/
+*.tar.gz
+*.tar.gz.asc
