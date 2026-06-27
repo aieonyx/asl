@@ -1,6 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
+    "asl-crypto-bridge",
     "asl-common",
     "asl-genesis",
     "asl-arpi",
@@ -38,3 +39,7 @@ strip = false
 
 [profile.dev]
 panic = "abort"
+
+[workspace.lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(kani)'] }
+

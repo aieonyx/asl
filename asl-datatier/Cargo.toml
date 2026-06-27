@@ -1,10 +1,19 @@
 [package]
 name = "asl-datatier"
-version.workspace = true
-edition.workspace = true
-authors.workspace = true
-license.workspace = true
-description = "DataTier-Enforcer PD — Critical/Personal/Noise boundary enforcement at kernel level"
+version = "0.1.0"
+edition = "2021"
+authors = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
+license = "Apache-2.0"
+description = "DataTier-Enforcer PD — three-tier sovereign data enforcement with Critical tier encryption"
 
 [dependencies]
-asl-common = { path = "../asl-common" }
+asl-crypto-bridge = { path = "../asl-crypto-bridge" }
+zeroize = { version = "1.7", default-features = false, features = ["alloc"] }
+
+[features]
+default = []
+kani = ["asl-crypto-bridge/kani"]
+std = ["asl-crypto-bridge/std"]
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(kani)'] }

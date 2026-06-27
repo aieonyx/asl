@@ -1,0 +1,21 @@
+[package]
+name = "asl-crypto-bridge"
+version = "0.1.0"
+edition = "2021"
+authors = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
+license = "Apache-2.0"
+description = "Sovereign crypto bridge: AES-256-GCM + Argon2 KDF for DataTier-Enforcer PD"
+
+[dependencies]
+aes-gcm = { version = "0.10", default-features = false, features = ["aes", "alloc"] }
+argon2 = { version = "0.5", default-features = false, features = ["alloc"] }
+rand_core = { version = "0.6", default-features = false }
+zeroize = { version = "1.7", default-features = false, features = ["alloc"] }
+
+[features]
+default = []
+kani = []
+std = []
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(kani)'] }
