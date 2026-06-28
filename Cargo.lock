@@ -165,6 +165,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "asl-multinode"
+version = "0.1.0"
+dependencies = [
+ "asl-common",
+]
+
+[[package]]
 name = "asl-network-routing"
 version = "0.1.0"
 dependencies = [
