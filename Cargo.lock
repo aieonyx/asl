@@ -107,6 +107,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "asl-haniel"
+version = "0.1.0"
+dependencies = [
+ "asl-common",
+]
+
+[[package]]
 name = "asl-inverted-admin"
 version = "0.1.0"
 dependencies = [
@@ -120,7 +127,9 @@ dependencies = [
  "asl-arpi",
  "asl-axon-bridge",
  "asl-common",
+ "asl-crypto-bridge",
  "asl-datatier",
+ "asl-haniel",
  "asl-inverted-admin",
  "asl-soma",
  "asl-trustgraph",

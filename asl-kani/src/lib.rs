@@ -31,3 +31,4 @@ pub mod phoenix_proofs;
 pub mod repl_proofs;
 pub mod demo_proofs;
 pub mod crypto_proofs;
+pub mod haniel_proofs;

@@ -10,6 +10,8 @@ description = "ASL-seL4 mKernel — Kani formal verification harnesses"
 asl-common      = { path = "../asl-common" }
 asl-arpi        = { path = "../asl-arpi" }
 asl-datatier    = { path = "../asl-datatier" }
+asl-haniel = { path = "../asl-haniel" }
+asl-crypto-bridge = { path = "../asl-crypto-bridge" }
 asl-inverted-admin = { path = "../asl-inverted-admin" }
 asl-trustgraph  = { path = "../asl-trustgraph" }
 asl-soma        = { path = "../asl-soma" }
