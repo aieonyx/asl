@@ -1,0 +1,18 @@
+[package]
+name = "asl-arpi-ipc"
+version = "0.1.0"
+edition = "2021"
+authors = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
+license = "Apache-2.0"
+description = "ARPi Live IPC PD — full 5-layer sovereign auth over seL4 IPC"
+
+[dependencies]
+asl-common = { path = "../asl-common" }
+
+[features]
+default = []
+kani = []
+std = []
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(kani)'] }
