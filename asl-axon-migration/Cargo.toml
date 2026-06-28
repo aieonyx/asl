@@ -1,0 +1,17 @@
+[package]
+name = "asl-axon-migration"
+version = "0.1.0"
+edition = "2021"
+authors = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
+license = "Apache-2.0"
+description = "M22: AXON migration — ARPi-Broker PD source migrated to .ax, compiles to seL4 aarch64 ELF"
+
+[dependencies]
+asl-common = { path = "../asl-common" }
+
+[features]
+default = []
+std = []
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(kani)'] }

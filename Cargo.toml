@@ -1,6 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
+    "asl-axon-migration",
     "asl-arpi-ipc",
     "asl-awp",
     "asl-haniel",
