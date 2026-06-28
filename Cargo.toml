@@ -1,6 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
+    "asl-awp",
     "asl-haniel",
     "asl-crypto-bridge",
     "asl-common",

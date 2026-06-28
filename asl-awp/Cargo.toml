@@ -1,0 +1,18 @@
+[package]
+name = "asl-awp"
+version = "0.1.0"
+edition = "2021"
+authors = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
+license = "Apache-2.0"
+description = "AWP Protocol PD — AIEONYX Web Protocol live inside seL4"
+
+[dependencies]
+asl-common = { path = "../asl-common" }
+
+[features]
+default = []
+kani = []
+std = []
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(kani)'] }
