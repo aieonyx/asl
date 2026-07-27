@@ -1,0 +1,25 @@
+# Copyright (c) 2026 Edison Lepiten / AIEONYX
+# SPDX-License-Identifier: Apache-2.0
+# PL-74 M29: HANIEL Canvas Protection Domain
+
+[package]
+name        = "asl-haniel-canvas-pd"
+version     = "0.1.0"
+edition     = "2021"
+authors     = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
+license     = "Apache-2.0"
+description = "HANIEL-Canvas PD — sovereign compositor as seL4 PD with GPU capability"
+
+[dependencies]
+asl-common    = { path = "../../asl-common" }
+asl-arpi-ipc  = { path = "../../asl-arpi-ipc" }
+asl-haniel    = { path = "../../asl-haniel" }
+asl-onyxia-pd = { path = "../asl-onyxia-pd" }
+
+[features]
+default = []
+kani    = []
+std     = ["asl-haniel/std"]
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(kani)'] }

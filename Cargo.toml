@@ -26,6 +26,9 @@ members = [
     "pds/asl-shell-pd",
     "pds/asl-edisondb-pd",
     "pds/asl-onyxia-pd",
+    "pds/asl-arpi-broker-live",
+    "pds/asl-axon-exec-pd",
+    "pds/asl-haniel-canvas-pd",
 ]
 
 [workspace.package]
