@@ -1,0 +1,26 @@
+# Copyright (c) 2026 Edison Lepiten / AIEONYX
+# SPDX-License-Identifier: Apache-2.0
+# PL-73 M28: AXON-Exec Protection Domain
+# .ax scripts execute in isolated seL4 PD via AXON-Bridge
+
+[package]
+name        = "asl-axon-exec-pd"
+version     = "0.1.0"
+edition     = "2021"
+authors     = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
+license     = "Apache-2.0"
+description = "AXON-Exec PD — sovereign .ax scripts in isolated seL4 Protection Domain"
+
+[dependencies]
+asl-common      = { path = "../../asl-common" }
+asl-arpi-ipc    = { path = "../../asl-arpi-ipc" }
+asl-axon-bridge = { path = "../../asl-axon-bridge" }
+asl-shell-pd    = { path = "../asl-shell-pd" }
+
+[features]
+default = []
+kani    = []
+std     = []
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(kani)'] }

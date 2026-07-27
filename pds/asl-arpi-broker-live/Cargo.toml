@@ -1,0 +1,26 @@
+# Copyright (c) 2026 Edison Lepiten / AIEONYX
+# SPDX-License-Identifier: Apache-2.0
+# PL-72 M27: ARPi-Broker Live Inter-PD IPC
+
+[package]
+name        = "asl-arpi-broker-live"
+version     = "0.1.0"
+edition     = "2021"
+authors     = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
+license     = "Apache-2.0"
+description = "ARPi-Broker Live — wired inter-PD IPC through ARPi 5-layer auth"
+
+[dependencies]
+asl-common    = { path = "../../asl-common" }
+asl-arpi-ipc  = { path = "../../asl-arpi-ipc" }
+asl-shell-pd  = { path = "../asl-shell-pd" }
+asl-edisondb-pd = { path = "../asl-edisondb-pd" }
+asl-onyxia-pd = { path = "../asl-onyxia-pd" }
+
+[features]
+default = []
+kani    = []
+std     = []
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(kani)'] }
