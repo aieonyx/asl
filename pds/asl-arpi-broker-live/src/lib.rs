@@ -304,7 +304,7 @@ impl PathB {
             0xB030, // MSG_RENDER
             b"awp://aieonyx",
             0,
-                    )?;
+        )?;
 
         assert!(msg.header_valid(), "ARPi header must be valid");
 
@@ -351,7 +351,7 @@ impl PathC {
             0xC001, // MSG_EDB_READ
             b"entry_count",
             0,
-                    )?;
+        )?;
 
         assert!(msg.header_valid(), "ARPi header must be valid");
 
@@ -435,8 +435,9 @@ mod tests {
     fn test_path_a_high_anomaly_rejected() {
         let mut broker = ArpiBrokerLive::new();
         // Anomaly score 90 > threshold 75 — should be rejected at layer 5
+        // Anomaly score 90 > threshold 75 — rejected at Layer 5
         let result = broker.route(0x40, 0x41, SCHEMA_EDB_WRITE,
-            0xC002, b"put x 42");
+            0xC002, b"put x 42", 90);
         assert!(result.is_err());
         assert_eq!(broker.fail_count, 1);
     }
