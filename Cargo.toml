@@ -29,6 +29,7 @@ members = [
     "pds/asl-arpi-broker-live",
     "pds/asl-axon-exec-pd",
     "pds/asl-haniel-canvas-pd",
+    "pds/asl-sovereign-boot-proof",
 ]
 
 [workspace.package]

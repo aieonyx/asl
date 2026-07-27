@@ -1,0 +1,33 @@
+# Copyright (c) 2026 Edison Lepiten / AIEONYX
+# SPDX-License-Identifier: Apache-2.0
+# PL-75 M30: Sovereign Boot Proof — full stack integration
+# aiXos Phoenix v2.0 finish line
+
+[package]
+name        = "asl-sovereign-boot-proof"
+version     = "2.0.0"
+edition     = "2021"
+authors     = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
+license     = "Apache-2.0"
+description = "Sovereign Boot Proof — full seL4 stack, all PDs wired — aiXos Phoenix v2.0"
+
+[dependencies]
+asl-common           = { path = "../../asl-common" }
+asl-arpi-ipc         = { path = "../../asl-arpi-ipc" }
+asl-phoenix-desktop  = { path = "../asl-phoenix-desktop" }
+asl-shell-pd         = { path = "../asl-shell-pd" }
+asl-edisondb-pd      = { path = "../asl-edisondb-pd" }
+asl-onyxia-pd        = { path = "../asl-onyxia-pd" }
+asl-arpi-broker-live = { path = "../asl-arpi-broker-live" }
+asl-axon-exec-pd     = { path = "../asl-axon-exec-pd" }
+asl-haniel-canvas-pd = { path = "../asl-haniel-canvas-pd" }
+
+[features]
+default = []
+kani    = []
+std     = [
+    "asl-haniel-canvas-pd/std",
+]
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(kani)'] }
