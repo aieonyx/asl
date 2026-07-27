@@ -415,7 +415,7 @@ mod tests {
     fn test_path_a_arpi_header_valid() {
         let mut broker = ArpiBrokerLive::new();
         let msg = broker.route(0x40, 0x41, SCHEMA_EDB_WRITE,
-            0xC002, b"put x 42".unwrap();
+            0xC002, b"put x 42", 0).unwrap();
         assert!(msg.header_valid());
         assert_eq!(msg.src_pd, 0x40);
         assert_eq!(msg.dst_pd, 0x41);
