@@ -475,7 +475,7 @@ mod tests {
     fn test_path_b_header_carries_src_dst() {
         let mut broker = ArpiBrokerLive::new();
         let msg = broker.route(0x42, 0x20, SCHEMA_RENDER,
-            0xB030, b"awp://aieonyx".unwrap();
+            0xB030, b"awp://aieonyx", 0).unwrap();
         assert!(msg.header_valid());
         assert_eq!(msg.src_pd, 0x42); // Onyxia-PD
         assert_eq!(msg.dst_pd, 0x20); // HANIEL-PD
