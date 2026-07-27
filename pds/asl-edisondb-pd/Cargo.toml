@@ -1,0 +1,24 @@
+# Copyright (c) 2026 Edison Lepiten / AIEONYX
+# SPDX-License-Identifier: Apache-2.0
+# PL-71 M26: EdisonDB Protection Domain
+
+[package]
+name        = "asl-edisondb-pd"
+version     = "0.1.0"
+edition     = "2021"
+authors     = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
+license     = "Apache-2.0"
+description = "EdisonDB-PD — sovereign database as isolated seL4 Protection Domain"
+
+[dependencies]
+asl-common   = { path = "../../asl-common" }
+asl-arpi-ipc = { path = "../../asl-arpi-ipc" }
+asl-datatier = { path = "../../asl-datatier" }
+
+[features]
+default = []
+kani    = []
+std     = []
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(kani)'] }

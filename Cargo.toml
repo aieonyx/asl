@@ -23,6 +23,9 @@ members = [
     "asl-microkit",
     "asl-kani",
     "pds/asl-phoenix-desktop",
+    "pds/asl-shell-pd",
+    "pds/asl-edisondb-pd",
+    "pds/asl-onyxia-pd",
 ]
 
 [workspace.package]
