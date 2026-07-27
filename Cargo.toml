@@ -22,6 +22,7 @@ members = [
     "asl-soma",
     "asl-microkit",
     "asl-kani",
+    "pds/asl-phoenix-desktop",
 ]
 
 [workspace.package]
