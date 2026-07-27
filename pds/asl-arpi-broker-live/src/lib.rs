@@ -184,8 +184,11 @@ impl ArpiBrokerLive {
         self.bind_count += 1;
         self.seq = self.seq.wrapping_add(1); // monotonic, never reuses
 
-        let session   = sovereign_session(src_pd, dst_pd);
-        let schema_t  = asl_arpi_ipc::validate_schema(schema)?;
+        let session = sovereign_session(src_pd, dst_pd);
+        let schema_t = match asl_arpi_ipc::validate_schema(schema) {
+            Ok(s) => s,
+            Err(e) => { self.fail_count += 1; return Err(e); }
+        };
         let cap_token = sovereign_cap_token(self.seq, src_pd, schema_t);
 
         match self.binder.bind(schema, &session, cap_token, anomaly) {
