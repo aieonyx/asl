@@ -1,47 +1,29 @@
 // Copyright (c) 2026 Edison Lepiten / AIEONYX
 // SPDX-License-Identifier: Apache-2.0
-// ASL seL4 PD: GENESIS
+// GENESIS — Microkit PD
 #![no_std]
 #![no_main]
 
-// seL4 IPC buffer — Microkit requirement, every PD
-#[repr(C, align(512))]
-pub struct SeL4IpcBuffer {
-    pub words: [usize; 64],
-}
+// libmicrokit.a provides: _start, microkit_name, microkit_passive
+// We must provide: __sel4_ipc_buffer_obj, init(), notified()
 
 #[no_mangle]
-#[used]
-pub static mut __sel4_ipc_buffer_obj: SeL4IpcBuffer = SeL4IpcBuffer { words: [0usize; 64] };
+#[link_section = ".bss"]
+pub static mut __sel4_ipc_buffer_obj: [u8; 4096] = [0u8; 4096];
 
-// Microkit PD name — must match protection_domain name= in .system file exactly
-#[no_mangle]
-#[link_section = ".rodata"]
-pub static microkit_name: [u8; 8] = *b"GENESIS\0";
-// Microkit passive flag — false = active PD (has its own thread)
-#[no_mangle]
-#[link_section = ".data"]
-pub static microkit_passive: bool = false;
-
-
-use core::fmt::Write;
 const UART: *mut u8 = 0x09000000 as *mut u8;
 const SOVEREIGN_PROOF: u32 = 0x4153;
 
-struct Uart;
-impl Write for Uart {
-    fn write_str(&mut self, s: &str) -> core::fmt::Result {
-        for b in s.bytes() { unsafe { UART.write_volatile(b); } }
-        Ok(())
+fn uart_write(s: &[u8]) {
+    for &b in s {
+        unsafe { UART.write_volatile(b); }
     }
 }
 
 #[no_mangle]
 pub extern "C" fn init() {
-    let mut w = Uart;
-    let _ = core::writeln!(w, "[GENESIS] seL4 boot — proof=0x{:X}", SOVEREIGN_PROOF);
+    uart_write(b"[GENESIS] seL4 proof=0x4153\r\n");
     assert_eq!(SOVEREIGN_PROOF, 0x4153);
-    let _ = core::writeln!(w, "[GENESIS] init complete");
 }
 
 #[no_mangle]

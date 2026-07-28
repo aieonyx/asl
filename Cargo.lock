@@ -93,6 +93,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "asl-axon-bridge-bin"
+version = "2.0.0"
+
+[[package]]
 name = "asl-axon-exec-pd"
 version = "0.1.0"
 dependencies = [
@@ -200,6 +204,10 @@ version = "0.1.0"
 dependencies = [
  "asl-common",
 ]
+
+[[package]]
+name = "asl-inverted-admin-bin"
+version = "2.0.0"
 
 [[package]]
 name = "asl-kani"
