@@ -1,0 +1,22 @@
+# Copyright (c) 2026 Edison Lepiten / AIEONYX
+# SPDX-License-Identifier: Apache-2.0
+# PL-76: asl-haniel-canvas-pd-bin — seL4 PD binary
+
+[package]
+name    = "asl-haniel-canvas-pd-bin"
+version = "2.0.0"
+edition = "2021"
+authors = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
+license = "Apache-2.0"
+
+[[bin]]
+name = "asl-haniel-canvas-pd-bin"
+path = "src/main.rs"
+
+[profile.release]
+panic = "abort"
+opt-level = "s"
+lto = true
+
+[lints.rust]
+unexpected_cfgs = {{ level = "allow", check-cfg = ['cfg(kani)'] }}

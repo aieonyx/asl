@@ -30,6 +30,12 @@ members = [
     "pds/asl-axon-exec-pd",
     "pds/asl-haniel-canvas-pd",
     "pds/asl-sovereign-boot-proof",
+    "pds/asl-phoenix-desktop-pd",
+    "pds/asl-shell-pd-bin",
+    "pds/asl-edisondb-pd-bin",
+    "pds/asl-onyxia-pd-bin",
+    "pds/asl-axon-exec-pd-bin",
+    "pds/asl-haniel-canvas-pd-bin",
 ]
 
 [workspace.package]
