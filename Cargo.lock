@@ -57,6 +57,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "asl-arpi-broker"
+version = "2.0.0"
+
+[[package]]
+name = "asl-arpi-broker-live"
+version = "0.1.0"
+dependencies = [
+ "asl-arpi-ipc",
+ "asl-common",
+ "asl-edisondb-pd",
+ "asl-onyxia-pd",
+ "asl-shell-pd",
+]
+
+[[package]]
 name = "asl-arpi-ipc"
 version = "0.1.0"
 dependencies = [
@@ -76,6 +91,20 @@ version = "0.1.0"
 dependencies = [
  "asl-common",
 ]
+
+[[package]]
+name = "asl-axon-exec-pd"
+version = "0.1.0"
+dependencies = [
+ "asl-arpi-ipc",
+ "asl-axon-bridge",
+ "asl-common",
+ "asl-shell-pd",
+]
+
+[[package]]
+name = "asl-axon-exec-pd-bin"
+version = "2.0.0"
 
 [[package]]
 name = "asl-axon-migration"
@@ -107,6 +136,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "asl-datatier-enforcer"
+version = "2.0.0"
+
+[[package]]
+name = "asl-edisondb-pd"
+version = "0.1.0"
+dependencies = [
+ "asl-arpi-ipc",
+ "asl-common",
+ "asl-datatier",
+]
+
+[[package]]
+name = "asl-edisondb-pd-bin"
+version = "2.0.0"
+
+[[package]]
 name = "asl-firewall-cap"
 version = "0.1.0"
 dependencies = [
@@ -133,6 +179,20 @@ version = "0.1.0"
 dependencies = [
  "asl-common",
 ]
+
+[[package]]
+name = "asl-haniel-canvas-pd"
+version = "0.1.0"
+dependencies = [
+ "asl-arpi-ipc",
+ "asl-common",
+ "asl-haniel",
+ "asl-onyxia-pd",
+]
+
+[[package]]
+name = "asl-haniel-canvas-pd-bin"
+version = "2.0.0"
 
 [[package]]
 name = "asl-inverted-admin"
@@ -179,6 +239,43 @@ dependencies = [
 ]
 
 [[package]]
+name = "asl-onyxia-pd"
+version = "0.1.0"
+dependencies = [
+ "asl-arpi-ipc",
+ "asl-common",
+ "asl-haniel",
+]
+
+[[package]]
+name = "asl-onyxia-pd-bin"
+version = "2.0.0"
+
+[[package]]
+name = "asl-phoenix-console"
+version = "2.0.0"
+
+[[package]]
+name = "asl-phoenix-desktop"
+version = "0.1.0"
+dependencies = [
+ "asl-common",
+ "asl-haniel",
+]
+
+[[package]]
+name = "asl-phoenix-desktop-pd"
+version = "2.0.0"
+
+[[package]]
+name = "asl-phoenix-init"
+version = "2.0.0"
+
+[[package]]
+name = "asl-phoenix-watchdog"
+version = "2.0.0"
+
+[[package]]
 name = "asl-power-mgmt"
 version = "0.1.0"
 dependencies = [
@@ -186,10 +283,41 @@ dependencies = [
 ]
 
 [[package]]
+name = "asl-shell-pd"
+version = "0.1.0"
+dependencies = [
+ "asl-arpi-ipc",
+ "asl-common",
+]
+
+[[package]]
+name = "asl-shell-pd-bin"
+version = "2.0.0"
+
+[[package]]
 name = "asl-soma"
 version = "0.1.0"
 dependencies = [
  "asl-common",
+]
+
+[[package]]
+name = "asl-soma-identity"
+version = "2.0.0"
+
+[[package]]
+name = "asl-sovereign-boot-proof"
+version = "2.0.0"
+dependencies = [
+ "asl-arpi-broker-live",
+ "asl-arpi-ipc",
+ "asl-axon-exec-pd",
+ "asl-common",
+ "asl-edisondb-pd",
+ "asl-haniel-canvas-pd",
+ "asl-onyxia-pd",
+ "asl-phoenix-desktop",
+ "asl-shell-pd",
 ]
 
 [[package]]
@@ -205,6 +333,10 @@ version = "0.1.0"
 dependencies = [
  "asl-common",
 ]
+
+[[package]]
+name = "asl-trustgraph-gate"
+version = "2.0.0"
 
 [[package]]
 name = "base64ct"

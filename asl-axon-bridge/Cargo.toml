@@ -8,3 +8,7 @@ description = "AXON-Bridge PD — boundary between AXON userspace and ASL-seL4 m
 
 [dependencies]
 asl-common = { path = "../asl-common" }
+
+[[bin]]
+name = "asl-axon-bridge"
+path = "src/main.rs"

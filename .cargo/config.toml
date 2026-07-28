@@ -1,11 +1,9 @@
-# Copyright (c) 2026 Edison Lepiten / AIEONYX
-# SPDX-License-Identifier: Apache-2.0
-
 [target.aarch64-unknown-none]
-linker = "aarch64-linux-gnu-gcc"
 rustflags = [
-    "-C", "link-arg=-nostartfiles",
+    "-C", "link-arg=-T/home/edisonbl/asl/microkit.ld",
+    "-C", "link-arg=--undefined=microkit_name",
+    "-C", "link-arg=--undefined=__sel4_ipc_buffer_obj",
+    "-C", "link-arg=--undefined=microkit_passive",
+    "-C", "link-arg=--undefined=init",
+    "-C", "link-arg=--undefined=notified",
 ]
-
-[target.x86_64-unknown-linux-gnu]
-rustflags = []

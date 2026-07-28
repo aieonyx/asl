@@ -38,12 +38,12 @@ echo "[BUILD] Step 1: Building all PD binaries..."
 
 CORE_PDS=(
     "asl-genesis"
-    "asl-arpi-broker"
-    "asl-datatier-enforcer"
-    "asl-trustgraph-gate"
+    "asl-arpi-broker-bin"
+    "asl-datatier-enforcer-bin"
+    "asl-trustgraph-gate-bin"
     "asl-inverted-admin"
     "asl-axon-bridge"
-    "asl-soma-identity"
+    "asl-soma-identity-bin"
 )
 
 PHOENIX_PDS=(
@@ -65,6 +65,7 @@ build_pd() {
     local pkg="$1"
     echo "  Building: $pkg"
     cargo build \
+        --target-dir "$SCRIPT_DIR/target" \
         --manifest-path "$pkg/Cargo.toml" \
         --target "$TARGET" \
         --release \
@@ -114,7 +115,6 @@ else
     fi
 
     "$MICROKIT" phoenix-v2.system \
-        --sdk "$MICROKIT_SDK" \
         --board qemu_virt_aarch64 \
         --config release \
         -o "$BUILD_DIR/phoenix-v2.img" \

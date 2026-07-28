@@ -1,6 +1,6 @@
 // Copyright (c) 2026 Edison Lepiten / AIEONYX
 // SPDX-License-Identifier: Apache-2.0
-// ASL seL4 PD: EdisonDB-PD
+// ASL seL4 PD: DataTier-Enforcer
 #![no_std]
 #![no_main]
 
@@ -17,7 +17,7 @@ pub static mut __sel4_ipc_buffer_obj: SeL4IpcBuffer = SeL4IpcBuffer { words: [0u
 // Microkit PD name — must match protection_domain name= in .system file exactly
 #[no_mangle]
 #[link_section = ".rodata"]
-pub static microkit_name: [u8; 12] = *b"EdisonDB-PD\0";
+pub static microkit_name: [u8; 18] = *b"DataTier-Enforcer\0";
 // Microkit passive flag — false = active PD (has its own thread)
 #[no_mangle]
 #[link_section = ".data"]
@@ -39,9 +39,9 @@ impl Write for Uart {
 #[no_mangle]
 pub extern "C" fn init() {
     let mut w = Uart;
-    let _ = core::writeln!(w, "[EdisonDB-PD] seL4 boot — proof=0x{:X}", SOVEREIGN_PROOF);
+    let _ = core::writeln!(w, "[DataTier-Enforcer] seL4 boot — proof=0x{:X}", SOVEREIGN_PROOF);
     assert_eq!(SOVEREIGN_PROOF, 0x4153);
-    let _ = core::writeln!(w, "[EdisonDB-PD] init complete");
+    let _ = core::writeln!(w, "[DataTier-Enforcer] init complete");
 }
 
 #[no_mangle]

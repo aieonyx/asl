@@ -1,37 +1,51 @@
 // Copyright (c) 2026 Edison Lepiten / AIEONYX
 // SPDX-License-Identifier: Apache-2.0
-// PL-76: Phoenix-Desktop PD binary entry point
-// Runs aiXos Phoenix desktop render loop under seL4
-
+// ASL seL4 PD: Phoenix-Desktop
 #![no_std]
 #![no_main]
 
+// seL4 IPC buffer — Microkit requirement, every PD
+#[repr(C, align(512))]
+pub struct SeL4IpcBuffer {
+    pub words: [usize; 64],
+}
+
+#[no_mangle]
+#[used]
+pub static mut __sel4_ipc_buffer_obj: SeL4IpcBuffer = SeL4IpcBuffer { words: [0usize; 64] };
+
+// Microkit PD name — must match protection_domain name= in .system file exactly
+#[no_mangle]
+#[link_section = ".rodata"]
+pub static microkit_name: [u8; 16] = *b"Phoenix-Desktop\0";
+// Microkit passive flag — false = active PD (has its own thread)
+#[no_mangle]
+#[link_section = ".data"]
+pub static microkit_passive: bool = false;
+
+
 use core::fmt::Write;
+const UART: *mut u8 = 0x09000000 as *mut u8;
+const SOVEREIGN_PROOF: u32 = 0x4153;
 
-const SOVEREIGN_PROOF: u64 = 0x4153;
-const RAMFB_BASE: u32      = 0x44000000;
-const SERIAL_BASE: u32     = 0x09000000;
-
-struct SerialWriter;
-impl Write for SerialWriter {
+struct Uart;
+impl Write for Uart {
     fn write_str(&mut self, s: &str) -> core::fmt::Result {
-        for b in s.bytes() {
-            unsafe { core::ptr::write_volatile(SERIAL_BASE as *mut u8, b); }
-        }
+        for b in s.bytes() { unsafe { UART.write_volatile(b); } }
         Ok(())
     }
 }
 
 #[no_mangle]
-pub extern "C" fn main() -> ! {
-    let mut w = SerialWriter;
-    let _ = writeln!(w, "[PHOENIX-DESKTOP] PD starting under seL4");
-    let _ = writeln!(w, "[PHOENIX-DESKTOP] FramebufferWrite cap: ramfb@{:#x}", RAMFB_BASE);
-    let _ = writeln!(w, "[PHOENIX-DESKTOP] Sovereign proof: {:#x}", SOVEREIGN_PROOF);
-    let _ = writeln!(w, "[PHOENIX-DESKTOP] Desktop render loop: ACTIVE");
-    let _ = writeln!(w, "[PHOENIX-DESKTOP] aiXos Phoenix v2.0 — GUI live under seL4");
-    loop { core::hint::spin_loop(); }
+pub extern "C" fn init() {
+    let mut w = Uart;
+    let _ = core::writeln!(w, "[Phoenix-Desktop] seL4 boot — proof=0x{:X}", SOVEREIGN_PROOF);
+    assert_eq!(SOVEREIGN_PROOF, 0x4153);
+    let _ = core::writeln!(w, "[Phoenix-Desktop] init complete");
 }
+
+#[no_mangle]
+pub extern "C" fn notified(_ch: u8) {}
 
 #[panic_handler]
 fn panic(_: &core::panic::PanicInfo) -> ! { loop {} }

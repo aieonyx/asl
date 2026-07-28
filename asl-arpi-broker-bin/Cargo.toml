@@ -1,5 +1,5 @@
 [package]
-name    = "asl-edisondb-pd-bin"
+name    = "asl-arpi-broker"
 version = "2.0.0"
 edition = "2021"
 authors = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
@@ -7,7 +7,7 @@ license = "Apache-2.0"
 build   = "build.rs"
 
 [[bin]]
-name = "asl-edisondb-pd-bin"
+name = "asl-arpi-broker"
 path = "src/main.rs"
 
 [profile.release]

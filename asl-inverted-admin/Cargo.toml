@@ -8,3 +8,7 @@ description = "Inverted-Admin PD — no ambient authority, dual-key admin enforc
 
 [dependencies]
 asl-common = { path = "../asl-common" }
+
+[[bin]]
+name = "asl-inverted-admin"
+path = "src/main.rs"

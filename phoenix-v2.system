@@ -48,7 +48,7 @@
                      priority="254"
                      budget="1000"
                      period="1000">
-    <program_image path="pds/asl-genesis/target/aarch64-unknown-none/release/asl-genesis"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-genesis"/>
     <map mr="serial"               vaddr="0x09000000" perms="rw" cached="false"/>
     <map mr="sovereign_proof_frame" vaddr="0x48000000" perms="rw" cached="false"/>
   </protection_domain>
@@ -57,7 +57,7 @@
                      priority="253"
                      budget="800"
                      period="1000">
-    <program_image path="pds/asl-arpi-broker/target/aarch64-unknown-none/release/asl-arpi-broker"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-arpi-broker"/>
     <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
   </protection_domain>
 
@@ -65,7 +65,7 @@
                      priority="252"
                      budget="600"
                      period="1000">
-    <program_image path="pds/asl-datatier-enforcer/target/aarch64-unknown-none/release/asl-datatier-enforcer"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-datatier-enforcer"/>
     <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
   </protection_domain>
 
@@ -73,7 +73,7 @@
                      priority="251"
                      budget="600"
                      period="1000">
-    <program_image path="pds/asl-trustgraph-gate/target/aarch64-unknown-none/release/asl-trustgraph-gate"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-trustgraph-gate"/>
     <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
   </protection_domain>
 
@@ -81,7 +81,7 @@
                      priority="250"
                      budget="500"
                      period="1000">
-    <program_image path="pds/asl-inverted-admin/target/aarch64-unknown-none/release/asl-inverted-admin"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-inverted-admin"/>
     <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
   </protection_domain>
 
@@ -89,7 +89,7 @@
                      priority="249"
                      budget="800"
                      period="1000">
-    <program_image path="pds/asl-axon-bridge/target/aarch64-unknown-none/release/asl-axon-bridge"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-axon-bridge"/>
     <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
   </protection_domain>
 
@@ -97,7 +97,7 @@
                      priority="248"
                      budget="400"
                      period="1000">
-    <program_image path="pds/asl-soma-identity/target/aarch64-unknown-none/release/asl-soma-identity"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-soma-identity"/>
     <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
   </protection_domain>
 
@@ -109,7 +109,7 @@
                      priority="247"
                      budget="1000"
                      period="1000">
-    <program_image path="pds/asl-phoenix-init/target/aarch64-unknown-none/release/asl-phoenix-init"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-phoenix-init"/>
     <map mr="serial"       vaddr="0x09000000" perms="rw" cached="false"/>
     <map mr="phoenix_heap" vaddr="0x4A000000" perms="rw" cached="true"/>
   </protection_domain>
@@ -118,7 +118,7 @@
                      priority="246"
                      budget="500"
                      period="1000">
-    <program_image path="pds/asl-phoenix-console/target/aarch64-unknown-none/release/asl-phoenix-console"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-phoenix-console"/>
     <map mr="serial"       vaddr="0x09000000" perms="rw" cached="false"/>
     <map mr="phoenix_heap" vaddr="0x4A000000" perms="r"  cached="true"/>
   </protection_domain>
@@ -127,7 +127,7 @@
                      priority="245"
                      budget="200"
                      period="1000">
-    <program_image path="pds/asl-phoenix-watchdog/target/aarch64-unknown-none/release/asl-phoenix-watchdog"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-phoenix-watchdog"/>
     <map mr="serial"             vaddr="0x09000000" perms="rw" cached="false"/>
     <map mr="watchdog_registers" vaddr="0x4C000000" perms="rw" cached="false"/>
   </protection_domain>
@@ -141,7 +141,7 @@
                      priority="244"
                      budget="800"
                      period="1000">
-    <program_image path="pds/asl-haniel-canvas-pd-bin/target/aarch64-unknown-none/release/asl-haniel-canvas-pd-bin"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-haniel-canvas-pd-bin"/>
     <map mr="serial"          vaddr="0x09000000" perms="rw" cached="false"/>
     <map mr="gpu_framebuffer" vaddr="0x44000000" perms="rw" cached="false"/>
     <map mr="virtio_gpu"      vaddr="0x0a000000" perms="rw" cached="false"/>
@@ -152,7 +152,7 @@
                      priority="243"
                      budget="1000"
                      period="1000">
-    <program_image path="pds/asl-phoenix-desktop-pd/target/aarch64-unknown-none/release/asl-phoenix-desktop-pd"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-phoenix-desktop-pd"/>
     <map mr="serial"       vaddr="0x09000000" perms="rw" cached="false"/>
     <map mr="phoenix_heap" vaddr="0x4A000000" perms="rw" cached="true"/>
   </protection_domain>
@@ -162,7 +162,7 @@
                      priority="242"
                      budget="600"
                      period="1000">
-    <program_image path="pds/asl-shell-pd-bin/target/aarch64-unknown-none/release/asl-shell-pd-bin"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-shell-pd-bin"/>
     <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
   </protection_domain>
 
@@ -171,7 +171,7 @@
                      priority="241"
                      budget="600"
                      period="1000">
-    <program_image path="pds/asl-edisondb-pd-bin/target/aarch64-unknown-none/release/asl-edisondb-pd-bin"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-edisondb-pd-bin"/>
     <map mr="serial"       vaddr="0x09000000" perms="rw" cached="false"/>
     <map mr="phoenix_heap" vaddr="0x4A000000" perms="rw" cached="true"/>
   </protection_domain>
@@ -181,7 +181,7 @@
                      priority="240"
                      budget="600"
                      period="1000">
-    <program_image path="pds/asl-onyxia-pd-bin/target/aarch64-unknown-none/release/asl-onyxia-pd-bin"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-onyxia-pd-bin"/>
     <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
   </protection_domain>
 
@@ -190,7 +190,7 @@
                      priority="239"
                      budget="400"
                      period="1000">
-    <program_image path="pds/asl-axon-exec-pd-bin/target/aarch64-unknown-none/release/asl-axon-exec-pd-bin"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-axon-exec-pd-bin"/>
     <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
   </protection_domain>
 
