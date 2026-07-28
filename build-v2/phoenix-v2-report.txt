@@ -29,7 +29,7 @@
        <Region name=PD-ELF Phoenix-Watchdog-1 addr=0x6026d000 size=4096>
        <Region name=PD-ELF HANIEL-Canvas-0 addr=0x6026e000 size=556>
        <Region name=PD-ELF HANIEL-Canvas-1 addr=0x6026f000 size=4096>
-       <Region name=PD-ELF Phoenix-Desktop-0 addr=0x60270000 size=556>
+       <Region name=PD-ELF Phoenix-Desktop-0 addr=0x60270000 size=1508>
        <Region name=PD-ELF Phoenix-Desktop-1 addr=0x60271000 size=4096>
        <Region name=PD-ELF Shell-PD-0 addr=0x60272000 size=548>
        <Region name=PD-ELF Shell-PD-1 addr=0x60273000 size=4096>

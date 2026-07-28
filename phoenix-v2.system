@@ -152,7 +152,7 @@
                      priority="243"
                      budget="1000"
                      period="1000">
-    <program_image path="target/aarch64-unknown-none/release/asl-phoenix-desktop-pd"/>
+    <program_image path="/home/edisonbl/aixos/target/aarch64-unknown-none/microkit/aixos-phoenix-pd"/>
     <map mr="serial"       vaddr="0x09000000" perms="rw" cached="false"/>
     <map mr="phoenix_heap" vaddr="0x4A000000" perms="rw" cached="true"/>
   </protection_domain>
