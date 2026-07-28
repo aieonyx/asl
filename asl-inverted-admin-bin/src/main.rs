@@ -1,28 +1,23 @@
 // Copyright (c) 2026 Edison Lepiten / AIEONYX
 // SPDX-License-Identifier: Apache-2.0
-// ASL seL4 PD: INVERTED-ADMIN
+// Inverted-Admin PD — seL4 binary entry point
 #![no_std]
 #![no_main]
 
-// seL4 IPC buffer — Microkit requirement, every PD
 #[repr(C, align(512))]
-pub struct SeL4IpcBuffer {
-    pub words: [usize; 64],
-}
+pub struct SeL4IpcBuffer { pub words: [usize; 64] }
 
 #[no_mangle]
 #[used]
 pub static mut __sel4_ipc_buffer_obj: SeL4IpcBuffer = SeL4IpcBuffer { words: [0usize; 64] };
 
-// Microkit PD name — must match protection_domain name= in .system file exactly
 #[no_mangle]
 #[link_section = ".rodata"]
 pub static microkit_name: [u8; 15] = *b"Inverted-Admin\0";
-// Microkit passive flag — false = active PD (has its own thread)
+
 #[no_mangle]
 #[link_section = ".data"]
 pub static microkit_passive: bool = false;
-
 
 use core::fmt::Write;
 const UART: *mut u8 = 0x09000000 as *mut u8;
@@ -39,9 +34,8 @@ impl Write for Uart {
 #[no_mangle]
 pub extern "C" fn init() {
     let mut w = Uart;
-    let _ = core::writeln!(w, "[INVERTED-ADMIN] seL4 boot — proof=0x{:X}", SOVEREIGN_PROOF);
+    let _ = core::writeln!(w, "[Inverted-Admin] seL4 boot — proof=0x{:X}", SOVEREIGN_PROOF);
     assert_eq!(SOVEREIGN_PROOF, 0x4153);
-    let _ = core::writeln!(w, "[INVERTED-ADMIN] init complete");
 }
 
 #[no_mangle]

@@ -13,6 +13,8 @@ members = [
     "asl-datatier",
     "asl-trustgraph",
     "asl-inverted-admin",
+    "asl-axon-bridge-bin",
+    "asl-inverted-admin-bin",
     "asl-axon-bridge",
     "asl-gpu-cap",
     "asl-power-mgmt",

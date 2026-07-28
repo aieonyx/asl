@@ -41,8 +41,8 @@ CORE_PDS=(
     "asl-arpi-broker-bin"
     "asl-datatier-enforcer-bin"
     "asl-trustgraph-gate-bin"
-    "asl-inverted-admin"
-    "asl-axon-bridge"
+    "asl-inverted-admin-bin"
+    "asl-axon-bridge-bin"
     "asl-soma-identity-bin"
 )
 

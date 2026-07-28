@@ -1,0 +1,13 @@
+[package]
+name    = "asl-axon-bridge-bin"
+version = "2.0.0"
+edition = "2021"
+authors = ["Edison Lepiten <aieonyx.eu@gmail.com>"]
+license = "Apache-2.0"
+
+[[bin]]
+name = "asl-axon-bridge-bin"
+path = "src/main.rs"
+
+[lints.rust]
+unexpected_cfgs = { level = "allow", check-cfg = ['cfg(kani)'] }

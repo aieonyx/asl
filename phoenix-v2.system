@@ -81,7 +81,7 @@
                      priority="250"
                      budget="500"
                      period="1000">
-    <program_image path="target/aarch64-unknown-none/release/asl-inverted-admin"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-inverted-admin-bin"/>
     <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
   </protection_domain>
 
@@ -89,7 +89,7 @@
                      priority="249"
                      budget="800"
                      period="1000">
-    <program_image path="target/aarch64-unknown-none/release/asl-axon-bridge"/>
+    <program_image path="target/aarch64-unknown-none/release/asl-axon-bridge-bin"/>
     <map mr="serial" vaddr="0x09000000" perms="rw" cached="false"/>
   </protection_domain>
 
