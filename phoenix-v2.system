@@ -17,6 +17,9 @@
   <memory_region name="fw_cfg"
                  size="0x1000"
                  phys_addr="0x09020000"/>  <!-- QEMU fw_cfg for ramfb -->
+  <memory_region name="rtc"
+                 size="0x1000"
+                 phys_addr="0x09010000"/>  <!-- PL031 RTC -->
   <memory_region name="serial"
                  size="0x1000"
                  phys_addr="0x09000000"/>  <!-- PL011 UART -->
@@ -159,6 +162,7 @@
                      budget="5000"
                      period="5000">
     <program_image path="/home/edisonbl/aixos/target/aarch64-unknown-none/microkit/aixos-phoenix-pd"/>
+    <map mr="rtc"            vaddr="0x09010000" perms="rw" cached="false"/>
     <map mr="serial"         vaddr="0x09000000" perms="rw" cached="false"/>
     <map mr="fw_cfg"          vaddr="0x09020000" perms="rw" cached="false"/>
     <map mr="phoenix_heap"   vaddr="0x4A000000" perms="rw" cached="true"/>
