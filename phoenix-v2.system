@@ -14,6 +14,9 @@
        QEMU virt AArch64 memory map
        ════════════════════════════════════════════════════ -->
 
+  <memory_region name="fw_cfg"
+                 size="0x1000"
+                 phys_addr="0x09020000"/>  <!-- QEMU fw_cfg for ramfb -->
   <memory_region name="serial"
                  size="0x1000"
                  phys_addr="0x09000000"/>  <!-- PL011 UART -->
@@ -31,6 +34,9 @@
                  phys_addr="0x4C000000"/>  <!-- SP805 Watchdog MMIO -->
 
   <!-- PL-76: GPU framebuffer — 1280×720 ARGB8888 = 3.6MB -->
+  <memory_region name="gpu_dma"
+                 size="0x10000"
+                 phys_addr="0x4B000000"/>  <!-- virtio-gpu DMA queue (uncached) -->
   <memory_region name="gpu_framebuffer"
                  size="0x400000"
                  phys_addr="0x44000000"/>  <!-- ramfb device -->
@@ -45,7 +51,7 @@
        ════════════════════════════════════════════════════ -->
 
   <protection_domain name="GENESIS"
-                     priority="254"
+                     priority="1"
                      budget="1000"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-genesis"/>
@@ -54,7 +60,7 @@
   </protection_domain>
 
   <protection_domain name="ARPi-Broker"
-                     priority="253"
+                     priority="1"
                      budget="800"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-arpi-broker"/>
@@ -62,7 +68,7 @@
   </protection_domain>
 
   <protection_domain name="DataTier-Enforcer"
-                     priority="252"
+                     priority="1"
                      budget="600"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-datatier-enforcer"/>
@@ -70,7 +76,7 @@
   </protection_domain>
 
   <protection_domain name="TrustGraph-Gate"
-                     priority="251"
+                     priority="1"
                      budget="600"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-trustgraph-gate"/>
@@ -78,7 +84,7 @@
   </protection_domain>
 
   <protection_domain name="Inverted-Admin"
-                     priority="250"
+                     priority="1"
                      budget="500"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-inverted-admin-bin"/>
@@ -86,7 +92,7 @@
   </protection_domain>
 
   <protection_domain name="AXON-Bridge"
-                     priority="249"
+                     priority="1"
                      budget="800"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-axon-bridge-bin"/>
@@ -94,7 +100,7 @@
   </protection_domain>
 
   <protection_domain name="SOMA-Identity"
-                     priority="248"
+                     priority="1"
                      budget="400"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-soma-identity"/>
@@ -106,7 +112,7 @@
        ════════════════════════════════════════════════════ -->
 
   <protection_domain name="Phoenix-Init"
-                     priority="247"
+                     priority="1"
                      budget="1000"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-phoenix-init"/>
@@ -115,7 +121,7 @@
   </protection_domain>
 
   <protection_domain name="Phoenix-Console"
-                     priority="246"
+                     priority="1"
                      budget="500"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-phoenix-console"/>
@@ -124,7 +130,7 @@
   </protection_domain>
 
   <protection_domain name="Phoenix-Watchdog"
-                     priority="245"
+                     priority="1"
                      budget="200"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-phoenix-watchdog"/>
@@ -138,7 +144,7 @@
 
   <!-- GPU-Cap PD: sole FramebufferWrite holder -->
   <protection_domain name="HANIEL-Canvas"
-                     priority="244"
+                     priority="1"
                      budget="800"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-haniel-canvas-pd-bin"/>
@@ -154,14 +160,16 @@
                      period="5000">
     <program_image path="/home/edisonbl/aixos/target/aarch64-unknown-none/microkit/aixos-phoenix-pd"/>
     <map mr="serial"         vaddr="0x09000000" perms="rw" cached="false"/>
+    <map mr="fw_cfg"          vaddr="0x09020000" perms="rw" cached="false"/>
     <map mr="phoenix_heap"   vaddr="0x4A000000" perms="rw" cached="true"/>
     <map mr="virtio_mmio"    vaddr="0x0a003000" perms="rw" cached="false"/>
     <map mr="gpu_framebuffer" vaddr="0x44000000" perms="rw" cached="true"/>
+    <map mr="gpu_dma"         vaddr="0x4B000000" perms="rw" cached="false"/>
   </protection_domain>
 
   <!-- Shell-PD: axc> shell isolated -->
   <protection_domain name="Shell-PD"
-                     priority="242"
+                     priority="1"
                      budget="600"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-shell-pd-bin"/>
@@ -170,7 +178,7 @@
 
   <!-- EdisonDB-PD: sovereign store isolated -->
   <protection_domain name="EdisonDB-PD"
-                     priority="241"
+                     priority="1"
                      budget="600"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-edisondb-pd-bin"/>
@@ -180,7 +188,7 @@
 
   <!-- Onyxia-PD: sovereign browser, http:// blocked -->
   <protection_domain name="Onyxia-PD"
-                     priority="240"
+                     priority="1"
                      budget="600"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-onyxia-pd-bin"/>
@@ -189,7 +197,7 @@
 
   <!-- AXON-Exec-PD: scripts in isolated PD -->
   <protection_domain name="AXON-Exec-PD"
-                     priority="239"
+                     priority="1"
                      budget="400"
                      period="1000">
     <program_image path="target/aarch64-unknown-none/release/asl-axon-exec-pd-bin"/>
