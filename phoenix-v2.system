@@ -38,7 +38,7 @@
 
   <!-- PL-76: GPU framebuffer — 1280×720 ARGB8888 = 3.6MB -->
   <memory_region name="gpu_dma"
-                 size="0x10000"
+                 size="0x20000"
                  phys_addr="0x4B000000"/>  <!-- virtio-gpu DMA queue (uncached) -->
   <memory_region name="gpu_framebuffer"
                  size="0x400000"
