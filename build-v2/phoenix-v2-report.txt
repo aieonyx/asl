@@ -30559,8 +30559,8 @@
          flags                0
     0x0d93 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000c9e (SchedContext: PD=Phoenix-Desktop)
-         budget               5000
-         period               5000
+         budget               20000
+         period               20000
          extra_refills        0
          badge                267
          flags                0
