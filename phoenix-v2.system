@@ -169,6 +169,7 @@
     <map mr="virtio_mmio"    vaddr="0x0a003000" perms="rw" cached="false"/>
     <map mr="gpu_framebuffer" vaddr="0x44000000" perms="rw" cached="true"/>
     <map mr="gpu_dma"         vaddr="0x4B000000" perms="rw" cached="false"/>
+    <irq irq="47" id="60" trigger="edge"/>  <!-- virtio-tablet interrupt -->
   </protection_domain>
 
   <!-- Shell-PD: axc> shell isolated -->

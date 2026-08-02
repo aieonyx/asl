@@ -55,8 +55,8 @@
 
 # System Kernel Invocations Summary
 
-     # of invocations   :      3,546
-     size of invocations:    253,568
+     # of invocations   :      3,550
+     size of invocations:    253,792
 
 # Allocated Kernel Objects Detail
 
@@ -28531,22 +28531,20 @@
          node_depth           1
          node_offset          3405
          num_objects          16
-    0x0c3d ASID Pool            - Assign            - 0x0000000000000006 (ASID Pool: init)
+    0x0c3d IRQ Control          - Get               - 0x0000000000000004 (IRQ Control)
+         irq                  47
+         trigger              1
+         dest_root (cap)      0x0000000000000064 (CNode: root)
+         dest_index           9223372036854779229
+         dest_depth           64
+    0x0c3e ASID Pool            - Assign            - 0x0000000000000006 (ASID Pool: init)
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
       REPEAT: count=16
-    0x0c3e CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           3421
-         dest_depth           14
-         src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
-         src_depth            64
-         rights               3
-         badge                0
     0x0c3f CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3422
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000472 (Page(4 KiB): MR=sovereign_proof_frame @ 48000000)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
          src_depth            64
          rights               3
          badge                0
@@ -28554,23 +28552,23 @@
          dest_index           3423
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008aa (Page(4 KiB): MR=ELF:GENESIS-0 @ 6026c000)
+         src_obj (cap)        0x8000000000000472 (Page(4 KiB): MR=sovereign_proof_frame @ 48000000)
          src_depth            64
-         rights               2
+         rights               3
          badge                0
     0x0c41 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3424
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008ab (Page(4 KiB): MR=ELF:GENESIS-1 @ 6026d000)
+         src_obj (cap)        0x80000000000008aa (Page(4 KiB): MR=ELF:GENESIS-0 @ 6026c000)
          src_depth            64
-         rights               3
+         rights               2
          badge                0
     0x0c42 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3425
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000004f (Page(4 KiB): MR=STACK:GENESIS #0)
+         src_obj (cap)        0x80000000000008ab (Page(4 KiB): MR=ELF:GENESIS-1 @ 6026d000)
          src_depth            64
          rights               3
          badge                0
@@ -28578,7 +28576,7 @@
          dest_index           3426
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x800000000000004f (Page(4 KiB): MR=STACK:GENESIS #0)
          src_depth            64
          rights               3
          badge                0
@@ -28586,23 +28584,23 @@
          dest_index           3427
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008ac (Page(4 KiB): MR=ELF:ARPi-Broker-0 @ 6026e000)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
          src_depth            64
-         rights               2
+         rights               3
          badge                0
     0x0c45 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3428
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008ad (Page(4 KiB): MR=ELF:ARPi-Broker-1 @ 6026f000)
+         src_obj (cap)        0x80000000000008ac (Page(4 KiB): MR=ELF:ARPi-Broker-0 @ 6026e000)
          src_depth            64
-         rights               3
+         rights               2
          badge                0
     0x0c46 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3429
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000050 (Page(4 KiB): MR=STACK:ARPi-Broker #0)
+         src_obj (cap)        0x80000000000008ad (Page(4 KiB): MR=ELF:ARPi-Broker-1 @ 6026f000)
          src_depth            64
          rights               3
          badge                0
@@ -28610,7 +28608,7 @@
          dest_index           3430
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x8000000000000050 (Page(4 KiB): MR=STACK:ARPi-Broker #0)
          src_depth            64
          rights               3
          badge                0
@@ -28618,23 +28616,23 @@
          dest_index           3431
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008ae (Page(4 KiB): MR=ELF:DataTier-Enforcer-0 @ 60270000)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
          src_depth            64
-         rights               2
+         rights               3
          badge                0
     0x0c49 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3432
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008af (Page(4 KiB): MR=ELF:DataTier-Enforcer-1 @ 60271000)
+         src_obj (cap)        0x80000000000008ae (Page(4 KiB): MR=ELF:DataTier-Enforcer-0 @ 60270000)
          src_depth            64
-         rights               3
+         rights               2
          badge                0
     0x0c4a CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3433
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000051 (Page(4 KiB): MR=STACK:DataTier-Enforcer #0)
+         src_obj (cap)        0x80000000000008af (Page(4 KiB): MR=ELF:DataTier-Enforcer-1 @ 60271000)
          src_depth            64
          rights               3
          badge                0
@@ -28642,7 +28640,7 @@
          dest_index           3434
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x8000000000000051 (Page(4 KiB): MR=STACK:DataTier-Enforcer #0)
          src_depth            64
          rights               3
          badge                0
@@ -28650,23 +28648,23 @@
          dest_index           3435
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008b0 (Page(4 KiB): MR=ELF:TrustGraph-Gate-0 @ 60272000)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
          src_depth            64
-         rights               2
+         rights               3
          badge                0
     0x0c4d CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3436
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008b1 (Page(4 KiB): MR=ELF:TrustGraph-Gate-1 @ 60273000)
+         src_obj (cap)        0x80000000000008b0 (Page(4 KiB): MR=ELF:TrustGraph-Gate-0 @ 60272000)
          src_depth            64
-         rights               3
+         rights               2
          badge                0
     0x0c4e CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3437
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000052 (Page(4 KiB): MR=STACK:TrustGraph-Gate #0)
+         src_obj (cap)        0x80000000000008b1 (Page(4 KiB): MR=ELF:TrustGraph-Gate-1 @ 60273000)
          src_depth            64
          rights               3
          badge                0
@@ -28674,7 +28672,7 @@
          dest_index           3438
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x8000000000000052 (Page(4 KiB): MR=STACK:TrustGraph-Gate #0)
          src_depth            64
          rights               3
          badge                0
@@ -28682,23 +28680,23 @@
          dest_index           3439
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008b2 (Page(4 KiB): MR=ELF:Inverted-Admin-0 @ 60274000)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
          src_depth            64
-         rights               2
+         rights               3
          badge                0
     0x0c51 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3440
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008b3 (Page(4 KiB): MR=ELF:Inverted-Admin-1 @ 60275000)
+         src_obj (cap)        0x80000000000008b2 (Page(4 KiB): MR=ELF:Inverted-Admin-0 @ 60274000)
          src_depth            64
-         rights               3
+         rights               2
          badge                0
     0x0c52 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3441
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000053 (Page(4 KiB): MR=STACK:Inverted-Admin #0)
+         src_obj (cap)        0x80000000000008b3 (Page(4 KiB): MR=ELF:Inverted-Admin-1 @ 60275000)
          src_depth            64
          rights               3
          badge                0
@@ -28706,7 +28704,7 @@
          dest_index           3442
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x8000000000000053 (Page(4 KiB): MR=STACK:Inverted-Admin #0)
          src_depth            64
          rights               3
          badge                0
@@ -28714,23 +28712,23 @@
          dest_index           3443
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008b4 (Page(4 KiB): MR=ELF:AXON-Bridge-0 @ 60276000)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
          src_depth            64
-         rights               2
+         rights               3
          badge                0
     0x0c55 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3444
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008b5 (Page(4 KiB): MR=ELF:AXON-Bridge-1 @ 60277000)
+         src_obj (cap)        0x80000000000008b4 (Page(4 KiB): MR=ELF:AXON-Bridge-0 @ 60276000)
          src_depth            64
-         rights               3
+         rights               2
          badge                0
     0x0c56 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3445
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000054 (Page(4 KiB): MR=STACK:AXON-Bridge #0)
+         src_obj (cap)        0x80000000000008b5 (Page(4 KiB): MR=ELF:AXON-Bridge-1 @ 60277000)
          src_depth            64
          rights               3
          badge                0
@@ -28738,7 +28736,7 @@
          dest_index           3446
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x8000000000000054 (Page(4 KiB): MR=STACK:AXON-Bridge #0)
          src_depth            64
          rights               3
          badge                0
@@ -28746,23 +28744,23 @@
          dest_index           3447
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008b6 (Page(4 KiB): MR=ELF:SOMA-Identity-0 @ 60278000)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
          src_depth            64
-         rights               2
+         rights               3
          badge                0
     0x0c59 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3448
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008b7 (Page(4 KiB): MR=ELF:SOMA-Identity-1 @ 60279000)
+         src_obj (cap)        0x80000000000008b6 (Page(4 KiB): MR=ELF:SOMA-Identity-0 @ 60278000)
          src_depth            64
-         rights               3
+         rights               2
          badge                0
     0x0c5a CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           3449
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000055 (Page(4 KiB): MR=STACK:SOMA-Identity #0)
+         src_obj (cap)        0x80000000000008b7 (Page(4 KiB): MR=ELF:SOMA-Identity-1 @ 60279000)
          src_depth            64
          rights               3
          badge                0
@@ -28770,7 +28768,7 @@
          dest_index           3450
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x8000000000000055 (Page(4 KiB): MR=STACK:SOMA-Identity #0)
          src_depth            64
          rights               3
          badge                0
@@ -28778,32 +28776,32 @@
          dest_index           3451
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_depth            64
+         rights               3
+         badge                0
+    0x0c5d CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           3452
+         dest_depth           14
+         src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x8000000000000480 (Page(4 KiB): MR=phoenix_heap @ 4a000000)
          src_depth            64
          rights               3
          badge                0
       REPEAT: count=1024
-    0x0c5d CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           4475
+    0x0c5e CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           4476
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x80000000000008b8 (Page(4 KiB): MR=ELF:Phoenix-Init-0 @ 6027a000)
          src_depth            64
          rights               2
          badge                0
-    0x0c5e CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           4476
-         dest_depth           14
-         src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008b9 (Page(4 KiB): MR=ELF:Phoenix-Init-1 @ 6027b000)
-         src_depth            64
-         rights               3
-         badge                0
     0x0c5f CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           4477
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000056 (Page(4 KiB): MR=STACK:Phoenix-Init #0)
+         src_obj (cap)        0x80000000000008b9 (Page(4 KiB): MR=ELF:Phoenix-Init-1 @ 6027b000)
          src_depth            64
          rights               3
          badge                0
@@ -28811,7 +28809,7 @@
          dest_index           4478
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x8000000000000056 (Page(4 KiB): MR=STACK:Phoenix-Init #0)
          src_depth            64
          rights               3
          badge                0
@@ -28819,32 +28817,32 @@
          dest_index           4479
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_depth            64
+         rights               3
+         badge                0
+    0x0c62 CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           4480
+         dest_depth           14
+         src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x8000000000000480 (Page(4 KiB): MR=phoenix_heap @ 4a000000)
          src_depth            64
          rights               2
          badge                0
       REPEAT: count=1024
-    0x0c62 CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           5503
+    0x0c63 CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           5504
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x80000000000008ba (Page(4 KiB): MR=ELF:Phoenix-Console-0 @ 6027c000)
          src_depth            64
          rights               2
          badge                0
-    0x0c63 CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           5504
-         dest_depth           14
-         src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008bb (Page(4 KiB): MR=ELF:Phoenix-Console-1 @ 6027d000)
-         src_depth            64
-         rights               3
-         badge                0
     0x0c64 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           5505
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000057 (Page(4 KiB): MR=STACK:Phoenix-Console #0)
+         src_obj (cap)        0x80000000000008bb (Page(4 KiB): MR=ELF:Phoenix-Console-1 @ 6027d000)
          src_depth            64
          rights               3
          badge                0
@@ -28852,7 +28850,7 @@
          dest_index           5506
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x8000000000000057 (Page(4 KiB): MR=STACK:Phoenix-Console #0)
          src_depth            64
          rights               3
          badge                0
@@ -28860,7 +28858,7 @@
          dest_index           5507
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008a9 (Page(4 KiB): MR=watchdog_registers @ 4c000000)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
          src_depth            64
          rights               3
          badge                0
@@ -28868,23 +28866,23 @@
          dest_index           5508
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008bc (Page(4 KiB): MR=ELF:Phoenix-Watchdog-0 @ 6027e000)
+         src_obj (cap)        0x80000000000008a9 (Page(4 KiB): MR=watchdog_registers @ 4c000000)
          src_depth            64
-         rights               2
+         rights               3
          badge                0
     0x0c68 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           5509
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008bd (Page(4 KiB): MR=ELF:Phoenix-Watchdog-1 @ 6027f000)
+         src_obj (cap)        0x80000000000008bc (Page(4 KiB): MR=ELF:Phoenix-Watchdog-0 @ 6027e000)
          src_depth            64
-         rights               3
+         rights               2
          badge                0
     0x0c69 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           5510
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000058 (Page(4 KiB): MR=STACK:Phoenix-Watchdog #0)
+         src_obj (cap)        0x80000000000008bd (Page(4 KiB): MR=ELF:Phoenix-Watchdog-1 @ 6027f000)
          src_depth            64
          rights               3
          badge                0
@@ -28892,7 +28890,7 @@
          dest_index           5511
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x8000000000000058 (Page(4 KiB): MR=STACK:Phoenix-Watchdog #0)
          src_depth            64
          rights               3
          badge                0
@@ -28900,40 +28898,40 @@
          dest_index           5512
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_depth            64
+         rights               3
+         badge                0
+    0x0c6c CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           5513
+         dest_depth           14
+         src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x800000000000006e (Page(4 KiB): MR=gpu_framebuffer @ 44000000)
          src_depth            64
          rights               3
          badge                0
       REPEAT: count=1024
-    0x0c6c CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           6536
+    0x0c6d CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           6537
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x800000000000006c (Page(4 KiB): MR=virtio_mmio @ a003000)
          src_depth            64
          rights               3
          badge                0
-    0x0c6d CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           6537
+    0x0c6e CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           6538
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x80000000000008be (Page(4 KiB): MR=ELF:HANIEL-Canvas-0 @ 60280000)
          src_depth            64
          rights               2
          badge                0
-    0x0c6e CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           6538
-         dest_depth           14
-         src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x80000000000008bf (Page(4 KiB): MR=ELF:HANIEL-Canvas-1 @ 60281000)
-         src_depth            64
-         rights               3
-         badge                0
     0x0c6f CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           6539
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000059 (Page(4 KiB): MR=STACK:HANIEL-Canvas #0)
+         src_obj (cap)        0x80000000000008bf (Page(4 KiB): MR=ELF:HANIEL-Canvas-1 @ 60281000)
          src_depth            64
          rights               3
          badge                0
@@ -28941,7 +28939,7 @@
          dest_index           6540
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000064 (Page(4 KiB): MR=rtc @ 9010000)
+         src_obj (cap)        0x8000000000000059 (Page(4 KiB): MR=STACK:HANIEL-Canvas #0)
          src_depth            64
          rights               3
          badge                0
@@ -28949,7 +28947,7 @@
          dest_index           6541
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x8000000000000064 (Page(4 KiB): MR=rtc @ 9010000)
          src_depth            64
          rights               3
          badge                0
@@ -28957,7 +28955,7 @@
          dest_index           6542
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000069 (Page(4 KiB): MR=fw_cfg @ 9020000)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
          src_depth            64
          rights               3
          badge                0
@@ -28965,21 +28963,29 @@
          dest_index           6543
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
+         src_obj (cap)        0x8000000000000069 (Page(4 KiB): MR=fw_cfg @ 9020000)
+         src_depth            64
+         rights               3
+         badge                0
+    0x0c74 CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           6544
+         dest_depth           14
+         src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x8000000000000480 (Page(4 KiB): MR=phoenix_heap @ 4a000000)
          src_depth            64
          rights               3
          badge                0
       REPEAT: count=1024
-    0x0c74 CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           7567
+    0x0c75 CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           7568
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x800000000000006c (Page(4 KiB): MR=virtio_mmio @ a003000)
          src_depth            64
          rights               3
          badge                0
-    0x0c75 CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           7568
+    0x0c76 CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           7569
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x800000000000006e (Page(4 KiB): MR=gpu_framebuffer @ 44000000)
@@ -28987,8 +28993,8 @@
          rights               3
          badge                0
       REPEAT: count=1024
-    0x0c76 CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           8592
+    0x0c77 CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           8593
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x8000000000000882 (Page(4 KiB): MR=gpu_dma @ 4b000000)
@@ -28996,8 +29002,8 @@
          rights               3
          badge                0
       REPEAT: count=32
-    0x0c77 CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           8624
+    0x0c78 CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           8625
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x80000000000008c0 (Page(4 KiB): MR=ELF:Phoenix-Desktop-0 @ 60282000)
@@ -29005,19 +29011,11 @@
          rights               3
          badge                0
       REPEAT: count=970
-    0x0c78 CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           9594
-         dest_depth           14
-         src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005a (Page(4 KiB): MR=STACK:Phoenix-Desktop #0)
-         src_depth            64
-         rights               3
-         badge                0
     0x0c79 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           9595
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x800000000000005a (Page(4 KiB): MR=STACK:Phoenix-Desktop #0)
          src_depth            64
          rights               3
          badge                0
@@ -29025,23 +29023,23 @@
          dest_index           9596
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000c8a (Page(4 KiB): MR=ELF:Shell-PD-0 @ 6064c000)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
          src_depth            64
-         rights               2
+         rights               3
          badge                0
     0x0c7b CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           9597
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000c8b (Page(4 KiB): MR=ELF:Shell-PD-1 @ 6064d000)
+         src_obj (cap)        0x8000000000000c8a (Page(4 KiB): MR=ELF:Shell-PD-0 @ 6064c000)
          src_depth            64
-         rights               3
+         rights               2
          badge                0
     0x0c7c CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           9598
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005b (Page(4 KiB): MR=STACK:Shell-PD #0)
+         src_obj (cap)        0x8000000000000c8b (Page(4 KiB): MR=ELF:Shell-PD-1 @ 6064d000)
          src_depth            64
          rights               3
          badge                0
@@ -29049,7 +29047,7 @@
          dest_index           9599
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x800000000000005b (Page(4 KiB): MR=STACK:Shell-PD #0)
          src_depth            64
          rights               3
          badge                0
@@ -29057,32 +29055,32 @@
          dest_index           9600
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_depth            64
+         rights               3
+         badge                0
+    0x0c7f CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           9601
+         dest_depth           14
+         src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x8000000000000480 (Page(4 KiB): MR=phoenix_heap @ 4a000000)
          src_depth            64
          rights               3
          badge                0
       REPEAT: count=1024
-    0x0c7f CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           10624
+    0x0c80 CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           10625
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
          src_obj (cap)        0x8000000000000c8c (Page(4 KiB): MR=ELF:EdisonDB-PD-0 @ 6064e000)
          src_depth            64
          rights               2
          badge                0
-    0x0c80 CNode                - Mint              - 0x0000000000000065 (CNode: system)
-         dest_index           10625
-         dest_depth           14
-         src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000c8d (Page(4 KiB): MR=ELF:EdisonDB-PD-1 @ 6064f000)
-         src_depth            64
-         rights               3
-         badge                0
     0x0c81 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10626
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005c (Page(4 KiB): MR=STACK:EdisonDB-PD #0)
+         src_obj (cap)        0x8000000000000c8d (Page(4 KiB): MR=ELF:EdisonDB-PD-1 @ 6064f000)
          src_depth            64
          rights               3
          badge                0
@@ -29090,7 +29088,7 @@
          dest_index           10627
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x800000000000005c (Page(4 KiB): MR=STACK:EdisonDB-PD #0)
          src_depth            64
          rights               3
          badge                0
@@ -29098,23 +29096,23 @@
          dest_index           10628
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000c8e (Page(4 KiB): MR=ELF:Onyxia-PD-0 @ 60650000)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
          src_depth            64
-         rights               2
+         rights               3
          badge                0
     0x0c84 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10629
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000c8f (Page(4 KiB): MR=ELF:Onyxia-PD-1 @ 60651000)
+         src_obj (cap)        0x8000000000000c8e (Page(4 KiB): MR=ELF:Onyxia-PD-0 @ 60650000)
          src_depth            64
-         rights               3
+         rights               2
          badge                0
     0x0c85 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10630
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005d (Page(4 KiB): MR=STACK:Onyxia-PD #0)
+         src_obj (cap)        0x8000000000000c8f (Page(4 KiB): MR=ELF:Onyxia-PD-1 @ 60651000)
          src_depth            64
          rights               3
          badge                0
@@ -29122,7 +29120,7 @@
          dest_index           10631
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
+         src_obj (cap)        0x800000000000005d (Page(4 KiB): MR=STACK:Onyxia-PD #0)
          src_depth            64
          rights               3
          badge                0
@@ -29130,23 +29128,23 @@
          dest_index           10632
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000c90 (Page(4 KiB): MR=ELF:AXON-Exec-PD-0 @ 60652000)
+         src_obj (cap)        0x800000000000005f (Page(4 KiB): MR=serial @ 9000000)
          src_depth            64
-         rights               2
+         rights               3
          badge                0
     0x0c88 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10633
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000c91 (Page(4 KiB): MR=ELF:AXON-Exec-PD-1 @ 60653000)
+         src_obj (cap)        0x8000000000000c90 (Page(4 KiB): MR=ELF:AXON-Exec-PD-0 @ 60652000)
          src_depth            64
-         rights               3
+         rights               2
          badge                0
     0x0c89 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10634
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x800000000000005e (Page(4 KiB): MR=STACK:AXON-Exec-PD #0)
+         src_obj (cap)        0x8000000000000c91 (Page(4 KiB): MR=ELF:AXON-Exec-PD-1 @ 60653000)
          src_depth            64
          rights               3
          badge                0
@@ -29154,18 +29152,18 @@
          dest_index           10635
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
+         src_obj (cap)        0x800000000000005e (Page(4 KiB): MR=STACK:AXON-Exec-PD #0)
          src_depth            64
-         rights               15
-         badge                1
+         rights               3
+         badge                0
     0x0c8b CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10636
          dest_depth           14
          src_root (cap)       0x0000000000000064 (CNode: root)
-         src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
+         src_obj (cap)        0x8000000000000ccf (Notification: PD=Phoenix-Desktop)
          src_depth            64
          rights               15
-         badge                2
+         badge                1152921504606846976
     0x0c8c CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10637
          dest_depth           14
@@ -29173,7 +29171,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                3
+         badge                1
     0x0c8d CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10638
          dest_depth           14
@@ -29181,7 +29179,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                4
+         badge                2
     0x0c8e CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10639
          dest_depth           14
@@ -29189,7 +29187,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                5
+         badge                3
     0x0c8f CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10640
          dest_depth           14
@@ -29197,7 +29195,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                6
+         badge                4
     0x0c90 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10641
          dest_depth           14
@@ -29205,7 +29203,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                7
+         badge                5
     0x0c91 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10642
          dest_depth           14
@@ -29213,7 +29211,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                8
+         badge                6
     0x0c92 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10643
          dest_depth           14
@@ -29221,7 +29219,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                9
+         badge                7
     0x0c93 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10644
          dest_depth           14
@@ -29229,7 +29227,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                10
+         badge                8
     0x0c94 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10645
          dest_depth           14
@@ -29237,7 +29235,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                11
+         badge                9
     0x0c95 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10646
          dest_depth           14
@@ -29245,7 +29243,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                12
+         badge                10
     0x0c96 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10647
          dest_depth           14
@@ -29253,7 +29251,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                13
+         badge                11
     0x0c97 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10648
          dest_depth           14
@@ -29261,7 +29259,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                14
+         badge                12
     0x0c98 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10649
          dest_depth           14
@@ -29269,7 +29267,7 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
-         badge                15
+         badge                13
     0x0c99 CNode                - Mint              - 0x0000000000000065 (CNode: system)
          dest_index           10650
          dest_depth           14
@@ -29277,8 +29275,24 @@
          src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
          src_depth            64
          rights               15
+         badge                14
+    0x0c9a CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           10651
+         dest_depth           14
+         src_root (cap)       0x0000000000000064 (CNode: root)
+         src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
+         src_depth            64
+         rights               15
+         badge                15
+    0x0c9b CNode                - Mint              - 0x0000000000000065 (CNode: system)
+         dest_index           10652
+         dest_depth           14
+         src_root (cap)       0x0000000000000064 (CNode: root)
+         src_obj (cap)        0x8000000000000cc3 (EP: Monitor Fault)
+         src_depth            64
+         rights               15
          badge                16
-    0x0c9a CNode                - Mint              - 0x8000000000000d4d (CNode: PD=GENESIS)
+    0x0c9c CNode                - Mint              - 0x8000000000000d4d (CNode: PD=GENESIS)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29286,7 +29300,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0c9b CNode                - Mint              - 0x8000000000000d4e (CNode: PD=ARPi-Broker)
+    0x0c9d CNode                - Mint              - 0x8000000000000d4e (CNode: PD=ARPi-Broker)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29294,7 +29308,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0c9c CNode                - Mint              - 0x8000000000000d4f (CNode: PD=DataTier-Enforcer)
+    0x0c9e CNode                - Mint              - 0x8000000000000d4f (CNode: PD=DataTier-Enforcer)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29302,7 +29316,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0c9d CNode                - Mint              - 0x8000000000000d50 (CNode: PD=TrustGraph-Gate)
+    0x0c9f CNode                - Mint              - 0x8000000000000d50 (CNode: PD=TrustGraph-Gate)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29310,7 +29324,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0c9e CNode                - Mint              - 0x8000000000000d51 (CNode: PD=Inverted-Admin)
+    0x0ca0 CNode                - Mint              - 0x8000000000000d51 (CNode: PD=Inverted-Admin)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29318,7 +29332,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0c9f CNode                - Mint              - 0x8000000000000d52 (CNode: PD=AXON-Bridge)
+    0x0ca1 CNode                - Mint              - 0x8000000000000d52 (CNode: PD=AXON-Bridge)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29326,7 +29340,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0ca0 CNode                - Mint              - 0x8000000000000d53 (CNode: PD=SOMA-Identity)
+    0x0ca2 CNode                - Mint              - 0x8000000000000d53 (CNode: PD=SOMA-Identity)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29334,7 +29348,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0ca1 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
+    0x0ca3 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29342,7 +29356,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0ca2 CNode                - Mint              - 0x8000000000000d55 (CNode: PD=Phoenix-Console)
+    0x0ca4 CNode                - Mint              - 0x8000000000000d55 (CNode: PD=Phoenix-Console)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29350,7 +29364,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0ca3 CNode                - Mint              - 0x8000000000000d56 (CNode: PD=Phoenix-Watchdog)
+    0x0ca5 CNode                - Mint              - 0x8000000000000d56 (CNode: PD=Phoenix-Watchdog)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29358,7 +29372,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0ca4 CNode                - Mint              - 0x8000000000000d57 (CNode: PD=HANIEL-Canvas)
+    0x0ca6 CNode                - Mint              - 0x8000000000000d57 (CNode: PD=HANIEL-Canvas)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29366,7 +29380,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0ca5 CNode                - Mint              - 0x8000000000000d58 (CNode: PD=Phoenix-Desktop)
+    0x0ca7 CNode                - Mint              - 0x8000000000000d58 (CNode: PD=Phoenix-Desktop)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29374,7 +29388,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0ca6 CNode                - Mint              - 0x8000000000000d59 (CNode: PD=Shell-PD)
+    0x0ca8 CNode                - Mint              - 0x8000000000000d59 (CNode: PD=Shell-PD)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29382,7 +29396,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0ca7 CNode                - Mint              - 0x8000000000000d5a (CNode: PD=EdisonDB-PD)
+    0x0ca9 CNode                - Mint              - 0x8000000000000d5a (CNode: PD=EdisonDB-PD)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29390,7 +29404,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0ca8 CNode                - Mint              - 0x8000000000000d5b (CNode: PD=Onyxia-PD)
+    0x0caa CNode                - Mint              - 0x8000000000000d5b (CNode: PD=Onyxia-PD)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29398,7 +29412,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0ca9 CNode                - Mint              - 0x8000000000000d5c (CNode: PD=AXON-Exec-PD)
+    0x0cab CNode                - Mint              - 0x8000000000000d5c (CNode: PD=AXON-Exec-PD)
          dest_index           1
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29406,7 +29420,7 @@
          src_depth            64
          rights               15
          badge                0
-    0x0caa CNode                - Mint              - 0x8000000000000d4d (CNode: PD=GENESIS)
+    0x0cac CNode                - Mint              - 0x8000000000000d4d (CNode: PD=GENESIS)
          dest_index           4
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29415,7 +29429,7 @@
          rights               15
          badge                1
       REPEAT: count=16
-    0x0cab CNode                - Mint              - 0x8000000000000d4d (CNode: PD=GENESIS)
+    0x0cad CNode                - Mint              - 0x8000000000000d4d (CNode: PD=GENESIS)
          dest_index           3
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29424,7 +29438,15 @@
          rights               15
          badge                0
       REPEAT: count=16
-    0x0cac CNode                - Mint              - 0x8000000000000d4d (CNode: PD=GENESIS)
+    0x0cae CNode                - Mint              - 0x8000000000000d58 (CNode: PD=Phoenix-Desktop)
+         dest_index           198
+         dest_depth           9
+         src_root (cap)       0x0000000000000064 (CNode: root)
+         src_obj (cap)        0x8000000000000d5d (IRQ Handler: irq=47)
+         src_depth            64
+         rights               15
+         badge                0
+    0x0caf CNode                - Mint              - 0x8000000000000d4d (CNode: PD=GENESIS)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29432,7 +29454,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cad CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
+    0x0cb0 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29440,7 +29462,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cae CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
+    0x0cb1 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
          dest_index           11
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29448,7 +29470,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0caf CNode                - Mint              - 0x8000000000000d4e (CNode: PD=ARPi-Broker)
+    0x0cb2 CNode                - Mint              - 0x8000000000000d4e (CNode: PD=ARPi-Broker)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29456,7 +29478,7 @@
          src_depth            64
          rights               15
          badge                2
-    0x0cb0 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
+    0x0cb3 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
          dest_index           12
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29464,7 +29486,7 @@
          src_depth            64
          rights               15
          badge                2
-    0x0cb1 CNode                - Mint              - 0x8000000000000d53 (CNode: PD=SOMA-Identity)
+    0x0cb4 CNode                - Mint              - 0x8000000000000d53 (CNode: PD=SOMA-Identity)
          dest_index           11
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29472,7 +29494,7 @@
          src_depth            64
          rights               15
          badge                4
-    0x0cb2 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
+    0x0cb5 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
          dest_index           13
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29480,7 +29502,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cb3 CNode                - Mint              - 0x8000000000000d55 (CNode: PD=Phoenix-Console)
+    0x0cb6 CNode                - Mint              - 0x8000000000000d55 (CNode: PD=Phoenix-Console)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29488,7 +29510,7 @@
          src_depth            64
          rights               15
          badge                8
-    0x0cb4 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
+    0x0cb7 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
          dest_index           14
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29496,7 +29518,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cb5 CNode                - Mint              - 0x8000000000000d56 (CNode: PD=Phoenix-Watchdog)
+    0x0cb8 CNode                - Mint              - 0x8000000000000d56 (CNode: PD=Phoenix-Watchdog)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29504,7 +29526,7 @@
          src_depth            64
          rights               15
          badge                16
-    0x0cb6 CNode                - Mint              - 0x8000000000000d56 (CNode: PD=Phoenix-Watchdog)
+    0x0cb9 CNode                - Mint              - 0x8000000000000d56 (CNode: PD=Phoenix-Watchdog)
          dest_index           11
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29512,7 +29534,7 @@
          src_depth            64
          rights               15
          badge                2
-    0x0cb7 CNode                - Mint              - 0x8000000000000d4d (CNode: PD=GENESIS)
+    0x0cba CNode                - Mint              - 0x8000000000000d4d (CNode: PD=GENESIS)
          dest_index           11
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29520,7 +29542,7 @@
          src_depth            64
          rights               15
          badge                2
-    0x0cb8 CNode                - Mint              - 0x8000000000000d4e (CNode: PD=ARPi-Broker)
+    0x0cbb CNode                - Mint              - 0x8000000000000d4e (CNode: PD=ARPi-Broker)
          dest_index           11
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29528,7 +29550,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cb9 CNode                - Mint              - 0x8000000000000d4f (CNode: PD=DataTier-Enforcer)
+    0x0cbc CNode                - Mint              - 0x8000000000000d4f (CNode: PD=DataTier-Enforcer)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29536,7 +29558,7 @@
          src_depth            64
          rights               15
          badge                2
-    0x0cba CNode                - Mint              - 0x8000000000000d4f (CNode: PD=DataTier-Enforcer)
+    0x0cbd CNode                - Mint              - 0x8000000000000d4f (CNode: PD=DataTier-Enforcer)
          dest_index           11
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29544,7 +29566,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cbb CNode                - Mint              - 0x8000000000000d50 (CNode: PD=TrustGraph-Gate)
+    0x0cbe CNode                - Mint              - 0x8000000000000d50 (CNode: PD=TrustGraph-Gate)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29552,7 +29574,7 @@
          src_depth            64
          rights               15
          badge                2
-    0x0cbc CNode                - Mint              - 0x8000000000000d50 (CNode: PD=TrustGraph-Gate)
+    0x0cbf CNode                - Mint              - 0x8000000000000d50 (CNode: PD=TrustGraph-Gate)
          dest_index           11
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29560,7 +29582,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cbd CNode                - Mint              - 0x8000000000000d51 (CNode: PD=Inverted-Admin)
+    0x0cc0 CNode                - Mint              - 0x8000000000000d51 (CNode: PD=Inverted-Admin)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29568,7 +29590,7 @@
          src_depth            64
          rights               15
          badge                2
-    0x0cbe CNode                - Mint              - 0x8000000000000d51 (CNode: PD=Inverted-Admin)
+    0x0cc1 CNode                - Mint              - 0x8000000000000d51 (CNode: PD=Inverted-Admin)
          dest_index           11
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29576,7 +29598,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cbf CNode                - Mint              - 0x8000000000000d52 (CNode: PD=AXON-Bridge)
+    0x0cc2 CNode                - Mint              - 0x8000000000000d52 (CNode: PD=AXON-Bridge)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29584,7 +29606,7 @@
          src_depth            64
          rights               15
          badge                2
-    0x0cc0 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
+    0x0cc3 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
          dest_index           15
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29592,7 +29614,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cc1 CNode                - Mint              - 0x8000000000000d58 (CNode: PD=Phoenix-Desktop)
+    0x0cc4 CNode                - Mint              - 0x8000000000000d58 (CNode: PD=Phoenix-Desktop)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29600,7 +29622,7 @@
          src_depth            64
          rights               15
          badge                32
-    0x0cc2 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
+    0x0cc5 CNode                - Mint              - 0x8000000000000d54 (CNode: PD=Phoenix-Init)
          dest_index           16
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29608,7 +29630,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cc3 CNode                - Mint              - 0x8000000000000d57 (CNode: PD=HANIEL-Canvas)
+    0x0cc6 CNode                - Mint              - 0x8000000000000d57 (CNode: PD=HANIEL-Canvas)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29616,7 +29638,7 @@
          src_depth            64
          rights               15
          badge                64
-    0x0cc4 CNode                - Mint              - 0x8000000000000d58 (CNode: PD=Phoenix-Desktop)
+    0x0cc7 CNode                - Mint              - 0x8000000000000d58 (CNode: PD=Phoenix-Desktop)
          dest_index           11
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29624,7 +29646,7 @@
          src_depth            64
          rights               15
          badge                2
-    0x0cc5 CNode                - Mint              - 0x8000000000000d57 (CNode: PD=HANIEL-Canvas)
+    0x0cc8 CNode                - Mint              - 0x8000000000000d57 (CNode: PD=HANIEL-Canvas)
          dest_index           11
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29632,7 +29654,7 @@
          src_depth            64
          rights               15
          badge                2
-    0x0cc6 CNode                - Mint              - 0x8000000000000d5b (CNode: PD=Onyxia-PD)
+    0x0cc9 CNode                - Mint              - 0x8000000000000d5b (CNode: PD=Onyxia-PD)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29640,7 +29662,7 @@
          src_depth            64
          rights               15
          badge                4
-    0x0cc7 CNode                - Mint              - 0x8000000000000d57 (CNode: PD=HANIEL-Canvas)
+    0x0cca CNode                - Mint              - 0x8000000000000d57 (CNode: PD=HANIEL-Canvas)
          dest_index           12
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29648,7 +29670,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cc8 CNode                - Mint              - 0x8000000000000d59 (CNode: PD=Shell-PD)
+    0x0ccb CNode                - Mint              - 0x8000000000000d59 (CNode: PD=Shell-PD)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29656,7 +29678,7 @@
          src_depth            64
          rights               15
          badge                4
-    0x0cc9 CNode                - Mint              - 0x8000000000000d4e (CNode: PD=ARPi-Broker)
+    0x0ccc CNode                - Mint              - 0x8000000000000d4e (CNode: PD=ARPi-Broker)
          dest_index           12
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29664,7 +29686,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cca CNode                - Mint              - 0x8000000000000d59 (CNode: PD=Shell-PD)
+    0x0ccd CNode                - Mint              - 0x8000000000000d59 (CNode: PD=Shell-PD)
          dest_index           11
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29672,7 +29694,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0ccb CNode                - Mint              - 0x8000000000000d5c (CNode: PD=AXON-Exec-PD)
+    0x0cce CNode                - Mint              - 0x8000000000000d5c (CNode: PD=AXON-Exec-PD)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29680,7 +29702,7 @@
          src_depth            64
          rights               15
          badge                2
-    0x0ccc CNode                - Mint              - 0x8000000000000d5a (CNode: PD=EdisonDB-PD)
+    0x0ccf CNode                - Mint              - 0x8000000000000d5a (CNode: PD=EdisonDB-PD)
          dest_index           10
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29688,7 +29710,7 @@
          src_depth            64
          rights               15
          badge                4
-    0x0ccd CNode                - Mint              - 0x8000000000000d4f (CNode: PD=DataTier-Enforcer)
+    0x0cd0 CNode                - Mint              - 0x8000000000000d4f (CNode: PD=DataTier-Enforcer)
          dest_index           12
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29696,7 +29718,7 @@
          src_depth            64
          rights               15
          badge                1
-    0x0cce CNode                - Mint              - 0x8000000000000d58 (CNode: PD=Phoenix-Desktop)
+    0x0cd1 CNode                - Mint              - 0x8000000000000d58 (CNode: PD=Phoenix-Desktop)
          dest_index           12
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29704,7 +29726,7 @@
          src_depth            64
          rights               15
          badge                2
-    0x0ccf CNode                - Mint              - 0x8000000000000d5a (CNode: PD=EdisonDB-PD)
+    0x0cd2 CNode                - Mint              - 0x8000000000000d5a (CNode: PD=EdisonDB-PD)
          dest_index           11
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29712,7 +29734,7 @@
          src_depth            64
          rights               15
          badge                4
-    0x0cd0 CNode                - Mint              - 0x8000000000000d58 (CNode: PD=Phoenix-Desktop)
+    0x0cd3 CNode                - Mint              - 0x8000000000000d58 (CNode: PD=Phoenix-Desktop)
          dest_index           13
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29720,7 +29742,7 @@
          src_depth            64
          rights               15
          badge                4
-    0x0cd1 CNode                - Mint              - 0x8000000000000d59 (CNode: PD=Shell-PD)
+    0x0cd4 CNode                - Mint              - 0x8000000000000d59 (CNode: PD=Shell-PD)
          dest_index           12
          dest_depth           9
          src_root (cap)       0x0000000000000064 (CNode: root)
@@ -29728,1158 +29750,1160 @@
          src_depth            64
          rights               15
          badge                8
-    0x0cd2 Page Table           - Map               - 0x8000000000000ce4 (PageTable: PD=GENESIS VADDR=0x0)
+    0x0cd5 IRQ Handler          - SetNotification   - 0x8000000000000d5d (IRQ Handler: irq=47)
+         notification (cap)   0x800000000000298c (Notification: PD=Phoenix-Desktop (badge=0x1000000000000000))
+    0x0cd6 Page Table           - Map               - 0x8000000000000ce4 (PageTable: PD=GENESIS VADDR=0x0)
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0x0
          attr                 3
-    0x0cd3 Page Table           - Map               - 0x8000000000000ce5 (PageTable: PD=GENESIS VADDR=0x40000000)
+    0x0cd7 Page Table           - Map               - 0x8000000000000ce5 (PageTable: PD=GENESIS VADDR=0x40000000)
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0x40000000
          attr                 3
-    0x0cd4 Page Table           - Map               - 0x8000000000000ce6 (PageTable: PD=GENESIS VADDR=0xffc0000000)
+    0x0cd8 Page Table           - Map               - 0x8000000000000ce6 (PageTable: PD=GENESIS VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0xffc0000000
          attr                 3
-    0x0cd5 Page Table           - Map               - 0x8000000000000ce7 (PageTable: PD=ARPi-Broker VADDR=0x0)
+    0x0cd9 Page Table           - Map               - 0x8000000000000ce7 (PageTable: PD=ARPi-Broker VADDR=0x0)
          vspace (cap)         0x8000000000000cd5 (VSpace: PD=ARPi-Broker)
          vaddr                0x0
          attr                 3
-    0x0cd6 Page Table           - Map               - 0x8000000000000ce8 (PageTable: PD=ARPi-Broker VADDR=0xffc0000000)
+    0x0cda Page Table           - Map               - 0x8000000000000ce8 (PageTable: PD=ARPi-Broker VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000cd5 (VSpace: PD=ARPi-Broker)
          vaddr                0xffc0000000
          attr                 3
-    0x0cd7 Page Table           - Map               - 0x8000000000000ce9 (PageTable: PD=DataTier-Enforcer VADDR=0x0)
+    0x0cdb Page Table           - Map               - 0x8000000000000ce9 (PageTable: PD=DataTier-Enforcer VADDR=0x0)
          vspace (cap)         0x8000000000000cd6 (VSpace: PD=DataTier-Enforcer)
          vaddr                0x0
          attr                 3
-    0x0cd8 Page Table           - Map               - 0x8000000000000cea (PageTable: PD=DataTier-Enforcer VADDR=0xffc0000000)
+    0x0cdc Page Table           - Map               - 0x8000000000000cea (PageTable: PD=DataTier-Enforcer VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000cd6 (VSpace: PD=DataTier-Enforcer)
          vaddr                0xffc0000000
          attr                 3
-    0x0cd9 Page Table           - Map               - 0x8000000000000ceb (PageTable: PD=TrustGraph-Gate VADDR=0x0)
+    0x0cdd Page Table           - Map               - 0x8000000000000ceb (PageTable: PD=TrustGraph-Gate VADDR=0x0)
          vspace (cap)         0x8000000000000cd7 (VSpace: PD=TrustGraph-Gate)
          vaddr                0x0
          attr                 3
-    0x0cda Page Table           - Map               - 0x8000000000000cec (PageTable: PD=TrustGraph-Gate VADDR=0xffc0000000)
+    0x0cde Page Table           - Map               - 0x8000000000000cec (PageTable: PD=TrustGraph-Gate VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000cd7 (VSpace: PD=TrustGraph-Gate)
          vaddr                0xffc0000000
          attr                 3
-    0x0cdb Page Table           - Map               - 0x8000000000000ced (PageTable: PD=Inverted-Admin VADDR=0x0)
+    0x0cdf Page Table           - Map               - 0x8000000000000ced (PageTable: PD=Inverted-Admin VADDR=0x0)
          vspace (cap)         0x8000000000000cd8 (VSpace: PD=Inverted-Admin)
          vaddr                0x0
          attr                 3
-    0x0cdc Page Table           - Map               - 0x8000000000000cee (PageTable: PD=Inverted-Admin VADDR=0xffc0000000)
+    0x0ce0 Page Table           - Map               - 0x8000000000000cee (PageTable: PD=Inverted-Admin VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000cd8 (VSpace: PD=Inverted-Admin)
          vaddr                0xffc0000000
          attr                 3
-    0x0cdd Page Table           - Map               - 0x8000000000000cef (PageTable: PD=AXON-Bridge VADDR=0x0)
+    0x0ce1 Page Table           - Map               - 0x8000000000000cef (PageTable: PD=AXON-Bridge VADDR=0x0)
          vspace (cap)         0x8000000000000cd9 (VSpace: PD=AXON-Bridge)
          vaddr                0x0
          attr                 3
-    0x0cde Page Table           - Map               - 0x8000000000000cf0 (PageTable: PD=AXON-Bridge VADDR=0xffc0000000)
+    0x0ce2 Page Table           - Map               - 0x8000000000000cf0 (PageTable: PD=AXON-Bridge VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000cd9 (VSpace: PD=AXON-Bridge)
          vaddr                0xffc0000000
          attr                 3
-    0x0cdf Page Table           - Map               - 0x8000000000000cf1 (PageTable: PD=SOMA-Identity VADDR=0x0)
+    0x0ce3 Page Table           - Map               - 0x8000000000000cf1 (PageTable: PD=SOMA-Identity VADDR=0x0)
          vspace (cap)         0x8000000000000cda (VSpace: PD=SOMA-Identity)
          vaddr                0x0
          attr                 3
-    0x0ce0 Page Table           - Map               - 0x8000000000000cf2 (PageTable: PD=SOMA-Identity VADDR=0xffc0000000)
+    0x0ce4 Page Table           - Map               - 0x8000000000000cf2 (PageTable: PD=SOMA-Identity VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000cda (VSpace: PD=SOMA-Identity)
          vaddr                0xffc0000000
          attr                 3
-    0x0ce1 Page Table           - Map               - 0x8000000000000cf3 (PageTable: PD=Phoenix-Init VADDR=0x0)
+    0x0ce5 Page Table           - Map               - 0x8000000000000cf3 (PageTable: PD=Phoenix-Init VADDR=0x0)
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0x0
          attr                 3
-    0x0ce2 Page Table           - Map               - 0x8000000000000cf4 (PageTable: PD=Phoenix-Init VADDR=0x40000000)
+    0x0ce6 Page Table           - Map               - 0x8000000000000cf4 (PageTable: PD=Phoenix-Init VADDR=0x40000000)
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0x40000000
          attr                 3
-    0x0ce3 Page Table           - Map               - 0x8000000000000cf5 (PageTable: PD=Phoenix-Init VADDR=0xffc0000000)
+    0x0ce7 Page Table           - Map               - 0x8000000000000cf5 (PageTable: PD=Phoenix-Init VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0xffc0000000
          attr                 3
-    0x0ce4 Page Table           - Map               - 0x8000000000000cf6 (PageTable: PD=Phoenix-Console VADDR=0x0)
+    0x0ce8 Page Table           - Map               - 0x8000000000000cf6 (PageTable: PD=Phoenix-Console VADDR=0x0)
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0x0
          attr                 3
-    0x0ce5 Page Table           - Map               - 0x8000000000000cf7 (PageTable: PD=Phoenix-Console VADDR=0x40000000)
+    0x0ce9 Page Table           - Map               - 0x8000000000000cf7 (PageTable: PD=Phoenix-Console VADDR=0x40000000)
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0x40000000
          attr                 3
-    0x0ce6 Page Table           - Map               - 0x8000000000000cf8 (PageTable: PD=Phoenix-Console VADDR=0xffc0000000)
+    0x0cea Page Table           - Map               - 0x8000000000000cf8 (PageTable: PD=Phoenix-Console VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0xffc0000000
          attr                 3
-    0x0ce7 Page Table           - Map               - 0x8000000000000cf9 (PageTable: PD=Phoenix-Watchdog VADDR=0x0)
+    0x0ceb Page Table           - Map               - 0x8000000000000cf9 (PageTable: PD=Phoenix-Watchdog VADDR=0x0)
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0x0
          attr                 3
-    0x0ce8 Page Table           - Map               - 0x8000000000000cfa (PageTable: PD=Phoenix-Watchdog VADDR=0x40000000)
+    0x0cec Page Table           - Map               - 0x8000000000000cfa (PageTable: PD=Phoenix-Watchdog VADDR=0x40000000)
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0x40000000
          attr                 3
-    0x0ce9 Page Table           - Map               - 0x8000000000000cfb (PageTable: PD=Phoenix-Watchdog VADDR=0xffc0000000)
+    0x0ced Page Table           - Map               - 0x8000000000000cfb (PageTable: PD=Phoenix-Watchdog VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0xffc0000000
          attr                 3
-    0x0cea Page Table           - Map               - 0x8000000000000cfc (PageTable: PD=HANIEL-Canvas VADDR=0x0)
+    0x0cee Page Table           - Map               - 0x8000000000000cfc (PageTable: PD=HANIEL-Canvas VADDR=0x0)
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0x0
          attr                 3
-    0x0ceb Page Table           - Map               - 0x8000000000000cfd (PageTable: PD=HANIEL-Canvas VADDR=0x40000000)
+    0x0cef Page Table           - Map               - 0x8000000000000cfd (PageTable: PD=HANIEL-Canvas VADDR=0x40000000)
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0x40000000
          attr                 3
-    0x0cec Page Table           - Map               - 0x8000000000000cfe (PageTable: PD=HANIEL-Canvas VADDR=0xffc0000000)
+    0x0cf0 Page Table           - Map               - 0x8000000000000cfe (PageTable: PD=HANIEL-Canvas VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0xffc0000000
          attr                 3
-    0x0ced Page Table           - Map               - 0x8000000000000cff (PageTable: PD=Phoenix-Desktop VADDR=0x0)
+    0x0cf1 Page Table           - Map               - 0x8000000000000cff (PageTable: PD=Phoenix-Desktop VADDR=0x0)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x0
          attr                 3
-    0x0cee Page Table           - Map               - 0x8000000000000d00 (PageTable: PD=Phoenix-Desktop VADDR=0x40000000)
+    0x0cf2 Page Table           - Map               - 0x8000000000000d00 (PageTable: PD=Phoenix-Desktop VADDR=0x40000000)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x40000000
          attr                 3
-    0x0cef Page Table           - Map               - 0x8000000000000d01 (PageTable: PD=Phoenix-Desktop VADDR=0xffc0000000)
+    0x0cf3 Page Table           - Map               - 0x8000000000000d01 (PageTable: PD=Phoenix-Desktop VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0xffc0000000
          attr                 3
-    0x0cf0 Page Table           - Map               - 0x8000000000000d02 (PageTable: PD=Shell-PD VADDR=0x0)
+    0x0cf4 Page Table           - Map               - 0x8000000000000d02 (PageTable: PD=Shell-PD VADDR=0x0)
          vspace (cap)         0x8000000000000ce0 (VSpace: PD=Shell-PD)
          vaddr                0x0
          attr                 3
-    0x0cf1 Page Table           - Map               - 0x8000000000000d03 (PageTable: PD=Shell-PD VADDR=0xffc0000000)
+    0x0cf5 Page Table           - Map               - 0x8000000000000d03 (PageTable: PD=Shell-PD VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000ce0 (VSpace: PD=Shell-PD)
          vaddr                0xffc0000000
          attr                 3
-    0x0cf2 Page Table           - Map               - 0x8000000000000d04 (PageTable: PD=EdisonDB-PD VADDR=0x0)
+    0x0cf6 Page Table           - Map               - 0x8000000000000d04 (PageTable: PD=EdisonDB-PD VADDR=0x0)
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0x0
          attr                 3
-    0x0cf3 Page Table           - Map               - 0x8000000000000d05 (PageTable: PD=EdisonDB-PD VADDR=0x40000000)
+    0x0cf7 Page Table           - Map               - 0x8000000000000d05 (PageTable: PD=EdisonDB-PD VADDR=0x40000000)
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0x40000000
          attr                 3
-    0x0cf4 Page Table           - Map               - 0x8000000000000d06 (PageTable: PD=EdisonDB-PD VADDR=0xffc0000000)
+    0x0cf8 Page Table           - Map               - 0x8000000000000d06 (PageTable: PD=EdisonDB-PD VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0xffc0000000
          attr                 3
-    0x0cf5 Page Table           - Map               - 0x8000000000000d07 (PageTable: PD=Onyxia-PD VADDR=0x0)
+    0x0cf9 Page Table           - Map               - 0x8000000000000d07 (PageTable: PD=Onyxia-PD VADDR=0x0)
          vspace (cap)         0x8000000000000ce2 (VSpace: PD=Onyxia-PD)
          vaddr                0x0
          attr                 3
-    0x0cf6 Page Table           - Map               - 0x8000000000000d08 (PageTable: PD=Onyxia-PD VADDR=0xffc0000000)
+    0x0cfa Page Table           - Map               - 0x8000000000000d08 (PageTable: PD=Onyxia-PD VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000ce2 (VSpace: PD=Onyxia-PD)
          vaddr                0xffc0000000
          attr                 3
-    0x0cf7 Page Table           - Map               - 0x8000000000000d09 (PageTable: PD=AXON-Exec-PD VADDR=0x0)
+    0x0cfb Page Table           - Map               - 0x8000000000000d09 (PageTable: PD=AXON-Exec-PD VADDR=0x0)
          vspace (cap)         0x8000000000000ce3 (VSpace: PD=AXON-Exec-PD)
          vaddr                0x0
          attr                 3
-    0x0cf8 Page Table           - Map               - 0x8000000000000d0a (PageTable: PD=AXON-Exec-PD VADDR=0xffc0000000)
+    0x0cfc Page Table           - Map               - 0x8000000000000d0a (PageTable: PD=AXON-Exec-PD VADDR=0xffc0000000)
          vspace (cap)         0x8000000000000ce3 (VSpace: PD=AXON-Exec-PD)
          vaddr                0xffc0000000
          attr                 3
-    0x0cf9 Page Table           - Map               - 0x8000000000000d0b (PageTable: PD=GENESIS VADDR=0x200000)
+    0x0cfd Page Table           - Map               - 0x8000000000000d0b (PageTable: PD=GENESIS VADDR=0x200000)
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0x200000
          attr                 3
-    0x0cfa Page Table           - Map               - 0x8000000000000d0c (PageTable: PD=GENESIS VADDR=0x9000000)
+    0x0cfe Page Table           - Map               - 0x8000000000000d0c (PageTable: PD=GENESIS VADDR=0x9000000)
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0x9000000
          attr                 3
-    0x0cfb Page Table           - Map               - 0x8000000000000d0d (PageTable: PD=GENESIS VADDR=0x48000000)
+    0x0cff Page Table           - Map               - 0x8000000000000d0d (PageTable: PD=GENESIS VADDR=0x48000000)
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0x48000000
          attr                 3
-    0x0cfc Page Table           - Map               - 0x8000000000000d0e (PageTable: PD=GENESIS VADDR=0xffffe00000)
+    0x0d00 Page Table           - Map               - 0x8000000000000d0e (PageTable: PD=GENESIS VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0xffffe00000
          attr                 3
-    0x0cfd Page Table           - Map               - 0x8000000000000d0f (PageTable: PD=ARPi-Broker VADDR=0x200000)
+    0x0d01 Page Table           - Map               - 0x8000000000000d0f (PageTable: PD=ARPi-Broker VADDR=0x200000)
          vspace (cap)         0x8000000000000cd5 (VSpace: PD=ARPi-Broker)
          vaddr                0x200000
          attr                 3
-    0x0cfe Page Table           - Map               - 0x8000000000000d10 (PageTable: PD=ARPi-Broker VADDR=0x9000000)
+    0x0d02 Page Table           - Map               - 0x8000000000000d10 (PageTable: PD=ARPi-Broker VADDR=0x9000000)
          vspace (cap)         0x8000000000000cd5 (VSpace: PD=ARPi-Broker)
          vaddr                0x9000000
          attr                 3
-    0x0cff Page Table           - Map               - 0x8000000000000d11 (PageTable: PD=ARPi-Broker VADDR=0xffffe00000)
+    0x0d03 Page Table           - Map               - 0x8000000000000d11 (PageTable: PD=ARPi-Broker VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000cd5 (VSpace: PD=ARPi-Broker)
          vaddr                0xffffe00000
          attr                 3
-    0x0d00 Page Table           - Map               - 0x8000000000000d12 (PageTable: PD=DataTier-Enforcer VADDR=0x200000)
+    0x0d04 Page Table           - Map               - 0x8000000000000d12 (PageTable: PD=DataTier-Enforcer VADDR=0x200000)
          vspace (cap)         0x8000000000000cd6 (VSpace: PD=DataTier-Enforcer)
          vaddr                0x200000
          attr                 3
-    0x0d01 Page Table           - Map               - 0x8000000000000d13 (PageTable: PD=DataTier-Enforcer VADDR=0x9000000)
+    0x0d05 Page Table           - Map               - 0x8000000000000d13 (PageTable: PD=DataTier-Enforcer VADDR=0x9000000)
          vspace (cap)         0x8000000000000cd6 (VSpace: PD=DataTier-Enforcer)
          vaddr                0x9000000
          attr                 3
-    0x0d02 Page Table           - Map               - 0x8000000000000d14 (PageTable: PD=DataTier-Enforcer VADDR=0xffffe00000)
+    0x0d06 Page Table           - Map               - 0x8000000000000d14 (PageTable: PD=DataTier-Enforcer VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000cd6 (VSpace: PD=DataTier-Enforcer)
          vaddr                0xffffe00000
          attr                 3
-    0x0d03 Page Table           - Map               - 0x8000000000000d15 (PageTable: PD=TrustGraph-Gate VADDR=0x200000)
+    0x0d07 Page Table           - Map               - 0x8000000000000d15 (PageTable: PD=TrustGraph-Gate VADDR=0x200000)
          vspace (cap)         0x8000000000000cd7 (VSpace: PD=TrustGraph-Gate)
          vaddr                0x200000
          attr                 3
-    0x0d04 Page Table           - Map               - 0x8000000000000d16 (PageTable: PD=TrustGraph-Gate VADDR=0x9000000)
+    0x0d08 Page Table           - Map               - 0x8000000000000d16 (PageTable: PD=TrustGraph-Gate VADDR=0x9000000)
          vspace (cap)         0x8000000000000cd7 (VSpace: PD=TrustGraph-Gate)
          vaddr                0x9000000
          attr                 3
-    0x0d05 Page Table           - Map               - 0x8000000000000d17 (PageTable: PD=TrustGraph-Gate VADDR=0xffffe00000)
+    0x0d09 Page Table           - Map               - 0x8000000000000d17 (PageTable: PD=TrustGraph-Gate VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000cd7 (VSpace: PD=TrustGraph-Gate)
          vaddr                0xffffe00000
          attr                 3
-    0x0d06 Page Table           - Map               - 0x8000000000000d18 (PageTable: PD=Inverted-Admin VADDR=0x200000)
+    0x0d0a Page Table           - Map               - 0x8000000000000d18 (PageTable: PD=Inverted-Admin VADDR=0x200000)
          vspace (cap)         0x8000000000000cd8 (VSpace: PD=Inverted-Admin)
          vaddr                0x200000
          attr                 3
-    0x0d07 Page Table           - Map               - 0x8000000000000d19 (PageTable: PD=Inverted-Admin VADDR=0x9000000)
+    0x0d0b Page Table           - Map               - 0x8000000000000d19 (PageTable: PD=Inverted-Admin VADDR=0x9000000)
          vspace (cap)         0x8000000000000cd8 (VSpace: PD=Inverted-Admin)
          vaddr                0x9000000
          attr                 3
-    0x0d08 Page Table           - Map               - 0x8000000000000d1a (PageTable: PD=Inverted-Admin VADDR=0xffffe00000)
+    0x0d0c Page Table           - Map               - 0x8000000000000d1a (PageTable: PD=Inverted-Admin VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000cd8 (VSpace: PD=Inverted-Admin)
          vaddr                0xffffe00000
          attr                 3
-    0x0d09 Page Table           - Map               - 0x8000000000000d1b (PageTable: PD=AXON-Bridge VADDR=0x200000)
+    0x0d0d Page Table           - Map               - 0x8000000000000d1b (PageTable: PD=AXON-Bridge VADDR=0x200000)
          vspace (cap)         0x8000000000000cd9 (VSpace: PD=AXON-Bridge)
          vaddr                0x200000
          attr                 3
-    0x0d0a Page Table           - Map               - 0x8000000000000d1c (PageTable: PD=AXON-Bridge VADDR=0x9000000)
+    0x0d0e Page Table           - Map               - 0x8000000000000d1c (PageTable: PD=AXON-Bridge VADDR=0x9000000)
          vspace (cap)         0x8000000000000cd9 (VSpace: PD=AXON-Bridge)
          vaddr                0x9000000
          attr                 3
-    0x0d0b Page Table           - Map               - 0x8000000000000d1d (PageTable: PD=AXON-Bridge VADDR=0xffffe00000)
+    0x0d0f Page Table           - Map               - 0x8000000000000d1d (PageTable: PD=AXON-Bridge VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000cd9 (VSpace: PD=AXON-Bridge)
          vaddr                0xffffe00000
          attr                 3
-    0x0d0c Page Table           - Map               - 0x8000000000000d1e (PageTable: PD=SOMA-Identity VADDR=0x200000)
+    0x0d10 Page Table           - Map               - 0x8000000000000d1e (PageTable: PD=SOMA-Identity VADDR=0x200000)
          vspace (cap)         0x8000000000000cda (VSpace: PD=SOMA-Identity)
          vaddr                0x200000
          attr                 3
-    0x0d0d Page Table           - Map               - 0x8000000000000d1f (PageTable: PD=SOMA-Identity VADDR=0x9000000)
+    0x0d11 Page Table           - Map               - 0x8000000000000d1f (PageTable: PD=SOMA-Identity VADDR=0x9000000)
          vspace (cap)         0x8000000000000cda (VSpace: PD=SOMA-Identity)
          vaddr                0x9000000
          attr                 3
-    0x0d0e Page Table           - Map               - 0x8000000000000d20 (PageTable: PD=SOMA-Identity VADDR=0xffffe00000)
+    0x0d12 Page Table           - Map               - 0x8000000000000d20 (PageTable: PD=SOMA-Identity VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000cda (VSpace: PD=SOMA-Identity)
          vaddr                0xffffe00000
          attr                 3
-    0x0d0f Page Table           - Map               - 0x8000000000000d21 (PageTable: PD=Phoenix-Init VADDR=0x200000)
+    0x0d13 Page Table           - Map               - 0x8000000000000d21 (PageTable: PD=Phoenix-Init VADDR=0x200000)
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0x200000
          attr                 3
-    0x0d10 Page Table           - Map               - 0x8000000000000d22 (PageTable: PD=Phoenix-Init VADDR=0x9000000)
+    0x0d14 Page Table           - Map               - 0x8000000000000d22 (PageTable: PD=Phoenix-Init VADDR=0x9000000)
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0x9000000
          attr                 3
-    0x0d11 Page Table           - Map               - 0x8000000000000d23 (PageTable: PD=Phoenix-Init VADDR=0x4a000000)
+    0x0d15 Page Table           - Map               - 0x8000000000000d23 (PageTable: PD=Phoenix-Init VADDR=0x4a000000)
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0x4a000000
          attr                 3
-    0x0d12 Page Table           - Map               - 0x8000000000000d24 (PageTable: PD=Phoenix-Init VADDR=0x4a200000)
+    0x0d16 Page Table           - Map               - 0x8000000000000d24 (PageTable: PD=Phoenix-Init VADDR=0x4a200000)
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0x4a200000
          attr                 3
-    0x0d13 Page Table           - Map               - 0x8000000000000d25 (PageTable: PD=Phoenix-Init VADDR=0xffffe00000)
+    0x0d17 Page Table           - Map               - 0x8000000000000d25 (PageTable: PD=Phoenix-Init VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0xffffe00000
          attr                 3
-    0x0d14 Page Table           - Map               - 0x8000000000000d26 (PageTable: PD=Phoenix-Console VADDR=0x200000)
+    0x0d18 Page Table           - Map               - 0x8000000000000d26 (PageTable: PD=Phoenix-Console VADDR=0x200000)
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0x200000
          attr                 3
-    0x0d15 Page Table           - Map               - 0x8000000000000d27 (PageTable: PD=Phoenix-Console VADDR=0x9000000)
+    0x0d19 Page Table           - Map               - 0x8000000000000d27 (PageTable: PD=Phoenix-Console VADDR=0x9000000)
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0x9000000
          attr                 3
-    0x0d16 Page Table           - Map               - 0x8000000000000d28 (PageTable: PD=Phoenix-Console VADDR=0x4a000000)
+    0x0d1a Page Table           - Map               - 0x8000000000000d28 (PageTable: PD=Phoenix-Console VADDR=0x4a000000)
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0x4a000000
          attr                 3
-    0x0d17 Page Table           - Map               - 0x8000000000000d29 (PageTable: PD=Phoenix-Console VADDR=0x4a200000)
+    0x0d1b Page Table           - Map               - 0x8000000000000d29 (PageTable: PD=Phoenix-Console VADDR=0x4a200000)
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0x4a200000
          attr                 3
-    0x0d18 Page Table           - Map               - 0x8000000000000d2a (PageTable: PD=Phoenix-Console VADDR=0xffffe00000)
+    0x0d1c Page Table           - Map               - 0x8000000000000d2a (PageTable: PD=Phoenix-Console VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0xffffe00000
          attr                 3
-    0x0d19 Page Table           - Map               - 0x8000000000000d2b (PageTable: PD=Phoenix-Watchdog VADDR=0x200000)
+    0x0d1d Page Table           - Map               - 0x8000000000000d2b (PageTable: PD=Phoenix-Watchdog VADDR=0x200000)
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0x200000
          attr                 3
-    0x0d1a Page Table           - Map               - 0x8000000000000d2c (PageTable: PD=Phoenix-Watchdog VADDR=0x9000000)
+    0x0d1e Page Table           - Map               - 0x8000000000000d2c (PageTable: PD=Phoenix-Watchdog VADDR=0x9000000)
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0x9000000
          attr                 3
-    0x0d1b Page Table           - Map               - 0x8000000000000d2d (PageTable: PD=Phoenix-Watchdog VADDR=0x4c000000)
+    0x0d1f Page Table           - Map               - 0x8000000000000d2d (PageTable: PD=Phoenix-Watchdog VADDR=0x4c000000)
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0x4c000000
          attr                 3
-    0x0d1c Page Table           - Map               - 0x8000000000000d2e (PageTable: PD=Phoenix-Watchdog VADDR=0xffffe00000)
+    0x0d20 Page Table           - Map               - 0x8000000000000d2e (PageTable: PD=Phoenix-Watchdog VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0xffffe00000
          attr                 3
-    0x0d1d Page Table           - Map               - 0x8000000000000d2f (PageTable: PD=HANIEL-Canvas VADDR=0x200000)
+    0x0d21 Page Table           - Map               - 0x8000000000000d2f (PageTable: PD=HANIEL-Canvas VADDR=0x200000)
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0x200000
          attr                 3
-    0x0d1e Page Table           - Map               - 0x8000000000000d30 (PageTable: PD=HANIEL-Canvas VADDR=0x9000000)
+    0x0d22 Page Table           - Map               - 0x8000000000000d30 (PageTable: PD=HANIEL-Canvas VADDR=0x9000000)
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0x9000000
          attr                 3
-    0x0d1f Page Table           - Map               - 0x8000000000000d31 (PageTable: PD=HANIEL-Canvas VADDR=0xa000000)
+    0x0d23 Page Table           - Map               - 0x8000000000000d31 (PageTable: PD=HANIEL-Canvas VADDR=0xa000000)
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0xa000000
          attr                 3
-    0x0d20 Page Table           - Map               - 0x8000000000000d32 (PageTable: PD=HANIEL-Canvas VADDR=0x44000000)
+    0x0d24 Page Table           - Map               - 0x8000000000000d32 (PageTable: PD=HANIEL-Canvas VADDR=0x44000000)
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0x44000000
          attr                 3
-    0x0d21 Page Table           - Map               - 0x8000000000000d33 (PageTable: PD=HANIEL-Canvas VADDR=0x44200000)
+    0x0d25 Page Table           - Map               - 0x8000000000000d33 (PageTable: PD=HANIEL-Canvas VADDR=0x44200000)
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0x44200000
          attr                 3
-    0x0d22 Page Table           - Map               - 0x8000000000000d34 (PageTable: PD=HANIEL-Canvas VADDR=0xffffe00000)
+    0x0d26 Page Table           - Map               - 0x8000000000000d34 (PageTable: PD=HANIEL-Canvas VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0xffffe00000
          attr                 3
-    0x0d23 Page Table           - Map               - 0x8000000000000d35 (PageTable: PD=Phoenix-Desktop VADDR=0x200000)
+    0x0d27 Page Table           - Map               - 0x8000000000000d35 (PageTable: PD=Phoenix-Desktop VADDR=0x200000)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x200000
          attr                 3
-    0x0d24 Page Table           - Map               - 0x8000000000000d36 (PageTable: PD=Phoenix-Desktop VADDR=0x400000)
+    0x0d28 Page Table           - Map               - 0x8000000000000d36 (PageTable: PD=Phoenix-Desktop VADDR=0x400000)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x400000
          attr                 3
-    0x0d25 Page Table           - Map               - 0x8000000000000d37 (PageTable: PD=Phoenix-Desktop VADDR=0x9000000)
+    0x0d29 Page Table           - Map               - 0x8000000000000d37 (PageTable: PD=Phoenix-Desktop VADDR=0x9000000)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x9000000
          attr                 3
-    0x0d26 Page Table           - Map               - 0x8000000000000d38 (PageTable: PD=Phoenix-Desktop VADDR=0xa000000)
+    0x0d2a Page Table           - Map               - 0x8000000000000d38 (PageTable: PD=Phoenix-Desktop VADDR=0xa000000)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0xa000000
          attr                 3
-    0x0d27 Page Table           - Map               - 0x8000000000000d39 (PageTable: PD=Phoenix-Desktop VADDR=0x44000000)
+    0x0d2b Page Table           - Map               - 0x8000000000000d39 (PageTable: PD=Phoenix-Desktop VADDR=0x44000000)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x44000000
          attr                 3
-    0x0d28 Page Table           - Map               - 0x8000000000000d3a (PageTable: PD=Phoenix-Desktop VADDR=0x44200000)
+    0x0d2c Page Table           - Map               - 0x8000000000000d3a (PageTable: PD=Phoenix-Desktop VADDR=0x44200000)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x44200000
          attr                 3
-    0x0d29 Page Table           - Map               - 0x8000000000000d3b (PageTable: PD=Phoenix-Desktop VADDR=0x4a000000)
+    0x0d2d Page Table           - Map               - 0x8000000000000d3b (PageTable: PD=Phoenix-Desktop VADDR=0x4a000000)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x4a000000
          attr                 3
-    0x0d2a Page Table           - Map               - 0x8000000000000d3c (PageTable: PD=Phoenix-Desktop VADDR=0x4a200000)
+    0x0d2e Page Table           - Map               - 0x8000000000000d3c (PageTable: PD=Phoenix-Desktop VADDR=0x4a200000)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x4a200000
          attr                 3
-    0x0d2b Page Table           - Map               - 0x8000000000000d3d (PageTable: PD=Phoenix-Desktop VADDR=0x4b000000)
+    0x0d2f Page Table           - Map               - 0x8000000000000d3d (PageTable: PD=Phoenix-Desktop VADDR=0x4b000000)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x4b000000
          attr                 3
-    0x0d2c Page Table           - Map               - 0x8000000000000d3e (PageTable: PD=Phoenix-Desktop VADDR=0xffffe00000)
+    0x0d30 Page Table           - Map               - 0x8000000000000d3e (PageTable: PD=Phoenix-Desktop VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0xffffe00000
          attr                 3
-    0x0d2d Page Table           - Map               - 0x8000000000000d3f (PageTable: PD=Shell-PD VADDR=0x200000)
+    0x0d31 Page Table           - Map               - 0x8000000000000d3f (PageTable: PD=Shell-PD VADDR=0x200000)
          vspace (cap)         0x8000000000000ce0 (VSpace: PD=Shell-PD)
          vaddr                0x200000
          attr                 3
-    0x0d2e Page Table           - Map               - 0x8000000000000d40 (PageTable: PD=Shell-PD VADDR=0x9000000)
+    0x0d32 Page Table           - Map               - 0x8000000000000d40 (PageTable: PD=Shell-PD VADDR=0x9000000)
          vspace (cap)         0x8000000000000ce0 (VSpace: PD=Shell-PD)
          vaddr                0x9000000
          attr                 3
-    0x0d2f Page Table           - Map               - 0x8000000000000d41 (PageTable: PD=Shell-PD VADDR=0xffffe00000)
+    0x0d33 Page Table           - Map               - 0x8000000000000d41 (PageTable: PD=Shell-PD VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000ce0 (VSpace: PD=Shell-PD)
          vaddr                0xffffe00000
          attr                 3
-    0x0d30 Page Table           - Map               - 0x8000000000000d42 (PageTable: PD=EdisonDB-PD VADDR=0x200000)
+    0x0d34 Page Table           - Map               - 0x8000000000000d42 (PageTable: PD=EdisonDB-PD VADDR=0x200000)
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0x200000
          attr                 3
-    0x0d31 Page Table           - Map               - 0x8000000000000d43 (PageTable: PD=EdisonDB-PD VADDR=0x9000000)
+    0x0d35 Page Table           - Map               - 0x8000000000000d43 (PageTable: PD=EdisonDB-PD VADDR=0x9000000)
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0x9000000
          attr                 3
-    0x0d32 Page Table           - Map               - 0x8000000000000d44 (PageTable: PD=EdisonDB-PD VADDR=0x4a000000)
+    0x0d36 Page Table           - Map               - 0x8000000000000d44 (PageTable: PD=EdisonDB-PD VADDR=0x4a000000)
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0x4a000000
          attr                 3
-    0x0d33 Page Table           - Map               - 0x8000000000000d45 (PageTable: PD=EdisonDB-PD VADDR=0x4a200000)
+    0x0d37 Page Table           - Map               - 0x8000000000000d45 (PageTable: PD=EdisonDB-PD VADDR=0x4a200000)
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0x4a200000
          attr                 3
-    0x0d34 Page Table           - Map               - 0x8000000000000d46 (PageTable: PD=EdisonDB-PD VADDR=0xffffe00000)
+    0x0d38 Page Table           - Map               - 0x8000000000000d46 (PageTable: PD=EdisonDB-PD VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0xffffe00000
          attr                 3
-    0x0d35 Page Table           - Map               - 0x8000000000000d47 (PageTable: PD=Onyxia-PD VADDR=0x200000)
+    0x0d39 Page Table           - Map               - 0x8000000000000d47 (PageTable: PD=Onyxia-PD VADDR=0x200000)
          vspace (cap)         0x8000000000000ce2 (VSpace: PD=Onyxia-PD)
          vaddr                0x200000
          attr                 3
-    0x0d36 Page Table           - Map               - 0x8000000000000d48 (PageTable: PD=Onyxia-PD VADDR=0x9000000)
+    0x0d3a Page Table           - Map               - 0x8000000000000d48 (PageTable: PD=Onyxia-PD VADDR=0x9000000)
          vspace (cap)         0x8000000000000ce2 (VSpace: PD=Onyxia-PD)
          vaddr                0x9000000
          attr                 3
-    0x0d37 Page Table           - Map               - 0x8000000000000d49 (PageTable: PD=Onyxia-PD VADDR=0xffffe00000)
+    0x0d3b Page Table           - Map               - 0x8000000000000d49 (PageTable: PD=Onyxia-PD VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000ce2 (VSpace: PD=Onyxia-PD)
          vaddr                0xffffe00000
          attr                 3
-    0x0d38 Page Table           - Map               - 0x8000000000000d4a (PageTable: PD=AXON-Exec-PD VADDR=0x200000)
+    0x0d3c Page Table           - Map               - 0x8000000000000d4a (PageTable: PD=AXON-Exec-PD VADDR=0x200000)
          vspace (cap)         0x8000000000000ce3 (VSpace: PD=AXON-Exec-PD)
          vaddr                0x200000
          attr                 3
-    0x0d39 Page Table           - Map               - 0x8000000000000d4b (PageTable: PD=AXON-Exec-PD VADDR=0x9000000)
+    0x0d3d Page Table           - Map               - 0x8000000000000d4b (PageTable: PD=AXON-Exec-PD VADDR=0x9000000)
          vspace (cap)         0x8000000000000ce3 (VSpace: PD=AXON-Exec-PD)
          vaddr                0x9000000
          attr                 3
-    0x0d3a Page Table           - Map               - 0x8000000000000d4c (PageTable: PD=AXON-Exec-PD VADDR=0xffffe00000)
+    0x0d3e Page Table           - Map               - 0x8000000000000d4c (PageTable: PD=AXON-Exec-PD VADDR=0xffffe00000)
          vspace (cap)         0x8000000000000ce3 (VSpace: PD=AXON-Exec-PD)
          vaddr                0xffffe00000
          attr                 3
-    0x0d3b Page                 - Map               - 0x8000000000000d5d (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d3f Page                 - Map               - 0x8000000000000d5e (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d3c Page                 - Map               - 0x8000000000000d5e (Page(4 KiB): MR=sovereign_proof_frame @ 48000000 (derived))
+    0x0d40 Page                 - Map               - 0x8000000000000d5f (Page(4 KiB): MR=sovereign_proof_frame @ 48000000 (derived))
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0x48000000
          rights               3
          attr                 6
-    0x0d3d Page                 - Map               - 0x8000000000000d5f (Page(4 KiB): MR=ELF:GENESIS-0 @ 6026c000 (derived))
+    0x0d41 Page                 - Map               - 0x8000000000000d60 (Page(4 KiB): MR=ELF:GENESIS-0 @ 6026c000 (derived))
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d3e Page                 - Map               - 0x8000000000000d60 (Page(4 KiB): MR=ELF:GENESIS-1 @ 6026d000 (derived))
+    0x0d42 Page                 - Map               - 0x8000000000000d61 (Page(4 KiB): MR=ELF:GENESIS-1 @ 6026d000 (derived))
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d3f Page                 - Map               - 0x8000000000000d61 (Page(4 KiB): MR=STACK:GENESIS #0 (derived))
+    0x0d43 Page                 - Map               - 0x8000000000000d62 (Page(4 KiB): MR=STACK:GENESIS #0 (derived))
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d40 Page                 - Map               - 0x8000000000000d62 (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d44 Page                 - Map               - 0x8000000000000d63 (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000cd5 (VSpace: PD=ARPi-Broker)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d41 Page                 - Map               - 0x8000000000000d63 (Page(4 KiB): MR=ELF:ARPi-Broker-0 @ 6026e000 (derived))
+    0x0d45 Page                 - Map               - 0x8000000000000d64 (Page(4 KiB): MR=ELF:ARPi-Broker-0 @ 6026e000 (derived))
          vspace (cap)         0x8000000000000cd5 (VSpace: PD=ARPi-Broker)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d42 Page                 - Map               - 0x8000000000000d64 (Page(4 KiB): MR=ELF:ARPi-Broker-1 @ 6026f000 (derived))
+    0x0d46 Page                 - Map               - 0x8000000000000d65 (Page(4 KiB): MR=ELF:ARPi-Broker-1 @ 6026f000 (derived))
          vspace (cap)         0x8000000000000cd5 (VSpace: PD=ARPi-Broker)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d43 Page                 - Map               - 0x8000000000000d65 (Page(4 KiB): MR=STACK:ARPi-Broker #0 (derived))
+    0x0d47 Page                 - Map               - 0x8000000000000d66 (Page(4 KiB): MR=STACK:ARPi-Broker #0 (derived))
          vspace (cap)         0x8000000000000cd5 (VSpace: PD=ARPi-Broker)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d44 Page                 - Map               - 0x8000000000000d66 (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d48 Page                 - Map               - 0x8000000000000d67 (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000cd6 (VSpace: PD=DataTier-Enforcer)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d45 Page                 - Map               - 0x8000000000000d67 (Page(4 KiB): MR=ELF:DataTier-Enforcer-0 @ 60270000 (derived))
+    0x0d49 Page                 - Map               - 0x8000000000000d68 (Page(4 KiB): MR=ELF:DataTier-Enforcer-0 @ 60270000 (derived))
          vspace (cap)         0x8000000000000cd6 (VSpace: PD=DataTier-Enforcer)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d46 Page                 - Map               - 0x8000000000000d68 (Page(4 KiB): MR=ELF:DataTier-Enforcer-1 @ 60271000 (derived))
+    0x0d4a Page                 - Map               - 0x8000000000000d69 (Page(4 KiB): MR=ELF:DataTier-Enforcer-1 @ 60271000 (derived))
          vspace (cap)         0x8000000000000cd6 (VSpace: PD=DataTier-Enforcer)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d47 Page                 - Map               - 0x8000000000000d69 (Page(4 KiB): MR=STACK:DataTier-Enforcer #0 (derived))
+    0x0d4b Page                 - Map               - 0x8000000000000d6a (Page(4 KiB): MR=STACK:DataTier-Enforcer #0 (derived))
          vspace (cap)         0x8000000000000cd6 (VSpace: PD=DataTier-Enforcer)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d48 Page                 - Map               - 0x8000000000000d6a (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d4c Page                 - Map               - 0x8000000000000d6b (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000cd7 (VSpace: PD=TrustGraph-Gate)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d49 Page                 - Map               - 0x8000000000000d6b (Page(4 KiB): MR=ELF:TrustGraph-Gate-0 @ 60272000 (derived))
+    0x0d4d Page                 - Map               - 0x8000000000000d6c (Page(4 KiB): MR=ELF:TrustGraph-Gate-0 @ 60272000 (derived))
          vspace (cap)         0x8000000000000cd7 (VSpace: PD=TrustGraph-Gate)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d4a Page                 - Map               - 0x8000000000000d6c (Page(4 KiB): MR=ELF:TrustGraph-Gate-1 @ 60273000 (derived))
+    0x0d4e Page                 - Map               - 0x8000000000000d6d (Page(4 KiB): MR=ELF:TrustGraph-Gate-1 @ 60273000 (derived))
          vspace (cap)         0x8000000000000cd7 (VSpace: PD=TrustGraph-Gate)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d4b Page                 - Map               - 0x8000000000000d6d (Page(4 KiB): MR=STACK:TrustGraph-Gate #0 (derived))
+    0x0d4f Page                 - Map               - 0x8000000000000d6e (Page(4 KiB): MR=STACK:TrustGraph-Gate #0 (derived))
          vspace (cap)         0x8000000000000cd7 (VSpace: PD=TrustGraph-Gate)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d4c Page                 - Map               - 0x8000000000000d6e (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d50 Page                 - Map               - 0x8000000000000d6f (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000cd8 (VSpace: PD=Inverted-Admin)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d4d Page                 - Map               - 0x8000000000000d6f (Page(4 KiB): MR=ELF:Inverted-Admin-0 @ 60274000 (derived))
+    0x0d51 Page                 - Map               - 0x8000000000000d70 (Page(4 KiB): MR=ELF:Inverted-Admin-0 @ 60274000 (derived))
          vspace (cap)         0x8000000000000cd8 (VSpace: PD=Inverted-Admin)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d4e Page                 - Map               - 0x8000000000000d70 (Page(4 KiB): MR=ELF:Inverted-Admin-1 @ 60275000 (derived))
+    0x0d52 Page                 - Map               - 0x8000000000000d71 (Page(4 KiB): MR=ELF:Inverted-Admin-1 @ 60275000 (derived))
          vspace (cap)         0x8000000000000cd8 (VSpace: PD=Inverted-Admin)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d4f Page                 - Map               - 0x8000000000000d71 (Page(4 KiB): MR=STACK:Inverted-Admin #0 (derived))
+    0x0d53 Page                 - Map               - 0x8000000000000d72 (Page(4 KiB): MR=STACK:Inverted-Admin #0 (derived))
          vspace (cap)         0x8000000000000cd8 (VSpace: PD=Inverted-Admin)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d50 Page                 - Map               - 0x8000000000000d72 (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d54 Page                 - Map               - 0x8000000000000d73 (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000cd9 (VSpace: PD=AXON-Bridge)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d51 Page                 - Map               - 0x8000000000000d73 (Page(4 KiB): MR=ELF:AXON-Bridge-0 @ 60276000 (derived))
+    0x0d55 Page                 - Map               - 0x8000000000000d74 (Page(4 KiB): MR=ELF:AXON-Bridge-0 @ 60276000 (derived))
          vspace (cap)         0x8000000000000cd9 (VSpace: PD=AXON-Bridge)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d52 Page                 - Map               - 0x8000000000000d74 (Page(4 KiB): MR=ELF:AXON-Bridge-1 @ 60277000 (derived))
+    0x0d56 Page                 - Map               - 0x8000000000000d75 (Page(4 KiB): MR=ELF:AXON-Bridge-1 @ 60277000 (derived))
          vspace (cap)         0x8000000000000cd9 (VSpace: PD=AXON-Bridge)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d53 Page                 - Map               - 0x8000000000000d75 (Page(4 KiB): MR=STACK:AXON-Bridge #0 (derived))
+    0x0d57 Page                 - Map               - 0x8000000000000d76 (Page(4 KiB): MR=STACK:AXON-Bridge #0 (derived))
          vspace (cap)         0x8000000000000cd9 (VSpace: PD=AXON-Bridge)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d54 Page                 - Map               - 0x8000000000000d76 (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d58 Page                 - Map               - 0x8000000000000d77 (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000cda (VSpace: PD=SOMA-Identity)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d55 Page                 - Map               - 0x8000000000000d77 (Page(4 KiB): MR=ELF:SOMA-Identity-0 @ 60278000 (derived))
+    0x0d59 Page                 - Map               - 0x8000000000000d78 (Page(4 KiB): MR=ELF:SOMA-Identity-0 @ 60278000 (derived))
          vspace (cap)         0x8000000000000cda (VSpace: PD=SOMA-Identity)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d56 Page                 - Map               - 0x8000000000000d78 (Page(4 KiB): MR=ELF:SOMA-Identity-1 @ 60279000 (derived))
+    0x0d5a Page                 - Map               - 0x8000000000000d79 (Page(4 KiB): MR=ELF:SOMA-Identity-1 @ 60279000 (derived))
          vspace (cap)         0x8000000000000cda (VSpace: PD=SOMA-Identity)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d57 Page                 - Map               - 0x8000000000000d79 (Page(4 KiB): MR=STACK:SOMA-Identity #0 (derived))
+    0x0d5b Page                 - Map               - 0x8000000000000d7a (Page(4 KiB): MR=STACK:SOMA-Identity #0 (derived))
          vspace (cap)         0x8000000000000cda (VSpace: PD=SOMA-Identity)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d58 Page                 - Map               - 0x8000000000000d7a (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d5c Page                 - Map               - 0x8000000000000d7b (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d59 Page                 - Map               - 0x8000000000000d7b (Page(4 KiB): MR=phoenix_heap @ 4a000000 (derived))
+    0x0d5d Page                 - Map               - 0x8000000000000d7c (Page(4 KiB): MR=phoenix_heap @ 4a000000 (derived))
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0x4a000000
          rights               3
          attr                 7
       REPEAT: count=1024
-    0x0d5a Page                 - Map               - 0x800000000000117b (Page(4 KiB): MR=ELF:Phoenix-Init-0 @ 6027a000 (derived))
+    0x0d5e Page                 - Map               - 0x800000000000117c (Page(4 KiB): MR=ELF:Phoenix-Init-0 @ 6027a000 (derived))
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d5b Page                 - Map               - 0x800000000000117c (Page(4 KiB): MR=ELF:Phoenix-Init-1 @ 6027b000 (derived))
+    0x0d5f Page                 - Map               - 0x800000000000117d (Page(4 KiB): MR=ELF:Phoenix-Init-1 @ 6027b000 (derived))
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d5c Page                 - Map               - 0x800000000000117d (Page(4 KiB): MR=STACK:Phoenix-Init #0 (derived))
+    0x0d60 Page                 - Map               - 0x800000000000117e (Page(4 KiB): MR=STACK:Phoenix-Init #0 (derived))
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d5d Page                 - Map               - 0x800000000000117e (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d61 Page                 - Map               - 0x800000000000117f (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d5e Page                 - Map               - 0x800000000000117f (Page(4 KiB): MR=phoenix_heap @ 4a000000 (derived))
+    0x0d62 Page                 - Map               - 0x8000000000001180 (Page(4 KiB): MR=phoenix_heap @ 4a000000 (derived))
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0x4a000000
          rights               2
          attr                 7
       REPEAT: count=1024
-    0x0d5f Page                 - Map               - 0x800000000000157f (Page(4 KiB): MR=ELF:Phoenix-Console-0 @ 6027c000 (derived))
+    0x0d63 Page                 - Map               - 0x8000000000001580 (Page(4 KiB): MR=ELF:Phoenix-Console-0 @ 6027c000 (derived))
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d60 Page                 - Map               - 0x8000000000001580 (Page(4 KiB): MR=ELF:Phoenix-Console-1 @ 6027d000 (derived))
+    0x0d64 Page                 - Map               - 0x8000000000001581 (Page(4 KiB): MR=ELF:Phoenix-Console-1 @ 6027d000 (derived))
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d61 Page                 - Map               - 0x8000000000001581 (Page(4 KiB): MR=STACK:Phoenix-Console #0 (derived))
+    0x0d65 Page                 - Map               - 0x8000000000001582 (Page(4 KiB): MR=STACK:Phoenix-Console #0 (derived))
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d62 Page                 - Map               - 0x8000000000001582 (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d66 Page                 - Map               - 0x8000000000001583 (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d63 Page                 - Map               - 0x8000000000001583 (Page(4 KiB): MR=watchdog_registers @ 4c000000 (derived))
+    0x0d67 Page                 - Map               - 0x8000000000001584 (Page(4 KiB): MR=watchdog_registers @ 4c000000 (derived))
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0x4c000000
          rights               3
          attr                 6
-    0x0d64 Page                 - Map               - 0x8000000000001584 (Page(4 KiB): MR=ELF:Phoenix-Watchdog-0 @ 6027e000 (derived))
+    0x0d68 Page                 - Map               - 0x8000000000001585 (Page(4 KiB): MR=ELF:Phoenix-Watchdog-0 @ 6027e000 (derived))
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d65 Page                 - Map               - 0x8000000000001585 (Page(4 KiB): MR=ELF:Phoenix-Watchdog-1 @ 6027f000 (derived))
+    0x0d69 Page                 - Map               - 0x8000000000001586 (Page(4 KiB): MR=ELF:Phoenix-Watchdog-1 @ 6027f000 (derived))
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d66 Page                 - Map               - 0x8000000000001586 (Page(4 KiB): MR=STACK:Phoenix-Watchdog #0 (derived))
+    0x0d6a Page                 - Map               - 0x8000000000001587 (Page(4 KiB): MR=STACK:Phoenix-Watchdog #0 (derived))
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d67 Page                 - Map               - 0x8000000000001587 (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d6b Page                 - Map               - 0x8000000000001588 (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d68 Page                 - Map               - 0x8000000000001588 (Page(4 KiB): MR=gpu_framebuffer @ 44000000 (derived))
+    0x0d6c Page                 - Map               - 0x8000000000001589 (Page(4 KiB): MR=gpu_framebuffer @ 44000000 (derived))
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0x44000000
          rights               3
          attr                 6
       REPEAT: count=1024
-    0x0d69 Page                 - Map               - 0x8000000000001988 (Page(4 KiB): MR=virtio_mmio @ a003000 (derived))
+    0x0d6d Page                 - Map               - 0x8000000000001989 (Page(4 KiB): MR=virtio_mmio @ a003000 (derived))
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0xa003000
          rights               3
          attr                 6
-    0x0d6a Page                 - Map               - 0x8000000000001989 (Page(4 KiB): MR=ELF:HANIEL-Canvas-0 @ 60280000 (derived))
+    0x0d6e Page                 - Map               - 0x800000000000198a (Page(4 KiB): MR=ELF:HANIEL-Canvas-0 @ 60280000 (derived))
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d6b Page                 - Map               - 0x800000000000198a (Page(4 KiB): MR=ELF:HANIEL-Canvas-1 @ 60281000 (derived))
+    0x0d6f Page                 - Map               - 0x800000000000198b (Page(4 KiB): MR=ELF:HANIEL-Canvas-1 @ 60281000 (derived))
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d6c Page                 - Map               - 0x800000000000198b (Page(4 KiB): MR=STACK:HANIEL-Canvas #0 (derived))
+    0x0d70 Page                 - Map               - 0x800000000000198c (Page(4 KiB): MR=STACK:HANIEL-Canvas #0 (derived))
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d6d Page                 - Map               - 0x800000000000198c (Page(4 KiB): MR=rtc @ 9010000 (derived))
+    0x0d71 Page                 - Map               - 0x800000000000198d (Page(4 KiB): MR=rtc @ 9010000 (derived))
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x9010000
          rights               3
          attr                 6
-    0x0d6e Page                 - Map               - 0x800000000000198d (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d72 Page                 - Map               - 0x800000000000198e (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d6f Page                 - Map               - 0x800000000000198e (Page(4 KiB): MR=fw_cfg @ 9020000 (derived))
+    0x0d73 Page                 - Map               - 0x800000000000198f (Page(4 KiB): MR=fw_cfg @ 9020000 (derived))
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x9020000
          rights               3
          attr                 6
-    0x0d70 Page                 - Map               - 0x800000000000198f (Page(4 KiB): MR=phoenix_heap @ 4a000000 (derived))
+    0x0d74 Page                 - Map               - 0x8000000000001990 (Page(4 KiB): MR=phoenix_heap @ 4a000000 (derived))
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x4a000000
          rights               3
          attr                 7
       REPEAT: count=1024
-    0x0d71 Page                 - Map               - 0x8000000000001d8f (Page(4 KiB): MR=virtio_mmio @ a003000 (derived))
+    0x0d75 Page                 - Map               - 0x8000000000001d90 (Page(4 KiB): MR=virtio_mmio @ a003000 (derived))
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0xa003000
          rights               3
          attr                 6
-    0x0d72 Page                 - Map               - 0x8000000000001d90 (Page(4 KiB): MR=gpu_framebuffer @ 44000000 (derived))
+    0x0d76 Page                 - Map               - 0x8000000000001d91 (Page(4 KiB): MR=gpu_framebuffer @ 44000000 (derived))
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x44000000
          rights               3
          attr                 7
       REPEAT: count=1024
-    0x0d73 Page                 - Map               - 0x8000000000002190 (Page(4 KiB): MR=gpu_dma @ 4b000000 (derived))
+    0x0d77 Page                 - Map               - 0x8000000000002191 (Page(4 KiB): MR=gpu_dma @ 4b000000 (derived))
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x4b000000
          rights               3
          attr                 6
       REPEAT: count=32
-    0x0d74 Page                 - Map               - 0x80000000000021b0 (Page(4 KiB): MR=ELF:Phoenix-Desktop-0 @ 60282000 (derived))
+    0x0d78 Page                 - Map               - 0x80000000000021b1 (Page(4 KiB): MR=ELF:Phoenix-Desktop-0 @ 60282000 (derived))
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x200000
          rights               3
          attr                 3
       REPEAT: count=970
-    0x0d75 Page                 - Map               - 0x800000000000257a (Page(4 KiB): MR=STACK:Phoenix-Desktop #0 (derived))
+    0x0d79 Page                 - Map               - 0x800000000000257b (Page(4 KiB): MR=STACK:Phoenix-Desktop #0 (derived))
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d76 Page                 - Map               - 0x800000000000257b (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d7a Page                 - Map               - 0x800000000000257c (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000ce0 (VSpace: PD=Shell-PD)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d77 Page                 - Map               - 0x800000000000257c (Page(4 KiB): MR=ELF:Shell-PD-0 @ 6064c000 (derived))
+    0x0d7b Page                 - Map               - 0x800000000000257d (Page(4 KiB): MR=ELF:Shell-PD-0 @ 6064c000 (derived))
          vspace (cap)         0x8000000000000ce0 (VSpace: PD=Shell-PD)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d78 Page                 - Map               - 0x800000000000257d (Page(4 KiB): MR=ELF:Shell-PD-1 @ 6064d000 (derived))
+    0x0d7c Page                 - Map               - 0x800000000000257e (Page(4 KiB): MR=ELF:Shell-PD-1 @ 6064d000 (derived))
          vspace (cap)         0x8000000000000ce0 (VSpace: PD=Shell-PD)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d79 Page                 - Map               - 0x800000000000257e (Page(4 KiB): MR=STACK:Shell-PD #0 (derived))
+    0x0d7d Page                 - Map               - 0x800000000000257f (Page(4 KiB): MR=STACK:Shell-PD #0 (derived))
          vspace (cap)         0x8000000000000ce0 (VSpace: PD=Shell-PD)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d7a Page                 - Map               - 0x800000000000257f (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d7e Page                 - Map               - 0x8000000000002580 (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d7b Page                 - Map               - 0x8000000000002580 (Page(4 KiB): MR=phoenix_heap @ 4a000000 (derived))
+    0x0d7f Page                 - Map               - 0x8000000000002581 (Page(4 KiB): MR=phoenix_heap @ 4a000000 (derived))
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0x4a000000
          rights               3
          attr                 7
       REPEAT: count=1024
-    0x0d7c Page                 - Map               - 0x8000000000002980 (Page(4 KiB): MR=ELF:EdisonDB-PD-0 @ 6064e000 (derived))
+    0x0d80 Page                 - Map               - 0x8000000000002981 (Page(4 KiB): MR=ELF:EdisonDB-PD-0 @ 6064e000 (derived))
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d7d Page                 - Map               - 0x8000000000002981 (Page(4 KiB): MR=ELF:EdisonDB-PD-1 @ 6064f000 (derived))
+    0x0d81 Page                 - Map               - 0x8000000000002982 (Page(4 KiB): MR=ELF:EdisonDB-PD-1 @ 6064f000 (derived))
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d7e Page                 - Map               - 0x8000000000002982 (Page(4 KiB): MR=STACK:EdisonDB-PD #0 (derived))
+    0x0d82 Page                 - Map               - 0x8000000000002983 (Page(4 KiB): MR=STACK:EdisonDB-PD #0 (derived))
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d7f Page                 - Map               - 0x8000000000002983 (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d83 Page                 - Map               - 0x8000000000002984 (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000ce2 (VSpace: PD=Onyxia-PD)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d80 Page                 - Map               - 0x8000000000002984 (Page(4 KiB): MR=ELF:Onyxia-PD-0 @ 60650000 (derived))
+    0x0d84 Page                 - Map               - 0x8000000000002985 (Page(4 KiB): MR=ELF:Onyxia-PD-0 @ 60650000 (derived))
          vspace (cap)         0x8000000000000ce2 (VSpace: PD=Onyxia-PD)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d81 Page                 - Map               - 0x8000000000002985 (Page(4 KiB): MR=ELF:Onyxia-PD-1 @ 60651000 (derived))
+    0x0d85 Page                 - Map               - 0x8000000000002986 (Page(4 KiB): MR=ELF:Onyxia-PD-1 @ 60651000 (derived))
          vspace (cap)         0x8000000000000ce2 (VSpace: PD=Onyxia-PD)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d82 Page                 - Map               - 0x8000000000002986 (Page(4 KiB): MR=STACK:Onyxia-PD #0 (derived))
+    0x0d86 Page                 - Map               - 0x8000000000002987 (Page(4 KiB): MR=STACK:Onyxia-PD #0 (derived))
          vspace (cap)         0x8000000000000ce2 (VSpace: PD=Onyxia-PD)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d83 Page                 - Map               - 0x8000000000002987 (Page(4 KiB): MR=serial @ 9000000 (derived))
+    0x0d87 Page                 - Map               - 0x8000000000002988 (Page(4 KiB): MR=serial @ 9000000 (derived))
          vspace (cap)         0x8000000000000ce3 (VSpace: PD=AXON-Exec-PD)
          vaddr                0x9000000
          rights               3
          attr                 6
-    0x0d84 Page                 - Map               - 0x8000000000002988 (Page(4 KiB): MR=ELF:AXON-Exec-PD-0 @ 60652000 (derived))
+    0x0d88 Page                 - Map               - 0x8000000000002989 (Page(4 KiB): MR=ELF:AXON-Exec-PD-0 @ 60652000 (derived))
          vspace (cap)         0x8000000000000ce3 (VSpace: PD=AXON-Exec-PD)
          vaddr                0x200000
          rights               2
          attr                 3
-    0x0d85 Page                 - Map               - 0x8000000000002989 (Page(4 KiB): MR=ELF:AXON-Exec-PD-1 @ 60653000 (derived))
+    0x0d89 Page                 - Map               - 0x800000000000298a (Page(4 KiB): MR=ELF:AXON-Exec-PD-1 @ 60653000 (derived))
          vspace (cap)         0x8000000000000ce3 (VSpace: PD=AXON-Exec-PD)
          vaddr                0x201000
          rights               3
          attr                 7
-    0x0d86 Page                 - Map               - 0x800000000000298a (Page(4 KiB): MR=STACK:AXON-Exec-PD #0 (derived))
+    0x0d8a Page                 - Map               - 0x800000000000298b (Page(4 KiB): MR=STACK:AXON-Exec-PD #0 (derived))
          vspace (cap)         0x8000000000000ce3 (VSpace: PD=AXON-Exec-PD)
          vaddr                0xfffffff000
          rights               3
          attr                 7
-    0x0d87 Page                 - Map               - 0x800000000000003f (Page(4 KiB): IPC Buffer PD=GENESIS)
+    0x0d8b Page                 - Map               - 0x800000000000003f (Page(4 KiB): IPC Buffer PD=GENESIS)
          vspace (cap)         0x8000000000000cd4 (VSpace: PD=GENESIS)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d88 Page                 - Map               - 0x8000000000000040 (Page(4 KiB): IPC Buffer PD=ARPi-Broker)
+    0x0d8c Page                 - Map               - 0x8000000000000040 (Page(4 KiB): IPC Buffer PD=ARPi-Broker)
          vspace (cap)         0x8000000000000cd5 (VSpace: PD=ARPi-Broker)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d89 Page                 - Map               - 0x8000000000000041 (Page(4 KiB): IPC Buffer PD=DataTier-Enforcer)
+    0x0d8d Page                 - Map               - 0x8000000000000041 (Page(4 KiB): IPC Buffer PD=DataTier-Enforcer)
          vspace (cap)         0x8000000000000cd6 (VSpace: PD=DataTier-Enforcer)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d8a Page                 - Map               - 0x8000000000000042 (Page(4 KiB): IPC Buffer PD=TrustGraph-Gate)
+    0x0d8e Page                 - Map               - 0x8000000000000042 (Page(4 KiB): IPC Buffer PD=TrustGraph-Gate)
          vspace (cap)         0x8000000000000cd7 (VSpace: PD=TrustGraph-Gate)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d8b Page                 - Map               - 0x8000000000000043 (Page(4 KiB): IPC Buffer PD=Inverted-Admin)
+    0x0d8f Page                 - Map               - 0x8000000000000043 (Page(4 KiB): IPC Buffer PD=Inverted-Admin)
          vspace (cap)         0x8000000000000cd8 (VSpace: PD=Inverted-Admin)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d8c Page                 - Map               - 0x8000000000000044 (Page(4 KiB): IPC Buffer PD=AXON-Bridge)
+    0x0d90 Page                 - Map               - 0x8000000000000044 (Page(4 KiB): IPC Buffer PD=AXON-Bridge)
          vspace (cap)         0x8000000000000cd9 (VSpace: PD=AXON-Bridge)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d8d Page                 - Map               - 0x8000000000000045 (Page(4 KiB): IPC Buffer PD=SOMA-Identity)
+    0x0d91 Page                 - Map               - 0x8000000000000045 (Page(4 KiB): IPC Buffer PD=SOMA-Identity)
          vspace (cap)         0x8000000000000cda (VSpace: PD=SOMA-Identity)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d8e Page                 - Map               - 0x8000000000000046 (Page(4 KiB): IPC Buffer PD=Phoenix-Init)
+    0x0d92 Page                 - Map               - 0x8000000000000046 (Page(4 KiB): IPC Buffer PD=Phoenix-Init)
          vspace (cap)         0x8000000000000cdb (VSpace: PD=Phoenix-Init)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d8f Page                 - Map               - 0x8000000000000047 (Page(4 KiB): IPC Buffer PD=Phoenix-Console)
+    0x0d93 Page                 - Map               - 0x8000000000000047 (Page(4 KiB): IPC Buffer PD=Phoenix-Console)
          vspace (cap)         0x8000000000000cdc (VSpace: PD=Phoenix-Console)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d90 Page                 - Map               - 0x8000000000000048 (Page(4 KiB): IPC Buffer PD=Phoenix-Watchdog)
+    0x0d94 Page                 - Map               - 0x8000000000000048 (Page(4 KiB): IPC Buffer PD=Phoenix-Watchdog)
          vspace (cap)         0x8000000000000cdd (VSpace: PD=Phoenix-Watchdog)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d91 Page                 - Map               - 0x8000000000000049 (Page(4 KiB): IPC Buffer PD=HANIEL-Canvas)
+    0x0d95 Page                 - Map               - 0x8000000000000049 (Page(4 KiB): IPC Buffer PD=HANIEL-Canvas)
          vspace (cap)         0x8000000000000cde (VSpace: PD=HANIEL-Canvas)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d92 Page                 - Map               - 0x800000000000004a (Page(4 KiB): IPC Buffer PD=Phoenix-Desktop)
+    0x0d96 Page                 - Map               - 0x800000000000004a (Page(4 KiB): IPC Buffer PD=Phoenix-Desktop)
          vspace (cap)         0x8000000000000cdf (VSpace: PD=Phoenix-Desktop)
          vaddr                0x23a000
          rights               3
          attr                 7
-    0x0d93 Page                 - Map               - 0x800000000000004b (Page(4 KiB): IPC Buffer PD=Shell-PD)
+    0x0d97 Page                 - Map               - 0x800000000000004b (Page(4 KiB): IPC Buffer PD=Shell-PD)
          vspace (cap)         0x8000000000000ce0 (VSpace: PD=Shell-PD)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d94 Page                 - Map               - 0x800000000000004c (Page(4 KiB): IPC Buffer PD=EdisonDB-PD)
+    0x0d98 Page                 - Map               - 0x800000000000004c (Page(4 KiB): IPC Buffer PD=EdisonDB-PD)
          vspace (cap)         0x8000000000000ce1 (VSpace: PD=EdisonDB-PD)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d95 Page                 - Map               - 0x800000000000004d (Page(4 KiB): IPC Buffer PD=Onyxia-PD)
+    0x0d99 Page                 - Map               - 0x800000000000004d (Page(4 KiB): IPC Buffer PD=Onyxia-PD)
          vspace (cap)         0x8000000000000ce2 (VSpace: PD=Onyxia-PD)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d96 Page                 - Map               - 0x800000000000004e (Page(4 KiB): IPC Buffer PD=AXON-Exec-PD)
+    0x0d9a Page                 - Map               - 0x800000000000004e (Page(4 KiB): IPC Buffer PD=AXON-Exec-PD)
          vspace (cap)         0x8000000000000ce3 (VSpace: PD=AXON-Exec-PD)
          vaddr                0x202000
          rights               3
          attr                 7
-    0x0d97 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0d9b SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000ca2 (SchedContext: PD=GENESIS)
          budget               1000
          period               1000
          extra_refills        0
          badge                256
          flags                0
-    0x0d98 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0d9c SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000ca3 (SchedContext: PD=ARPi-Broker)
          budget               800
          period               1000
          extra_refills        0
          badge                257
          flags                0
-    0x0d99 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0d9d SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000ca4 (SchedContext: PD=DataTier-Enforcer)
          budget               600
          period               1000
          extra_refills        0
          badge                258
          flags                0
-    0x0d9a SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0d9e SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000ca5 (SchedContext: PD=TrustGraph-Gate)
          budget               600
          period               1000
          extra_refills        0
          badge                259
          flags                0
-    0x0d9b SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0d9f SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000ca6 (SchedContext: PD=Inverted-Admin)
          budget               500
          period               1000
          extra_refills        0
          badge                260
          flags                0
-    0x0d9c SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0da0 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000ca7 (SchedContext: PD=AXON-Bridge)
          budget               800
          period               1000
          extra_refills        0
          badge                261
          flags                0
-    0x0d9d SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0da1 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000ca8 (SchedContext: PD=SOMA-Identity)
          budget               400
          period               1000
          extra_refills        0
          badge                262
          flags                0
-    0x0d9e SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0da2 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000ca9 (SchedContext: PD=Phoenix-Init)
          budget               1000
          period               1000
          extra_refills        0
          badge                263
          flags                0
-    0x0d9f SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0da3 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000caa (SchedContext: PD=Phoenix-Console)
          budget               500
          period               1000
          extra_refills        0
          badge                264
          flags                0
-    0x0da0 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0da4 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000cab (SchedContext: PD=Phoenix-Watchdog)
          budget               200
          period               1000
          extra_refills        0
          badge                265
          flags                0
-    0x0da1 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0da5 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000cac (SchedContext: PD=HANIEL-Canvas)
          budget               800
          period               1000
          extra_refills        0
          badge                266
          flags                0
-    0x0da2 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0da6 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000cad (SchedContext: PD=Phoenix-Desktop)
          budget               20000
          period               20000
          extra_refills        0
          badge                267
          flags                0
-    0x0da3 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0da7 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000cae (SchedContext: PD=Shell-PD)
          budget               600
          period               1000
          extra_refills        0
          badge                268
          flags                0
-    0x0da4 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0da8 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000caf (SchedContext: PD=EdisonDB-PD)
          budget               600
          period               1000
          extra_refills        0
          badge                269
          flags                0
-    0x0da5 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0da9 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000cb0 (SchedContext: PD=Onyxia-PD)
          budget               600
          period               1000
          extra_refills        0
          badge                270
          flags                0
-    0x0da6 SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
+    0x0daa SchedControl         - ConfigureFlags    - 0x0000000000000012 (None)
          schedcontext (cap)   0x8000000000000cb1 (SchedContext: PD=AXON-Exec-PD)
          budget               400
          period               1000
          extra_refills        0
          badge                271
          flags                0
-    0x0da7 TCB                  - SetSchedParams    - 0x8000000000000c92 (TCB: PD=GENESIS)
+    0x0dab TCB                  - SetSchedParams    - 0x8000000000000c92 (TCB: PD=GENESIS)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000ca2 (SchedContext: PD=GENESIS)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0da8 TCB                  - SetSchedParams    - 0x8000000000000c93 (TCB: PD=ARPi-Broker)
+    0x0dac TCB                  - SetSchedParams    - 0x8000000000000c93 (TCB: PD=ARPi-Broker)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000ca3 (SchedContext: PD=ARPi-Broker)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0da9 TCB                  - SetSchedParams    - 0x8000000000000c94 (TCB: PD=DataTier-Enforcer)
+    0x0dad TCB                  - SetSchedParams    - 0x8000000000000c94 (TCB: PD=DataTier-Enforcer)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000ca4 (SchedContext: PD=DataTier-Enforcer)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0daa TCB                  - SetSchedParams    - 0x8000000000000c95 (TCB: PD=TrustGraph-Gate)
+    0x0dae TCB                  - SetSchedParams    - 0x8000000000000c95 (TCB: PD=TrustGraph-Gate)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000ca5 (SchedContext: PD=TrustGraph-Gate)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0dab TCB                  - SetSchedParams    - 0x8000000000000c96 (TCB: PD=Inverted-Admin)
+    0x0daf TCB                  - SetSchedParams    - 0x8000000000000c96 (TCB: PD=Inverted-Admin)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000ca6 (SchedContext: PD=Inverted-Admin)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0dac TCB                  - SetSchedParams    - 0x8000000000000c97 (TCB: PD=AXON-Bridge)
+    0x0db0 TCB                  - SetSchedParams    - 0x8000000000000c97 (TCB: PD=AXON-Bridge)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000ca7 (SchedContext: PD=AXON-Bridge)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0dad TCB                  - SetSchedParams    - 0x8000000000000c98 (TCB: PD=SOMA-Identity)
+    0x0db1 TCB                  - SetSchedParams    - 0x8000000000000c98 (TCB: PD=SOMA-Identity)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000ca8 (SchedContext: PD=SOMA-Identity)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0dae TCB                  - SetSchedParams    - 0x8000000000000c99 (TCB: PD=Phoenix-Init)
+    0x0db2 TCB                  - SetSchedParams    - 0x8000000000000c99 (TCB: PD=Phoenix-Init)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000ca9 (SchedContext: PD=Phoenix-Init)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0daf TCB                  - SetSchedParams    - 0x8000000000000c9a (TCB: PD=Phoenix-Console)
+    0x0db3 TCB                  - SetSchedParams    - 0x8000000000000c9a (TCB: PD=Phoenix-Console)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000caa (SchedContext: PD=Phoenix-Console)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0db0 TCB                  - SetSchedParams    - 0x8000000000000c9b (TCB: PD=Phoenix-Watchdog)
+    0x0db4 TCB                  - SetSchedParams    - 0x8000000000000c9b (TCB: PD=Phoenix-Watchdog)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000cab (SchedContext: PD=Phoenix-Watchdog)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0db1 TCB                  - SetSchedParams    - 0x8000000000000c9c (TCB: PD=HANIEL-Canvas)
+    0x0db5 TCB                  - SetSchedParams    - 0x8000000000000c9c (TCB: PD=HANIEL-Canvas)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000cac (SchedContext: PD=HANIEL-Canvas)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0db2 TCB                  - SetSchedParams    - 0x8000000000000c9d (TCB: PD=Phoenix-Desktop)
+    0x0db6 TCB                  - SetSchedParams    - 0x8000000000000c9d (TCB: PD=Phoenix-Desktop)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  254
          priority             254
          sched_context (cap)  0x8000000000000cad (SchedContext: PD=Phoenix-Desktop)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0db3 TCB                  - SetSchedParams    - 0x8000000000000c9e (TCB: PD=Shell-PD)
+    0x0db7 TCB                  - SetSchedParams    - 0x8000000000000c9e (TCB: PD=Shell-PD)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000cae (SchedContext: PD=Shell-PD)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0db4 TCB                  - SetSchedParams    - 0x8000000000000c9f (TCB: PD=EdisonDB-PD)
+    0x0db8 TCB                  - SetSchedParams    - 0x8000000000000c9f (TCB: PD=EdisonDB-PD)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000caf (SchedContext: PD=EdisonDB-PD)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0db5 TCB                  - SetSchedParams    - 0x8000000000000ca0 (TCB: PD=Onyxia-PD)
+    0x0db9 TCB                  - SetSchedParams    - 0x8000000000000ca0 (TCB: PD=Onyxia-PD)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000cb0 (SchedContext: PD=Onyxia-PD)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0db6 TCB                  - SetSchedParams    - 0x8000000000000ca1 (TCB: PD=AXON-Exec-PD)
+    0x0dba TCB                  - SetSchedParams    - 0x8000000000000ca1 (TCB: PD=AXON-Exec-PD)
          authority (cap)      0x0000000000000001 (TCB: init)
          mcp                  1
          priority             1
          sched_context (cap)  0x8000000000000cb1 (SchedContext: PD=AXON-Exec-PD)
          fault_ep (cap)       0x8000000000000cc3 (EP: Monitor Fault)
-    0x0db7 TCB                  - SetSpace          - 0x8000000000000c92 (TCB: PD=GENESIS)
-         fault_ep (cap)       0x800000000000298b (None)
+    0x0dbb TCB                  - SetSpace          - 0x8000000000000c92 (TCB: PD=GENESIS)
+         fault_ep (cap)       0x800000000000298d (None)
          cspace_root (cap)    0x8000000000000d4d (CNode: PD=GENESIS)
          cspace_root_data     55
          vspace_root (cap)    0x8000000000000cd4 (VSpace: PD=GENESIS)
          vspace_root_data     0
       REPEAT: count=16
-    0x0db8 TCB                  - SetIPCBuffer      - 0x8000000000000c92 (TCB: PD=GENESIS)
+    0x0dbc TCB                  - SetIPCBuffer      - 0x8000000000000c92 (TCB: PD=GENESIS)
          buffer               0x202000
          buffer_frame (cap)   0x800000000000003f (Page(4 KiB): IPC Buffer PD=GENESIS)
-    0x0db9 TCB                  - SetIPCBuffer      - 0x8000000000000c93 (TCB: PD=ARPi-Broker)
+    0x0dbd TCB                  - SetIPCBuffer      - 0x8000000000000c93 (TCB: PD=ARPi-Broker)
          buffer               0x202000
          buffer_frame (cap)   0x8000000000000040 (Page(4 KiB): IPC Buffer PD=ARPi-Broker)
-    0x0dba TCB                  - SetIPCBuffer      - 0x8000000000000c94 (TCB: PD=DataTier-Enforcer)
+    0x0dbe TCB                  - SetIPCBuffer      - 0x8000000000000c94 (TCB: PD=DataTier-Enforcer)
          buffer               0x202000
          buffer_frame (cap)   0x8000000000000041 (Page(4 KiB): IPC Buffer PD=DataTier-Enforcer)
-    0x0dbb TCB                  - SetIPCBuffer      - 0x8000000000000c95 (TCB: PD=TrustGraph-Gate)
+    0x0dbf TCB                  - SetIPCBuffer      - 0x8000000000000c95 (TCB: PD=TrustGraph-Gate)
          buffer               0x202000
          buffer_frame (cap)   0x8000000000000042 (Page(4 KiB): IPC Buffer PD=TrustGraph-Gate)
-    0x0dbc TCB                  - SetIPCBuffer      - 0x8000000000000c96 (TCB: PD=Inverted-Admin)
+    0x0dc0 TCB                  - SetIPCBuffer      - 0x8000000000000c96 (TCB: PD=Inverted-Admin)
          buffer               0x202000
          buffer_frame (cap)   0x8000000000000043 (Page(4 KiB): IPC Buffer PD=Inverted-Admin)
-    0x0dbd TCB                  - SetIPCBuffer      - 0x8000000000000c97 (TCB: PD=AXON-Bridge)
+    0x0dc1 TCB                  - SetIPCBuffer      - 0x8000000000000c97 (TCB: PD=AXON-Bridge)
          buffer               0x202000
          buffer_frame (cap)   0x8000000000000044 (Page(4 KiB): IPC Buffer PD=AXON-Bridge)
-    0x0dbe TCB                  - SetIPCBuffer      - 0x8000000000000c98 (TCB: PD=SOMA-Identity)
+    0x0dc2 TCB                  - SetIPCBuffer      - 0x8000000000000c98 (TCB: PD=SOMA-Identity)
          buffer               0x202000
          buffer_frame (cap)   0x8000000000000045 (Page(4 KiB): IPC Buffer PD=SOMA-Identity)
-    0x0dbf TCB                  - SetIPCBuffer      - 0x8000000000000c99 (TCB: PD=Phoenix-Init)
+    0x0dc3 TCB                  - SetIPCBuffer      - 0x8000000000000c99 (TCB: PD=Phoenix-Init)
          buffer               0x202000
          buffer_frame (cap)   0x8000000000000046 (Page(4 KiB): IPC Buffer PD=Phoenix-Init)
-    0x0dc0 TCB                  - SetIPCBuffer      - 0x8000000000000c9a (TCB: PD=Phoenix-Console)
+    0x0dc4 TCB                  - SetIPCBuffer      - 0x8000000000000c9a (TCB: PD=Phoenix-Console)
          buffer               0x202000
          buffer_frame (cap)   0x8000000000000047 (Page(4 KiB): IPC Buffer PD=Phoenix-Console)
-    0x0dc1 TCB                  - SetIPCBuffer      - 0x8000000000000c9b (TCB: PD=Phoenix-Watchdog)
+    0x0dc5 TCB                  - SetIPCBuffer      - 0x8000000000000c9b (TCB: PD=Phoenix-Watchdog)
          buffer               0x202000
          buffer_frame (cap)   0x8000000000000048 (Page(4 KiB): IPC Buffer PD=Phoenix-Watchdog)
-    0x0dc2 TCB                  - SetIPCBuffer      - 0x8000000000000c9c (TCB: PD=HANIEL-Canvas)
+    0x0dc6 TCB                  - SetIPCBuffer      - 0x8000000000000c9c (TCB: PD=HANIEL-Canvas)
          buffer               0x202000
          buffer_frame (cap)   0x8000000000000049 (Page(4 KiB): IPC Buffer PD=HANIEL-Canvas)
-    0x0dc3 TCB                  - SetIPCBuffer      - 0x8000000000000c9d (TCB: PD=Phoenix-Desktop)
+    0x0dc7 TCB                  - SetIPCBuffer      - 0x8000000000000c9d (TCB: PD=Phoenix-Desktop)
          buffer               0x23a000
          buffer_frame (cap)   0x800000000000004a (Page(4 KiB): IPC Buffer PD=Phoenix-Desktop)
-    0x0dc4 TCB                  - SetIPCBuffer      - 0x8000000000000c9e (TCB: PD=Shell-PD)
+    0x0dc8 TCB                  - SetIPCBuffer      - 0x8000000000000c9e (TCB: PD=Shell-PD)
          buffer               0x202000
          buffer_frame (cap)   0x800000000000004b (Page(4 KiB): IPC Buffer PD=Shell-PD)
-    0x0dc5 TCB                  - SetIPCBuffer      - 0x8000000000000c9f (TCB: PD=EdisonDB-PD)
+    0x0dc9 TCB                  - SetIPCBuffer      - 0x8000000000000c9f (TCB: PD=EdisonDB-PD)
          buffer               0x202000
          buffer_frame (cap)   0x800000000000004c (Page(4 KiB): IPC Buffer PD=EdisonDB-PD)
-    0x0dc6 TCB                  - SetIPCBuffer      - 0x8000000000000ca0 (TCB: PD=Onyxia-PD)
+    0x0dca TCB                  - SetIPCBuffer      - 0x8000000000000ca0 (TCB: PD=Onyxia-PD)
          buffer               0x202000
          buffer_frame (cap)   0x800000000000004d (Page(4 KiB): IPC Buffer PD=Onyxia-PD)
-    0x0dc7 TCB                  - SetIPCBuffer      - 0x8000000000000ca1 (TCB: PD=AXON-Exec-PD)
+    0x0dcb TCB                  - SetIPCBuffer      - 0x8000000000000ca1 (TCB: PD=AXON-Exec-PD)
          buffer               0x202000
          buffer_frame (cap)   0x800000000000004e (Page(4 KiB): IPC Buffer PD=AXON-Exec-PD)
-    0x0dc8 TCB                  - WriteRegisters    - 0x8000000000000c92 (TCB: PD=GENESIS)
+    0x0dcc TCB                  - WriteRegisters    - 0x8000000000000c92 (TCB: PD=GENESIS)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -30918,7 +30942,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dc9 TCB                  - WriteRegisters    - 0x8000000000000c93 (TCB: PD=ARPi-Broker)
+    0x0dcd TCB                  - WriteRegisters    - 0x8000000000000c93 (TCB: PD=ARPi-Broker)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -30957,7 +30981,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dca TCB                  - WriteRegisters    - 0x8000000000000c94 (TCB: PD=DataTier-Enforcer)
+    0x0dce TCB                  - WriteRegisters    - 0x8000000000000c94 (TCB: PD=DataTier-Enforcer)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -30996,7 +31020,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dcb TCB                  - WriteRegisters    - 0x8000000000000c95 (TCB: PD=TrustGraph-Gate)
+    0x0dcf TCB                  - WriteRegisters    - 0x8000000000000c95 (TCB: PD=TrustGraph-Gate)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31035,7 +31059,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dcc TCB                  - WriteRegisters    - 0x8000000000000c96 (TCB: PD=Inverted-Admin)
+    0x0dd0 TCB                  - WriteRegisters    - 0x8000000000000c96 (TCB: PD=Inverted-Admin)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31074,7 +31098,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dcd TCB                  - WriteRegisters    - 0x8000000000000c97 (TCB: PD=AXON-Bridge)
+    0x0dd1 TCB                  - WriteRegisters    - 0x8000000000000c97 (TCB: PD=AXON-Bridge)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31113,7 +31137,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dce TCB                  - WriteRegisters    - 0x8000000000000c98 (TCB: PD=SOMA-Identity)
+    0x0dd2 TCB                  - WriteRegisters    - 0x8000000000000c98 (TCB: PD=SOMA-Identity)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31152,7 +31176,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dcf TCB                  - WriteRegisters    - 0x8000000000000c99 (TCB: PD=Phoenix-Init)
+    0x0dd3 TCB                  - WriteRegisters    - 0x8000000000000c99 (TCB: PD=Phoenix-Init)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31191,7 +31215,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dd0 TCB                  - WriteRegisters    - 0x8000000000000c9a (TCB: PD=Phoenix-Console)
+    0x0dd4 TCB                  - WriteRegisters    - 0x8000000000000c9a (TCB: PD=Phoenix-Console)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31230,7 +31254,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dd1 TCB                  - WriteRegisters    - 0x8000000000000c9b (TCB: PD=Phoenix-Watchdog)
+    0x0dd5 TCB                  - WriteRegisters    - 0x8000000000000c9b (TCB: PD=Phoenix-Watchdog)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31269,7 +31293,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dd2 TCB                  - WriteRegisters    - 0x8000000000000c9c (TCB: PD=HANIEL-Canvas)
+    0x0dd6 TCB                  - WriteRegisters    - 0x8000000000000c9c (TCB: PD=HANIEL-Canvas)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31308,7 +31332,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dd3 TCB                  - WriteRegisters    - 0x8000000000000c9d (TCB: PD=Phoenix-Desktop)
+    0x0dd7 TCB                  - WriteRegisters    - 0x8000000000000c9d (TCB: PD=Phoenix-Desktop)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31347,7 +31371,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dd4 TCB                  - WriteRegisters    - 0x8000000000000c9e (TCB: PD=Shell-PD)
+    0x0dd8 TCB                  - WriteRegisters    - 0x8000000000000c9e (TCB: PD=Shell-PD)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31386,7 +31410,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dd5 TCB                  - WriteRegisters    - 0x8000000000000c9f (TCB: PD=EdisonDB-PD)
+    0x0dd9 TCB                  - WriteRegisters    - 0x8000000000000c9f (TCB: PD=EdisonDB-PD)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31425,7 +31449,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dd6 TCB                  - WriteRegisters    - 0x8000000000000ca0 (TCB: PD=Onyxia-PD)
+    0x0dda TCB                  - WriteRegisters    - 0x8000000000000ca0 (TCB: PD=Onyxia-PD)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31464,7 +31488,7 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dd7 TCB                  - WriteRegisters    - 0x8000000000000ca1 (TCB: PD=AXON-Exec-PD)
+    0x0ddb TCB                  - WriteRegisters    - 0x8000000000000ca1 (TCB: PD=AXON-Exec-PD)
          resume               false
          arch_flags           0
          regs                 pc: 0x0000000000200000
@@ -31503,9 +31527,9 @@
                               x28: 0x0000000000000000
                               tpidr_el0: 0x0000000000000000
                               tpidrro_el0: 0x0000000000000000
-    0x0dd8 TCB                  - BindNotification  - 0x8000000000000c92 (TCB: PD=GENESIS)
+    0x0ddc TCB                  - BindNotification  - 0x8000000000000c92 (TCB: PD=GENESIS)
          notification (cap)   0x8000000000000cc4 (Notification: PD=GENESIS)
       REPEAT: count=16
-    0x0dd9 TCB                  - Resume            - 0x8000000000000c92 (TCB: PD=GENESIS)
+    0x0ddd TCB                  - Resume            - 0x8000000000000c92 (TCB: PD=GENESIS)
 
       REPEAT: count=16
